@@ -1,7 +1,5 @@
-import { Outlet } from 'react-router-dom';
-
-const App = () => {
-  return <Outlet />;
-};
+function App() {
+  return <h1>Dashboard berhasil!</h1>;
+}
 
 export default App;
