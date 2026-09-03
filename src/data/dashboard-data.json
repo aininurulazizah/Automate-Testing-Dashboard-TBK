@@ -1,21 +1,30 @@
 {
-  "generatedAt": "2026-09-03T08:43:11.672Z",
+  "generatedAt": "2026-09-03T09:05:44.931Z",
   "summary": {
-    "total": 6,
-    "passed": 3,
-    "failed": 3,
+    "total": 8,
+    "passed": 6,
+    "failed": 2,
     "flaky": 0,
     "skipped": 0,
-    "duration": 302163,
-    "durationFormatted": "00:05:02"
+    "duration": 401619,
+    "durationFormatted": "00:06:41"
   },
   "details": [
     {
+      "title": "@btm - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 32488,
+      "browser": "chromium",
+      "startTime": "2026-09-03T08:56:50.050Z",
+      "bookingCode": "BBTM260903C39G",
+      "error": null
+    },
+    {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 34763,
+      "duration": 29361,
       "browser": "chromium",
-      "startTime": "2026-09-03T08:35:23.241Z",
+      "startTime": "2026-09-03T08:57:53.429Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 230000\nReceived: 165000",
@@ -23,55 +32,61 @@
       }
     },
     {
+      "title": "@daytrans - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 38731,
+      "browser": "chromium",
+      "startTime": "2026-09-03T08:58:24.619Z",
+      "bookingCode": "BDTR260903O64N",
+      "error": null
+    },
+    {
+      "title": "@daytrans - Test Case 3 - Connecting Reservation",
+      "status": "passed",
+      "duration": 48329,
+      "browser": "chromium",
+      "startTime": "2026-09-03T08:59:04.781Z",
+      "bookingCode": "BDTR260903U07X",
+      "error": null
+    },
+    {
+      "title": "@kruzz - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 46010,
+      "browser": "chromium",
+      "startTime": "2026-09-03T08:59:54.714Z",
+      "bookingCode": "BKRZ260903C1RG",
+      "error": null
+    },
+    {
+      "title": "@kruzz - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 62907,
+      "browser": "chromium",
+      "startTime": "2026-09-03T09:00:41.577Z",
+      "bookingCode": "BKRZ260903JPKT",
+      "error": null
+    },
+    {
+      "title": "@kruzz - Test Case 3 - Connecting Reservation",
+      "status": "passed",
+      "duration": 51036,
+      "browser": "chromium",
+      "startTime": "2026-09-03T09:01:45.768Z",
+      "bookingCode": "BKRZ260903OP14",
+      "error": null
+    },
+    {
       "title": "@selamat - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 93503,
+      "duration": 92757,
       "browser": "chromium",
-      "startTime": "2026-09-03T08:37:35.539Z",
+      "startTime": "2026-09-03T09:04:11.376Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
         "detail": "Error: expect(locator).toHaveClass(expected) failed\n\nLocator: locator('div#load-container-payment')\nExpected pattern: /d-none/\nError: element(s) not found\n\nCall log:\n  - Expect \"toHaveClass\" with timeout 120000ms\n  - waiting for locator('div#load-container-payment')\n\n\n   at ../pages/selamat.js:86\n\n  84 |         const loader = await this.page.locator(`${element}`);\n  85 |         if (to_have) {\n> 86 |             await expect(loader).toHaveClass(new RegExp(loader_class), {timeout: 120000});\n     |                                  ^\n  87 |         } else {\n  88 |             await expect(loader).not.toHaveClass(new RegExp(loader_class), {timeout: 120000});\n  89 |         }\n    at Selamat.waitForLoader (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/selamat.js:86:34)\n    at Selamat.pilihMetodePembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/selamat.js:244:9)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:62:9"
       }
-    },
-    {
-      "title": "@trikusuma - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 37302,
-      "browser": "chromium",
-      "startTime": "2026-09-03T08:39:10.592Z",
-      "bookingCode": "BTKS260903OL4G",
-      "error": null
-    },
-    {
-      "title": "@trikusuma - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 46804,
-      "browser": "chromium",
-      "startTime": "2026-09-03T08:40:49.432Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 370000\nReceived: 320000",
-        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 370000\nReceived: 320000\n\n   at ../pages/trikusuma.js:343\n\n  341 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n  342 |\n> 343 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  344 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  345 |\n  346 |                 return expected_total_tiket;\n    at Trikusuma.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/trikusuma.js:343:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:150:36"
-      }
-    },
-    {
-      "title": "@wbtrans - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 38841,
-      "browser": "chromium",
-      "startTime": "2026-09-03T08:41:38.375Z",
-      "bookingCode": "BWBS260903JPV1",
-      "error": null
-    },
-    {
-      "title": "@wbtrans - Test Case 2 - Round Trip",
-      "status": "passed",
-      "duration": 50950,
-      "browser": "chromium",
-      "startTime": "2026-09-03T08:42:18.591Z",
-      "bookingCode": "BWBS2609030VSZ",
-      "error": null
     }
   ]
 }
