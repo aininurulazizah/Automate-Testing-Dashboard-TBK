@@ -1,62 +1,26 @@
 {
-  "generatedAt": "2026-08-27T07:22:36.431Z",
+  "generatedAt": "2026-09-03T08:00:04.231Z",
   "summary": {
-    "total": 5,
-    "passed": 4,
+    "total": 1,
+    "passed": 0,
     "failed": 1,
     "flaky": 0,
     "skipped": 0,
-    "duration": 104509,
-    "durationFormatted": "00:01:44"
+    "duration": 31837,
+    "durationFormatted": "00:00:31"
   },
   "details": [
     {
-      "title": "@aragon - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 58087,
-      "browser": "chromium",
-      "startTime": "2026-08-27T07:21:24.077Z",
-      "bookingCode": "BARG260827CJ5B",
-      "error": null
-    },
-    {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 46422,
+      "duration": 31837,
       "browser": "chromium",
-      "startTime": "2026-08-27T07:21:24.053Z",
+      "startTime": "2026-09-03T07:59:30.428Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 230000\nReceived: 165000",
-        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 230000\nReceived: 165000\n\n   at ..\\pages\\btm.js:308\n\n  306 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.total_bayar_label_payment.innerText());\n  307 |\n> 308 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  309 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  310 |\n  311 |                 return expected_total_tiket;\n    at Btm.validasiTotalHargaTiket (E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\pages\\btm.js:308:54)\n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:243:36"
+        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 230000\nReceived: 165000\n\n   at ../pages/btm.js:308\n\n  306 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.total_bayar_label_payment.innerText());\n  307 |\n> 308 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  309 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  310 |\n  311 |                 return expected_total_tiket;\n    at Btm.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:308:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:243:36"
       }
-    },
-    {
-      "title": "@kruzz - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 78601,
-      "browser": "chromium",
-      "startTime": "2026-08-27T06:25:29.860Z",
-      "bookingCode": "BKRZ260827289N",
-      "error": null
-    },
-    {
-      "title": "@kruzz - Test Case 2 - Round Trip",
-      "status": "passed",
-      "duration": 70220,
-      "browser": "chromium",
-      "startTime": "2026-08-27T06:26:52.504Z",
-      "bookingCode": "BKRZ260827O12H",
-      "error": null
-    },
-    {
-      "title": "@kruzz - Test Case 3 - Connecting Reservation",
-      "status": "passed",
-      "duration": 64185,
-      "browser": "chromium",
-      "startTime": "2026-08-27T06:28:06.456Z",
-      "bookingCode": "BKRZ260827PFYA",
-      "error": null
     }
   ]
 }
