@@ -40,3 +40,24 @@ export const summaries: SummaryItem[] = [
     icon: 'material-symbols:cancel',
   },
 ];
+
+export const generatedAt = report.generatedAt;
+
+export const generatedAtFormatted = (() => {
+  const date = new Date(report.generatedAt);
+
+  const datePart = date.toLocaleDateString('id-ID', {
+    timeZone: 'Asia/Jakarta',
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+  });
+
+  const timePart = date.toLocaleTimeString('id-ID', {
+    timeZone: 'Asia/Jakarta',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+
+  return `${datePart}, ${timePart} WIB`;
+})();

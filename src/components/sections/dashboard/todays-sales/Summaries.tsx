@@ -1,6 +1,6 @@
 import { Typography, Grid, Paper, Stack, Button } from '@mui/material';
 import IconifyIcon from 'components/base/IconifyIcon';
-import { summaries } from 'data/summary-test';
+import { generatedAtFormatted, summaries } from 'data/summary-test';
 import SaleCard from './SummaryCard';
 
 const Sales = () => {
@@ -27,6 +27,9 @@ const Sales = () => {
           </Grid>
         ))}
       </Grid>
+      <Typography variant="caption" color="primary.lighter">
+        <br></br>Last Execution : {generatedAtFormatted}
+      </Typography>
     </Paper>
   );
 };
