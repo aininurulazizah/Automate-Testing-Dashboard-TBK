@@ -1,26 +1,119 @@
 {
-  "generatedAt": "2026-09-03T08:00:04.231Z",
+  "generatedAt": "2026-09-07T08:52:40.501Z",
   "summary": {
-    "total": 1,
-    "passed": 0,
-    "failed": 1,
+    "total": 10,
+    "passed": 5,
+    "failed": 5,
     "flaky": 0,
     "skipped": 0,
-    "duration": 31837,
-    "durationFormatted": "00:00:31"
+    "duration": 470216,
+    "durationFormatted": "00:07:50"
   },
   "details": [
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 31837,
+      "duration": 88330,
       "browser": "chromium",
-      "startTime": "2026-09-03T07:59:30.428Z",
+      "startTime": "2026-09-07T08:47:51.783Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 230000\nReceived: 165000",
-        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 230000\nReceived: 165000\n\n   at ../pages/btm.js:308\n\n  306 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.total_bayar_label_payment.innerText());\n  307 |\n> 308 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  309 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  310 |\n  311 |                 return expected_total_tiket;\n    at Btm.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:308:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:243:36"
+        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 230000\nReceived: 165000\n\n   at ..\\pages\\btm.js:308\n\n  306 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.total_bayar_label_payment.innerText());\n  307 |\n> 308 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  309 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  310 |\n  311 |                 return expected_total_tiket;\n    at Btm.validasiTotalHargaTiket (E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\pages\\btm.js:308:54)\n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:247:36"
       }
+    },
+    {
+      "title": "@namaste - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 36223,
+      "browser": "chromium",
+      "startTime": "2026-09-07T08:50:49.311Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  - waiting for locator('button[data-trip=\"pulang\"]')\n",
+        "detail": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  - waiting for locator('button[data-trip=\"pulang\"]')\n\n\n   at ..\\pages\\namaste.js:225\n\n  223 |         await this.waitForLoader('div#modal-load', 'show', false);\n  224 |\n> 225 |         await this.tab_plg.click();\n      |                            ^\n  226 |         for(let i = 0; i < jml_penumpang; i++) {\n  227 |             await this.getPenumpangTerdaftar(i+1, 0).click();\n  228 |             await this.kursi_plg_tersedia.nth(i).click();\n    at Namaste.pilihKursiPulang (E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\pages\\namaste.js:225:28)\n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:145:13"
+      }
+    },
+    {
+      "title": "@transkita - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 4503,
+      "browser": "chromium",
+      "startTime": "2026-09-07T08:50:51.254Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://transkita-web.asmat.app/\nCall log:\n  - navigating to \"https://transkita-web.asmat.app/\", waiting until \"load\"\n",
+        "detail": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://transkita-web.asmat.app/\nCall log:\n  - navigating to \"https://transkita-web.asmat.app/\", waiting until \"load\"\n\n\n  15 |         const web = new site.locator(page);\n  16 |     \n> 17 |         await page.goto(site.urls[ENV]);\n     |                    ^\n  18 |\n  19 |         await clearBrowserState(page);\n  20 |         \n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:17:20"
+      }
+    },
+    {
+      "title": "@transkita - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 4532,
+      "browser": "chromium",
+      "startTime": "2026-09-07T08:51:00.522Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://transkita-web.asmat.app/\nCall log:\n  - navigating to \"https://transkita-web.asmat.app/\", waiting until \"load\"\n",
+        "detail": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://transkita-web.asmat.app/\nCall log:\n  - navigating to \"https://transkita-web.asmat.app/\", waiting until \"load\"\n\n\n  103 |             const web = new site.locator(page);\n  104 |     \n> 105 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  106 |\n  107 |             await clearBrowserState(page);\n  108 |     \n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:105:24"
+      }
+    },
+    {
+      "title": "@trikusuma - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 46503,
+      "browser": "chromium",
+      "startTime": "2026-09-07T08:51:33.675Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 370000\nReceived: 320000",
+        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 370000\nReceived: 320000\n\n   at ..\\pages\\trikusuma.js:343\n\n  341 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n  342 |\n> 343 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  344 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  345 |\n  346 |                 return expected_total_tiket;\n    at Trikusuma.validasiTotalHargaTiket (E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\pages\\trikusuma.js:343:54)\n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:152:36"
+      }
+    },
+    {
+      "title": "@btm - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 47380,
+      "browser": "chromium",
+      "startTime": "2026-09-07T08:47:51.766Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@minanga - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 37144,
+      "browser": "chromium",
+      "startTime": "2026-09-07T08:48:42.543Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@minanga - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 85846,
+      "browser": "chromium",
+      "startTime": "2026-09-07T08:49:21.979Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@namaste - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 78036,
+      "browser": "chromium",
+      "startTime": "2026-09-07T08:49:28.057Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@trikusuma - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 41719,
+      "browser": "chromium",
+      "startTime": "2026-09-07T08:51:09.883Z",
+      "bookingCode": null,
+      "error": null
     }
   ]
 }
