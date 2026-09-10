@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Box,
   Paper,
@@ -13,9 +13,20 @@ import {
 import { Details } from 'data/detail-test';
 import Detail from './Detail';
 
-const DetailsItem = () => {
+type DetailsItemProps = {
+  selectedStatus: 'All' | 'Passed' | 'Failed' | 'Flaky';
+};
+
+const DetailsItem = ({ selectedStatus }: DetailsItemProps) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+
+  const filteredDetails =
+    selectedStatus === 'All' ? Details : Details.filter((item) => item.priority === selectedStatus);
+
+  useEffect(() => {
+    setPage(0);
+  }, [selectedStatus]);
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
@@ -33,7 +44,7 @@ const DetailsItem = () => {
       </Typography>
 
       <Box sx={{ overflow: 'auto' }}>
-        <Table aria-label="top products table">
+        <Table aria-label="test details table">
           <TableHead>
             <TableRow>
               <TableCell>#</TableCell>
@@ -42,16 +53,20 @@ const DetailsItem = () => {
               <TableCell>Detail</TableCell>
             </TableRow>
           </TableHead>
+
           <TableBody>
-            {Details.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((item) => (
-              <Detail key={item.id} item={item} />
-            ))}
+            {filteredDetails
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((item) => (
+                <Detail key={item.id} item={item} />
+              ))}
           </TableBody>
         </Table>
       </Box>
+
       <TablePagination
         component="div"
-        count={Details.length}
+        count={filteredDetails.length}
         page={page}
         onPageChange={handleChangePage}
         rowsPerPage={rowsPerPage}

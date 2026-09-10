@@ -2,7 +2,12 @@ import { Card, CardContent, Stack, Typography } from '@mui/material';
 import IconifyIcon from 'components/base/IconifyIcon';
 import { SummaryItem } from 'data/summary-test';
 
-const SaleCard = ({ item }: { item: SummaryItem }) => {
+type SaleCardProps = {
+  item: SummaryItem;
+  onClick: () => void;
+};
+
+const SaleCard = ({ item, onClick }: SaleCardProps) => {
   const { value, label, bgColor, iconBackgroundColor, icon, svgIcon: SvgIcon } = item;
 
   const Icon = icon ? (
@@ -13,12 +18,25 @@ const SaleCard = ({ item }: { item: SummaryItem }) => {
 
   return (
     <Card
+      onClick={onClick}
       sx={{
         borderRadius: 4,
         bgcolor: bgColor,
+        cursor: 'pointer',
+
+        '&:hover': {
+          transform: 'translateY(-2px)',
+          boxShadow: 4,
+        },
+
+        transition: 'all 0.2s ease',
       }}
     >
-      <CardContent sx={(theme) => ({ p: { xs: `${theme.spacing(2.5)} !important` } })}>
+      <CardContent
+        sx={(theme) => ({
+          p: { xs: `${theme.spacing(2.5)} !important` },
+        })}
+      >
         <Stack
           sx={{
             width: 40,
@@ -36,6 +54,7 @@ const SaleCard = ({ item }: { item: SummaryItem }) => {
         <Typography variant="h3" color="primary.darker" mb={1}>
           {value}
         </Typography>
+
         <Typography variant="h6" color="grey.800" component="p" mb={1}>
           {label}
         </Typography>
