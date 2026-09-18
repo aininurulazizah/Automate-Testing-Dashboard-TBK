@@ -1,0 +1,113 @@
+{
+  "generatedAt": "2026-09-15T07:48:20.291Z",
+  "summary": {
+    "total": 10,
+    "passed": 7,
+    "failed": 3,
+    "flaky": 0,
+    "skipped": 0,
+    "duration": 376187,
+    "durationFormatted": "00:06:16"
+  },
+  "details": [
+    {
+      "title": "@adibuzz - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 20118,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:44:17.882Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: locator.click: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\ASUS\\AppData\\Local\\ms-playwright\\chromium-1194\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --user-data-dir=C:\\Users\\ASUS\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-TGzq3c --remote-debugging-pipe --no-startup-window\n<launched> pid=12544\n[pid=12544][err] [12544:128:0915/144430.520:ERROR:content\\browser\\gpu\\gpu_process_host.cc:970] GPU process exited unexpectedly: exit_code=34\nCall log:\n  - waiting for locator('input#tanggal_pulang + input')\n    - locator resolved to <input type=\"text\" tabindex=\"0\" placeholder=\"\" readonly=\"readonly\" class=\"form-control form-pp datepicker tglpulang flatpickr-input form-control input\"/>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n",
+        "detail": "Error: locator.click: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\ASUS\\AppData\\Local\\ms-playwright\\chromium-1194\\chrome-win\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --user-data-dir=C:\\Users\\ASUS\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-TGzq3c --remote-debugging-pipe --no-startup-window\n<launched> pid=12544\n[pid=12544][err] [12544:128:0915/144430.520:ERROR:content\\browser\\gpu\\gpu_process_host.cc:970] GPU process exited unexpectedly: exit_code=34\nCall log:\n  - waiting for locator('input#tanggal_pulang + input')\n    - locator resolved to <input type=\"text\" tabindex=\"0\" placeholder=\"\" readonly=\"readonly\" class=\"form-control form-pp datepicker tglpulang flatpickr-input form-control input\"/>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n\n\n   at ..\\pages\\adibuzz.js:137\n\n  135 |         const elemen_tgl = await this.page.locator(`[aria-label=\"${value}\"]`).nth(1).count();\n  136 |         const tanggal_target = elemen_tgl !== 0 ? this.page.locator(`[aria-label=\"${value}\"]`).nth(1) : this.page.locator(`[aria-label=\"${value}\"]`);\n> 137 |         await this.tanggal_pulang.click();\n      |                                   ^\n  138 |         while(!(await tanggal_target.isVisible())){\n  139 |             await this.next_month_btn2.click();\n  140 |         }\n    at Adibuzz.isiTanggalPulang (E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\pages\\adibuzz.js:137:35)\n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:121:13"
+      }
+    },
+    {
+      "title": "@btm - Test Case 3 - Connecting Reservation",
+      "status": "failed",
+      "duration": 35637,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:45:12.772Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+        "detail": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation\n\n   at ..\\utils\\helper.js:32\n\n  30 |     await page.context().clearCookies();\n  31 |\n> 32 |     await page.evaluate(() => {\n     |                ^\n  33 |         localStorage.clear();\n  34 |         sessionStorage.clear();\n  35 |     });\n    at clearBrowserState (E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\utils\\helper.js:32:16)\n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:198:13"
+      }
+    },
+    {
+      "title": "@trikusuma - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 42782,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:46:34.967Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 420000\nReceived: 320000",
+        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 420000\nReceived: 320000\n\n   at ..\\pages\\trikusuma.js:343\n\n  341 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n  342 |\n> 343 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  344 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  345 |\n  346 |                 return expected_total_tiket;\n    at Trikusuma.validasiTotalHargaTiket (E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\pages\\trikusuma.js:343:54)\n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:152:36"
+      }
+    },
+    {
+      "title": "@adibuzz - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 46255,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:44:17.904Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@btm - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 33651,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:44:47.762Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@harumbsi - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 28935,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:45:24.867Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@harumbsi - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 54848,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:45:54.049Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@trikusuma - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 37312,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:45:55.957Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@wbtrans - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 34926,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:46:52.690Z",
+      "bookingCode": null,
+      "error": null
+    },
+    {
+      "title": "@wbtrans - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 41723,
+      "browser": "chromium",
+      "startTime": "2026-09-15T07:47:25.428Z",
+      "bookingCode": null,
+      "error": null
+    }
+  ]
+}

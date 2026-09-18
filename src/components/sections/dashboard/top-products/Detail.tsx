@@ -10,21 +10,26 @@ import {
   Button,
   useTheme,
 } from '@mui/material';
-import { Item } from 'data/detail-test';
 
-const Detail = ({ item }: { item: Item }) => {
+import { DetailItem } from 'data/types';
+
+const Detail = ({ item }: { item: DetailItem }) => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
 
   const { id, name, priority, detail } = item;
+
   let color = '';
+
   switch (priority) {
     case 'Passed':
       color = theme.palette.success.main;
       break;
+
     case 'Failed':
       color = theme.palette.error.main;
       break;
+
     case 'Flaky':
       color = theme.palette.warning.main;
       break;
@@ -34,11 +39,13 @@ const Detail = ({ item }: { item: Item }) => {
     <>
       <TableRow>
         <TableCell>{id}</TableCell>
+
         <TableCell size="small">
           <Typography variant="subtitle2" whiteSpace="nowrap">
             {name}
           </Typography>
         </TableCell>
+
         <TableCell>
           <Chip
             label={priority}
@@ -48,6 +55,7 @@ const Detail = ({ item }: { item: Item }) => {
             }}
           />
         </TableCell>
+
         <TableCell>
           <Button
             variant="outlined"
@@ -56,7 +64,6 @@ const Detail = ({ item }: { item: Item }) => {
             sx={{
               borderRadius: 5,
               textTransform: 'none',
-
               '&:hover': {
                 bgcolor: 'primary.main',
                 color: 'common.white',

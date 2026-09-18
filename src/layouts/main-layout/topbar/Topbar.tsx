@@ -8,7 +8,6 @@ import IconifyIcon from 'components/base/IconifyIcon';
 import Search from 'components/common/Search';
 import ElevationScroll from './ElevationScroll';
 import AccountDropdown from './AccountDropdown';
-import LanguageDropdown from './LanguageDropdown';
 import Notification from './Notification';
 
 interface TopbarProps {
@@ -21,8 +20,8 @@ const Topbar = ({ drawerWidth, onHandleDrawerToggle }: TopbarProps) => {
 
   const pageTitle = useMemo(() => {
     const navItem = sitemap.find((navItem) => location.pathname === navItem.path);
-    return navItem!.name;
-  }, [location]);
+    return navItem?.name ?? 'Dashboard';
+  }, [location.pathname]);
 
   return (
     <ElevationScroll>
@@ -85,9 +84,8 @@ const Topbar = ({ drawerWidth, onHandleDrawerToggle }: TopbarProps) => {
                 maxWidth: 550,
               }}
             />
-            <LanguageDropdown />
-            <Notification />
             <AccountDropdown />
+            <Notification />
           </Stack>
         </Toolbar>
       </AppBar>

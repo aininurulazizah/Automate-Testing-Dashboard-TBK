@@ -29,8 +29,15 @@ export const routes = [
           </MainLayout>
         ),
         children: [
+          //default
           {
             index: true,
+            element: <Dashboard />,
+          },
+
+          // /:date
+          {
+            path: ':date',
             element: <Dashboard />,
           },
         ],

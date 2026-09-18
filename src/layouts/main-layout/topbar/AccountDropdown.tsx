@@ -86,8 +86,8 @@ const AccountDropdown = () => {
           alt="User Profile"
           src={Profile}
         /> */}
-        <Box sx={{ display: { xs: 'none', xl: 'block' } }}>
-          <Stack direction="row" alignItems="center" columnGap={6}>
+        <Box sx={{ display: { xl: 'block' } }}>
+          <Stack direction="row" alignItems="center" columnGap={4}>
             <Typography variant="h6" component="p" color="primary.darker" gutterBottom>
               QC Tiketux
             </Typography>
