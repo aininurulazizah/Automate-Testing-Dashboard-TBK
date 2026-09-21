@@ -42,8 +42,10 @@ const Sales = ({ data, onStatusChange }: SalesProps) => {
     },
   ];
 
-  const generatedAtFormatted = (() => {
-    const date = new Date(data.generatedAt);
+  const startedAtFormatted = (() => {
+    if (!data.startedAt) return '-';
+
+    const date = new Date(data.startedAt);
 
     const datePart = date.toLocaleDateString('id-ID', {
       timeZone: 'Asia/Jakarta',
@@ -100,7 +102,7 @@ const Sales = ({ data, onStatusChange }: SalesProps) => {
 
       <Typography variant="caption" color="primary.lighter">
         <br />
-        Execution : {generatedAtFormatted}
+        Execution : {startedAtFormatted}
       </Typography>
     </Paper>
   );

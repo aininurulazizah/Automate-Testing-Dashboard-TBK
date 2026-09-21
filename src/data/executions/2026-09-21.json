@@ -1,0 +1,27 @@
+{
+  "startedAt": "2026-09-21T07:11:35.920Z",
+  "generatedAt": "2026-09-21T08:15:48.883Z",
+  "summary": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "duration": 29139,
+    "durationFormatted": "00:00:29"
+  },
+  "details": [
+    {
+      "title": "@selamat - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 29139,
+      "browser": "chromium",
+      "startTime": "2026-09-21T07:11:35.920Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: locator.click: Test ended.\nCall log:\n  - waiting for locator('.modal-content button:has-text(\"Lanjutkan\")')\n    - locator resolved to <button id=\"btnAgree\" class=\"btn btn-danger btn-radius btn-sm mx-0 my-auto waves-effect waves-light\">Lanjutkan</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n",
+        "detail": "Error: locator.click: Test ended.\nCall log:\n  - waiting for locator('.modal-content button:has-text(\"Lanjutkan\")')\n    - locator resolved to <button id=\"btnAgree\" class=\"btn btn-danger btn-radius btn-sm mx-0 my-auto waves-effect waves-light\">Lanjutkan</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n\n\n   at ..\\pages\\selamat.js:258\n\n  256 |     async konfirmasiPembayaran() {\n  257 |         await this.konfirmasi_pembayaran_btn.click()\n> 258 |         await this.konfirmasi_pembayaran_btn_modal.click();\n      |                                                    ^\n  259 |\n  260 |         await this.waitForLoader('div#modal-load', 'show', false);\n  261 |     }\n    at Selamat.konfirmasiPembayaran (E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\pages\\selamat.js:258:52)\n    at E:\\Maganghub 2025\\TBK\\Automate-Testing-WL-TBK\\tests\\reservasi_test.spec.js:68:9"
+      }
+    }
+  ]
+}
