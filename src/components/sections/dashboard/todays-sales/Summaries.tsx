@@ -76,8 +76,15 @@ const Sales = ({ data, onStatusChange }: SalesProps) => {
           </Typography>
         </div>
 
-        <Button variant="outlined" startIcon={<IconifyIcon icon="solar:upload-linear" />}>
-          Export
+        <Button
+          variant="outlined"
+          startIcon={<IconifyIcon icon="solar:download-linear" />}
+          href={data.githubRunUrl ?? undefined}
+          target="_blank"
+          rel="noopener noreferrer"
+          disabled={!data.githubRunUrl}
+        >
+          Download Evidence
         </Button>
       </Stack>
 
