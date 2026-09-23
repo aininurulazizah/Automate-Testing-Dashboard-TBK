@@ -77,9 +77,10 @@ const Sales = ({ data, onStatusChange }: SalesProps) => {
         </div>
 
         <Button
+          component="a"
           variant="outlined"
           startIcon={<IconifyIcon icon="solar:download-linear" />}
-          href={data.githubRunUrl || undefined}
+          href={data.githubRunUrl || '#'}
           target="_blank"
           rel="noopener noreferrer"
           disabled={!data.githubRunUrl}
