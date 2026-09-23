@@ -3,6 +3,7 @@ import { SvgIconProps } from '@mui/material';
 export interface DashboardData {
   startedAt: string | null;
   generatedAt: string;
+  githubRunUrl: string | null;
 
   summary: {
     total: number;
