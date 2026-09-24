@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Grid } from '@mui/material';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import Summaries from 'components/sections/dashboard/todays-sales/Summaries';
 import Details from 'components/sections/dashboard/top-products/Details';
@@ -12,6 +12,7 @@ import type { Status } from 'components/sections/dashboard/todays-sales/Summarie
 
 const Dashboard = () => {
   const { date } = useParams();
+  const navigate = useNavigate();
 
   const [selectedStatus, setSelectedStatus] = useState<Status>('All');
 
@@ -25,11 +26,22 @@ const Dashboard = () => {
 
   const dashboardData = selectedExecution ?? report;
 
+  const handleDateChange = (selectedDate: string) => {
+    navigate(`/${selectedDate}`);
+    setSelectedStatus('All');
+  };
+
   return (
     <>
       <Grid container spacing={4}>
         <Grid item xs={12} xl={7}>
-          <Summaries data={dashboardData} onStatusChange={setSelectedStatus} />
+          <Summaries
+            data={dashboardData}
+            onStatusChange={setSelectedStatus}
+            selectedDate={date}
+            availableDates={executions.map((execution) => execution.date)}
+            onDateChange={handleDateChange}
+          />
         </Grid>
 
         <Grid item xs={12} xl={5}>

@@ -20,7 +20,7 @@ const Topbar = ({ drawerWidth, onHandleDrawerToggle }: TopbarProps) => {
 
   const pageTitle = useMemo(() => {
     const navItem = sitemap.find((navItem) => location.pathname === navItem.path);
-    return navItem?.name ?? 'Dashboard';
+    return navItem?.name ?? 'Automate Test Summary Report';
   }, [location.pathname]);
 
   return (
