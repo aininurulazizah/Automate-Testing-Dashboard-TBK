@@ -43,24 +43,24 @@ const Detail = ({ item, executionDate }: DetailProps) => {
       break;
   }
 
-  const handleRerun = async () => {
-    if (!executionDate) {
-      alert('Tanggal execution tidak ditemukan.');
-      return;
-    }
+const handleRerun = async () => {
+  if (!executionDate) {
+    alert('Tanggal execution tidak ditemukan.');
+    return;
+  }
 
-    try {
-      const response = await fetch('/api/rerun', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          testFile: 'reservasi_test.spec.js',
-          keyword: testTitle,
-          executionDate,
-        }),
-      });
+  try {
+    const response = await fetch('/api/rerun', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        testFile: 'reservasi_test.spec.js',
+        keyword: testTitle,
+        executionDate,
+      }),
+    });
 
       const data = await response.json();
 
