@@ -4,8 +4,8 @@
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/36499736133/artifacts/11006433606",
   "summary": {
     "total": 79,
-    "passed": 66,
-    "failed": 12,
+    "passed": 67,
+    "failed": 11,
     "flaky": 1,
     "skipped": 0,
     "duration": 3392886,
@@ -110,15 +110,12 @@
     },
     {
       "title": "@selamat - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 91443,
+      "status": "passed",
+      "duration": 28892,
       "browser": "chromium",
-      "startTime": "2026-09-29T00:45:15.741Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[onclick=\"return cek()\"]')\n    - locator resolved to <button type=\"submit\" onclick=\"return cek()\" class=\"btn color-primary btn-radius btn-block mb-0 waves-effect waves-light\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"ss-option\" data-id=\"69411594\">2 Penumpang</div> from <div class=\"form-group col-12\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"ss-option\" data-id=\"69411594\">2 Penumpang</div> from <div class=\"form-group col-12\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    157 × waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div class=\"ss-option\" data-id=\"69411594\">2 Penumpang</div> from <div class=\"form-group col-12\">…</div> subtree intercepts pointer events\n      - retrying click action\n        - waiting 500ms\n\n\n   at ../pages/selamat.js:145\n\n  143 |\n  144 |     async cariTiket() {\n> 145 |         await this.cari_btn.click();\n      |                             ^\n  146 |     }\n  147 |\n  148 |     async pilihJadwal() {\n    at Selamat.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/selamat.js:145:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:36:19"
-      }
+      "startTime": "2026-09-29T07:36:41.107Z",
+      "bookingCode": "BSLT260929DW8M",
+      "error": null
     },
     {
       "title": "@semeru - Test Case 1 - One Way Trip",
