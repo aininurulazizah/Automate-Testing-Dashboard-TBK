@@ -11,13 +11,21 @@ import {
   useTheme,
 } from '@mui/material';
 
+import ReplayIcon from '@mui/icons-material/Replay';
+import ViewIcon from '@mui/icons-material/Visibility';
+
 import { DetailItem } from 'data/types';
 
-const Detail = ({ item }: { item: DetailItem }) => {
+interface DetailProps {
+  item: DetailItem;
+  executionDate?: string;
+}
+
+const Detail = ({ item, executionDate }: DetailProps) => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
 
-  const { id, name, priority, detail } = item;
+  const { id, name, testTitle, priority, detail } = item;
 
   let color = '';
 
@@ -34,6 +42,35 @@ const Detail = ({ item }: { item: DetailItem }) => {
       color = theme.palette.warning.main;
       break;
   }
+
+  const handleRerun = async () => {
+    if (!executionDate) {
+      alert('Tanggal execution tidak ditemukan.');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/rerun', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          testTitle,
+          executionDate,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Gagal memicu re-run');
+      }
+
+      alert('Re-run berhasil dipicu.');
+    } catch (error) {
+      console.error(error);
+      alert('Gagal memicu re-run.');
+    }
+  };
 
   return (
     <>
@@ -60,6 +97,7 @@ const Detail = ({ item }: { item: DetailItem }) => {
           <Button
             variant="outlined"
             size="small"
+            startIcon={<ViewIcon />}
             onClick={() => setOpen(true)}
             sx={{
               borderRadius: 5,
@@ -70,8 +108,28 @@ const Detail = ({ item }: { item: DetailItem }) => {
               },
             }}
           >
-            View &gt;&gt;
+            Detail
           </Button>
+
+          {priority === 'Failed' && (
+            <Button
+              variant="outlined"
+              size="small"
+              startIcon={<ReplayIcon />}
+              onClick={handleRerun}
+              sx={{
+                borderRadius: 5,
+                textTransform: 'none',
+                ml: 1,
+                '&:hover': {
+                  bgcolor: 'primary.main',
+                  color: 'common.white',
+                },
+              }}
+            >
+              Re-run
+            </Button>
+          )}
         </TableCell>
       </TableRow>
 

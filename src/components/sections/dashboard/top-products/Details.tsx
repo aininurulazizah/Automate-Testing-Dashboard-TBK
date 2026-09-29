@@ -19,15 +19,17 @@ type Status = 'All' | 'Passed' | 'Failed' | 'Flaky';
 interface DetailsProps {
   data: DashboardData;
   selectedStatus: Status;
+  executionDate?: string;
 }
 
-const DetailsItem = ({ data, selectedStatus }: DetailsProps) => {
+const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
   const details: DetailItem[] = data.details.map((item, index) => ({
     id: index + 1,
     name: item.title,
+    testTitle: item.title,
     priority: item.status === 'passed' ? 'Passed' : item.status === 'failed' ? 'Failed' : 'Flaky',
     detail: [
       item.status === 'failed'
@@ -69,7 +71,7 @@ const DetailsItem = ({ data, selectedStatus }: DetailsProps) => {
               <TableCell>#</TableCell>
               <TableCell>Test Case Name</TableCell>
               <TableCell>Test Result</TableCell>
-              <TableCell>Detail</TableCell>
+              <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
 
@@ -77,7 +79,7 @@ const DetailsItem = ({ data, selectedStatus }: DetailsProps) => {
             {filteredDetails
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((item) => (
-                <Detail key={item.id} item={item} />
+                <Detail key={item.id} item={item} executionDate={executionDate} />
               ))}
           </TableBody>
         </Table>

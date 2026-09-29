@@ -45,7 +45,7 @@ const Dashboard = () => {
         </Grid>
 
         <Grid item xs={12} xl={5}>
-          <Details data={dashboardData} selectedStatus={selectedStatus} />
+          <Details data={dashboardData} selectedStatus={selectedStatus} executionDate={date} />
         </Grid>
       </Grid>
     </>

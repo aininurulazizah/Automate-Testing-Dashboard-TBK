@@ -41,6 +41,7 @@ export interface SummaryItem {
 export interface DetailItem {
   id: number;
   name: string;
+  testTitle: string;
   priority: 'Passed' | 'Failed' | 'Flaky';
   detail: {
     bookingCode?: string;
