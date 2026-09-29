@@ -43,35 +43,46 @@ const Detail = ({ item, executionDate }: DetailProps) => {
       break;
   }
 
-  const handleRerun = async () => {
-    if (!executionDate) {
-      alert('Tanggal execution tidak ditemukan.');
-      return;
+const handleRerun = async () => {
+  if (!executionDate) {
+    alert('Tanggal execution tidak ditemukan.');
+    return;
+  }
+
+  try {
+    const response = await fetch('/api/rerun', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        testFile: 'reservasi_test.spec.js',
+        keyword: testTitle,
+        executionDate,
+      }),
+    });
+
+    const data = await response.json();
+
+    console.log('Rerun response:', data);
+
+    if (!response.ok) {
+      throw new Error(
+        data.message || data.error || 'Gagal re-run'
+      );
     }
 
-    try {
-      const response = await fetch('/api/rerun', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          testFile: 'reservasi_test.spec.js',
-          keyword: testTitle,
-          executionDate,
-        }),
-      });
+    alert('Re-run berhasil');
+  } catch (error) {
+    console.error('Rerun error:', error);
 
-      if (!response.ok) {
-        throw new Error('Gagal re-run');
-      }
-
-      alert('Re-run berhasil');
-    } catch (error) {
-      console.error(error);
-      alert('Gagal re-run');
-    }
-  };
+    alert(
+      error instanceof Error
+        ? error.message
+        : 'Gagal re-run'
+    );
+  }
+};
 
   return (
     <>
