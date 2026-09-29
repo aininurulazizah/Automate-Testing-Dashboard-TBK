@@ -62,14 +62,19 @@ const Detail = ({ item, executionDate }: DetailProps) => {
         }),
       });
 
+      const data = await response.json();
+
+      console.log('Rerun response:', data);
+
       if (!response.ok) {
-        throw new Error('Gagal re-run');
+        throw new Error(data.message || data.error || 'Gagal re-run');
       }
 
       alert('Re-run berhasil');
     } catch (error) {
-      console.error(error);
-      alert('Gagal re-run');
+      console.error('Rerun error:', error);
+
+      alert(error instanceof Error ? error.message : 'Gagal re-run');
     }
   };
 
