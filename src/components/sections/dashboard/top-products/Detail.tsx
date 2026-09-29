@@ -56,19 +56,20 @@ const Detail = ({ item, executionDate }: DetailProps) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          testTitle,
+          testFile: 'reservasi_test.spec.js',
+          keyword: testTitle,
           executionDate,
         }),
       });
 
       if (!response.ok) {
-        throw new Error('Gagal memicu re-run');
+        throw new Error('Gagal re-run');
       }
 
-      alert('Re-run berhasil dipicu.');
+      alert('Re-run berhasil');
     } catch (error) {
       console.error(error);
-      alert('Gagal memicu re-run.');
+      alert('Gagal re-run');
     }
   };
 
