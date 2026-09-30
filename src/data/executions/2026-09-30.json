@@ -5,7 +5,7 @@
   "summary": {
     "total": 79,
     "passed": 70,
-    "failed": 7,
+    "failed": 6,
     "flaky": 2,
     "skipped": 0,
     "duration": 3285689,
@@ -23,14 +23,14 @@
     },
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
-      "status": "failed",
-      "duration": 29539,
+      "status": "timedOut",
+      "duration": 92766,
       "browser": "chromium",
-      "startTime": "2026-09-30T02:39:13.510Z",
+      "startTime": "2026-09-30T10:00:53.411Z",
       "bookingCode": null,
       "error": {
-        "summary": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 288500\nReceived: 0",
-        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 288500\nReceived: 0\n\n   at ../pages/btm.js:306\n\n  304 |\n  305 |                 const actual_total_tiket_payment_1 = this.normalizeRupiah(await this.total_bayar_label_general.innerText());\n> 306 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  307 |             \n  308 |                 if (await this.total_bayar_label_payment.count() > 0) {\n  309 |                     const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.total_bayar_label_payment.innerText());\n    at Btm.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:306:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:243:36"
+        "summary": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+        "detail": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.ss-single-selected').first()\u001b[22m\n\n\n   at ../pages/btm.js:121\n\n  119 |\n  120 |     async isiKeberangkatan(value) {\n> 121 |         await this.keberangkatan.click();\n      |                                  ^\n  122 |         await this.page.locator('.ss-option', { hasText: value }).first().click();\n  123 |     }\n  124 |\n    at Btm.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:121:34)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:200:23"
       }
     },
     {
