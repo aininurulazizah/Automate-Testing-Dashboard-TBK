@@ -5,7 +5,7 @@
   "summary": {
     "total": 79,
     "passed": 70,
-    "failed": 6,
+    "failed": 5,
     "flaky": 2,
     "skipped": 0,
     "duration": 3285689,
@@ -35,14 +35,14 @@
     },
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 90797,
+      "status": "timedOut",
+      "duration": 90779,
       "browser": "chromium",
-      "startTime": "2026-09-30T02:41:17.846Z",
+      "startTime": "2026-09-30T10:07:18.301Z",
       "bookingCode": null,
       "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div').locator('div.ss-list').locator('div.ss-option:text-is(\"CILACAP\")')\n\n\n   at ../pages/cgtrans.js:122\n\n  120 |     async isiKeberangkatan(value) {\n  121 |         await this.keberangkatan_field.click();\n> 122 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n      |                                                                                        ^\n  123 |     }\n  124 |\n  125 |     async isiTujuan(value) {\n    at Cgtrans.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/cgtrans.js:122:88)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:25:9"
+        "summary": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+        "detail": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('select#asal + div').locator('div.ss-list').locator('div.ss-option:text-is(\"CILACAP\")')\u001b[22m\n\n\n   at ../pages/cgtrans.js:122\n\n  120 |     async isiKeberangkatan(value) {\n  121 |         await this.keberangkatan_field.click();\n> 122 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n      |                                                                                        ^\n  123 |     }\n  124 |\n  125 |     async isiTujuan(value) {\n    at Cgtrans.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/cgtrans.js:122:88)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:25:9"
       }
     },
     {
