@@ -4,8 +4,8 @@
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/36659778346/artifacts/11075542867",
   "summary": {
     "total": 79,
-    "passed": 68,
-    "failed": 9,
+    "passed": 70,
+    "failed": 7,
     "flaky": 2,
     "skipped": 0,
     "duration": 3285689,
@@ -14,15 +14,12 @@
   "details": [
     {
       "title": "@baraya - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 25987,
+      "status": "passed",
+      "duration": 34924,
       "browser": "chromium",
-      "startTime": "2026-09-30T02:34:44.022Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Error: expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0\nReceived:    79000",
-        "detail": "Error: expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0\nReceived:    79000\n\n   at ../pages/baraya.js:323\n\n  321 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  322 |                 } catch {\n> 323 |                     expect(expected_total_tiket).toBeLessThanOrEqual(actual_total_tiket_seat_1)\n      |                                                  ^\n  324 |                 }\n  325 |\n  326 |                 const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('p#totalbayar').innerText());\n    at Baraya.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/baraya.js:323:50)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-09-30T07:40:01.791Z",
+      "bookingCode": "BBRT26093068NB",
+      "error": null
     },
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
@@ -110,15 +107,12 @@
     },
     {
       "title": "@yantigroup - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 106947,
+      "status": "passed",
+      "duration": 41540,
       "browser": "chromium",
-      "startTime": "2026-09-30T03:33:55.641Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.yantigroup.com/\", waiting until \"load\"\n\n\n  101 |             const web = new site.locator(page);\n  102 |     \n> 103 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  104 |\n  105 |             await clearBrowserState(page);\n  106 |     \n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:103:24"
-      }
+      "startTime": "2026-09-30T09:52:40.149Z",
+      "bookingCode": "BYGS260930UP2H",
+      "error": null
     },
     {
       "title": "@adibuzz - Test Case 1 - One Way Trip",

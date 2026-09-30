@@ -4,8 +4,8 @@
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/36659778346/artifacts/11075542867",
   "summary": {
     "total": 79,
-    "passed": 69,
-    "failed": 8,
+    "passed": 70,
+    "failed": 7,
     "flaky": 2,
     "skipped": 0,
     "duration": 3285689,
@@ -107,15 +107,12 @@
     },
     {
       "title": "@yantigroup - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 106947,
+      "status": "passed",
+      "duration": 41540,
       "browser": "chromium",
-      "startTime": "2026-09-30T03:33:55.641Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.yantigroup.com/\", waiting until \"load\"\n\n\n  101 |             const web = new site.locator(page);\n  102 |     \n> 103 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  104 |\n  105 |             await clearBrowserState(page);\n  106 |     \n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:103:24"
-      }
+      "startTime": "2026-09-30T09:52:40.149Z",
+      "bookingCode": "BYGS260930UP2H",
+      "error": null
     },
     {
       "title": "@adibuzz - Test Case 1 - One Way Trip",
