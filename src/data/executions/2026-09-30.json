@@ -23,7 +23,7 @@
     },
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
-      "status": "timedOut",
+      "status": "failed",
       "duration": 92766,
       "browser": "chromium",
       "startTime": "2026-09-30T10:00:53.411Z",
@@ -35,7 +35,7 @@
     },
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
-      "status": "timedOut",
+      "status": "failed",
       "duration": 90779,
       "browser": "chromium",
       "startTime": "2026-09-30T10:07:18.301Z",
