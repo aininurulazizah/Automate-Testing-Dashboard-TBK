@@ -4,8 +4,8 @@
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/36659778346/artifacts/11075542867",
   "summary": {
     "total": 79,
-    "passed": 70,
-    "failed": 5,
+    "passed": 71,
+    "failed": 4,
     "flaky": 2,
     "skipped": 0,
     "duration": 3285689,
@@ -59,15 +59,12 @@
     },
     {
       "title": "@krakaline - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93824,
+      "status": "passed",
+      "duration": 26788,
       "browser": "chromium",
-      "startTime": "2026-09-30T02:57:49.471Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Error: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users li').first().locator('div.harga > p').first()\n\n\n   at ../pages/krakaline.js:163\n\n  161 |\n  162 |         const first_jadwal = await this.jadwal_card.first();\n> 163 |         const harga_tiket = await first_jadwal.locator('div.harga > p').first().innerText();\n      |                                                                                 ^\n  164 |         await first_jadwal.locator('button:has-text(\"Pilih\")').first().click();\n  165 |         return harga_tiket;\n  166 |     }\n    at Krakaline.pilihJadwal (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/krakaline.js:163:81)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:38:29"
-      }
+      "startTime": "2026-10-01T07:38:13.165Z",
+      "bookingCode": "BKRL261001U6CV",
+      "error": null
     },
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
