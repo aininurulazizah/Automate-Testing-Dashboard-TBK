@@ -15,9 +15,9 @@
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 28844,
+      "duration": 27470,
       "browser": "chromium",
-      "startTime": "2026-10-01T08:36:25.933Z",
+      "startTime": "2026-10-01T10:27:27.669Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -27,9 +27,9 @@
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90746,
+      "duration": 90577,
       "browser": "chromium",
-      "startTime": "2026-10-01T08:42:00.458Z",
+      "startTime": "2026-10-01T10:29:28.604Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -39,13 +39,13 @@
     {
       "title": "@cgtrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90745,
+      "duration": 90575,
       "browser": "chromium",
-      "startTime": "2026-09-30T23:10:40.951Z",
+      "startTime": "2026-10-01T10:32:32.285Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div').locator('div.ss-list').locator('div.ss-option:text-is(\"CILACAP\")')\n\n\n   at ../pages/cgtrans.js:122\n\n  120 |     async isiKeberangkatan(value) {\n  121 |         await this.keberangkatan_field.click();\n> 122 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n      |                                                                                        ^\n  123 |     }\n  124 |\n  125 |     async isiTujuan(value) {\n    at Cgtrans.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/cgtrans.js:122:88)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:111:13"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div').locator('div.ss-list').locator('div.ss-option:text-is(\"CILACAP\")')\n\n   at ../pages/cgtrans.js:122\n\n  120 |     async isiKeberangkatan(value) {\n  121 |         await this.keberangkatan_field.click();\n> 122 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n      |                                                                                        ^\n  123 |     }\n  124 |\n  125 |     async isiTujuan(value) {\n    at Cgtrans.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/cgtrans.js:122:88)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:111:13"
       }
     },
     {
@@ -78,36 +78,36 @@
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93772,
+      "duration": 92601,
       "browser": "chromium",
-      "startTime": "2026-09-30T23:27:38.757Z",
+      "startTime": "2026-10-01T10:35:37.909Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Error: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users li').first().locator('div.harga > p').first()\n\n\n   at ../pages/krakaline.js:163\n\n  161 |\n  162 |         const first_jadwal = await this.jadwal_card.first();\n> 163 |         const harga_tiket = await first_jadwal.locator('div.harga > p').first().innerText();\n      |                                                                                 ^\n  164 |         await first_jadwal.locator('button:has-text(\"Pilih\")').first().click();\n  165 |         return harga_tiket;\n  166 |     }\n    at Krakaline.pilihJadwal (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/krakaline.js:163:81)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:128:33"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users').nth(1).locator('li').first().locator('p:has-text(\"Rp\")').first()\n\n   at ../pages/krakaline.js:172\n\n  170 |\n  171 |         const first_jadwal = await this.jadwal_plg_card.first();\n> 172 |         const harga_tiket = await first_jadwal.locator('p:has-text(\"Rp\")').first().innerText();\n      |                                                                                    ^\n  173 |         await first_jadwal.locator('button:has-text(\"Pilih\")').first().click();\n  174 |         return harga_tiket;\n  175 |     }\n    at Krakaline.pilihJadwalPulang (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/krakaline.js:172:84)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:130:37"
       }
     },
     {
       "title": "@royalkencana - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93254,
+      "duration": 92774,
       "browser": "chromium",
-      "startTime": "2026-09-30T23:45:38.631Z",
+      "startTime": "2026-10-01T10:38:45.425Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Error: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users').nth(1).locator('li').first().locator('p:has-text(\"Rp\")').first()\n\n\n   at ../pages/royalkencana.js:172\n\n  170 |\n  171 |         const first_jadwal = await this.jadwal_plg_card.first();\n> 172 |         const harga_tiket = await first_jadwal.locator('p:has-text(\"Rp\")').first().innerText();\n      |                                                                                    ^\n  173 |         await first_jadwal.locator('button:has-text(\"Pilih\")').first().click();\n  174 |         return harga_tiket;\n  175 |     }\n    at Royalkencana.pilihJadwalPulang (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/royalkencana.js:172:84)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:130:37"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users').nth(1).locator('li').first().locator('p:has-text(\"Rp\")').first()\n\n   at ../pages/royalkencana.js:172\n\n  170 |\n  171 |         const first_jadwal = await this.jadwal_plg_card.first();\n> 172 |         const harga_tiket = await first_jadwal.locator('p:has-text(\"Rp\")').first().innerText();\n      |                                                                                    ^\n  173 |         await first_jadwal.locator('button:has-text(\"Pilih\")').first().click();\n  174 |         return harga_tiket;\n  175 |     }\n    at Royalkencana.pilihJadwalPulang (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/royalkencana.js:172:84)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:130:37"
       }
     },
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 41511,
+      "duration": 34754,
       "browser": "chromium",
-      "startTime": "2026-09-30T23:56:17.257Z",
+      "startTime": "2026-10-01T10:41:03.985Z",
       "bookingCode": null,
       "error": {
-        "summary": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 370000\nReceived: 320000",
+        "summary": "Error: expect(received).toBe(expected) // Object.is equality",
         "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 370000\nReceived: 320000\n\n   at ../pages/trikusuma.js:343\n\n  341 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n  342 |\n> 343 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  344 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  345 |\n  346 |                 return expected_total_tiket;\n    at Trikusuma.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/trikusuma.js:343:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:150:36"
       }
     },
