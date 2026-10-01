@@ -4,8 +4,8 @@
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/36788064082/artifacts/11133062091",
   "summary": {
     "total": 79,
-    "passed": 66,
-    "failed": 10,
+    "passed": 67,
+    "failed": 9,
     "flaky": 3,
     "skipped": 0,
     "duration": 3149483,
@@ -50,15 +50,12 @@
     },
     {
       "title": "@joglosemar - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 28610,
+      "status": "passed",
+      "duration": 48754,
       "browser": "chromium",
-      "startTime": "2026-09-30T23:20:04.249Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 105000\nReceived: 95000",
-        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 105000\nReceived: 95000\n\n   at ../pages/joglosemar.js:286\n\n  284 |                 }\n  285 |\n> 286 |                 expect(harga_kursi).toBe(this.normalizeRupiah(harga_tiket));\n      |                                     ^\n  287 |             }\n  288 |         }\n  289 |         \n    at Joglosemar.validasiHargaTiketKursi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/joglosemar.js:286:37)\n    at Joglosemar.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/joglosemar.js:302:21)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-01T08:00:40.309Z",
+      "bookingCode": "BJGS261001J1EG",
+      "error": null
     },
     {
       "title": "@joglosemar - Test Case 2 - Round Trip",
