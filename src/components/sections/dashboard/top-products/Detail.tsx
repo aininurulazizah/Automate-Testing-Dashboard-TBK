@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {
+  Box,
   Chip,
   Dialog,
   DialogTitle,
@@ -8,11 +9,14 @@ import {
   TableRow,
   Typography,
   Button,
+  IconButton,
   useTheme,
 } from '@mui/material';
 
 import ReplayIcon from '@mui/icons-material/Replay';
 import ViewIcon from '@mui/icons-material/Visibility';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import CheckIcon from '@mui/icons-material/Check';
 
 import { DetailItem } from 'data/types';
 
@@ -42,6 +46,21 @@ const Detail = ({ item, executionDate }: DetailProps) => {
       color = theme.palette.warning.main;
       break;
   }
+
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const handleCopy = async (text: string, key: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(key);
+
+      setTimeout(() => {
+        setCopied(null);
+      }, 1500);
+    } catch (error) {
+      console.error('Gagal copy:', error);
+    }
+  };
 
   const handleRerun = async () => {
     if (!executionDate) {
@@ -146,22 +165,66 @@ const Detail = ({ item, executionDate }: DetailProps) => {
           {detail.map((item, index) => (
             <div key={index} style={{ marginBottom: 20 }}>
               {item.bookingCode && (
-                <Typography color="primary">Booking Code : {item.bookingCode}</Typography>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 0.5,
+                    mb: 1,
+                  }}
+                >
+                  <Typography color="primary">Booking Code : {item.bookingCode}</Typography>
+
+                  <IconButton
+                    size="small"
+                    onClick={() => handleCopy(item.bookingCode!, `booking-${index}`)}
+                    title="Copy booking code"
+                  >
+                    {copied === `booking-${index}` ? (
+                      <CheckIcon fontSize="small" color="success" />
+                    ) : (
+                      <ContentCopyIcon fontSize="small" />
+                    )}
+                  </IconButton>
+                </Box>
               )}
 
               {item.error && (
-                <Typography
-                  color="error"
-                  component="pre"
+                <Box
                   sx={{
-                    whiteSpace: 'pre-wrap',
-                    fontFamily: 'inherit',
-                    fontSize: '0.875rem',
-                    margin: 0,
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: 0.5,
                   }}
                 >
-                  Error : {item.error.detail || item.error.summary}
-                </Typography>
+                  <Typography
+                    color="error"
+                    component="pre"
+                    sx={{
+                      whiteSpace: 'pre-wrap',
+                      fontFamily: 'inherit',
+                      fontSize: '0.875rem',
+                      margin: 0,
+                      flex: 1,
+                    }}
+                  >
+                    Error : {item.error.detail || item.error.summary}
+                  </Typography>
+
+                  <IconButton
+                    size="small"
+                    onClick={() =>
+                      handleCopy(item.error?.detail || item.error?.summary || '', `error-${index}`)
+                    }
+                    title="Copy error detail"
+                  >
+                    {copied === `error-${index}` ? (
+                      <CheckIcon fontSize="small" color="success" />
+                    ) : (
+                      <ContentCopyIcon fontSize="small" />
+                    )}
+                  </IconButton>
+                </Box>
               )}
             </div>
           ))}
