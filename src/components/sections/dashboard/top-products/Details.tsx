@@ -34,7 +34,7 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
     detail: [
       item.status === 'failed'
         ? {
-            error: item.error?.summary ?? '-',
+            error: item.error ?? null,
           }
         : {
             bookingCode: item.bookingCode ?? '-',

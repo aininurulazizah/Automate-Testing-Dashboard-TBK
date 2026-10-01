@@ -38,13 +38,18 @@ export interface SummaryItem {
   svgIcon?: (props: SvgIconProps) => JSX.Element;
 }
 
+export interface ErrorDetail {
+  summary?: string | null;
+  detail?: string | null;
+}
+
 export interface DetailItem {
   id: number;
   name: string;
   testTitle: string;
   priority: 'Passed' | 'Failed' | 'Flaky';
   detail: {
-    bookingCode?: string;
-    error?: string;
+    bookingCode?: string | null;
+    error?: ErrorDetail | null;
   }[];
 }

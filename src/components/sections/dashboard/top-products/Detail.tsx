@@ -149,7 +149,20 @@ const Detail = ({ item, executionDate }: DetailProps) => {
                 <Typography color="primary">Booking Code : {item.bookingCode}</Typography>
               )}
 
-              {item.error && <Typography color="error">Error : {item.error}</Typography>}
+              {item.error && (
+                <Typography
+                  color="error"
+                  component="pre"
+                  sx={{
+                    whiteSpace: 'pre-wrap',
+                    fontFamily: 'inherit',
+                    fontSize: '0.875rem',
+                    margin: 0,
+                  }}
+                >
+                  Error : {item.error.detail || item.error.summary}
+                </Typography>
+              )}
             </div>
           ))}
         </DialogContent>
