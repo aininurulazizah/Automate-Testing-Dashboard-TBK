@@ -4,8 +4,8 @@
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/36499736133/artifacts/11006433606",
   "summary": {
     "total": 79,
-    "passed": 71,
-    "failed": 7,
+    "passed": 72,
+    "failed": 6,
     "flaky": 1,
     "skipped": 0,
     "duration": 3392886,
@@ -110,15 +110,12 @@
     },
     {
       "title": "@semeru - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 95523,
+      "status": "passed",
+      "duration": 21507,
       "browser": "chromium",
-      "startTime": "2026-10-01T11:02:16.249Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users ul > li').first().locator('p.harga')\n\n   at ../pages/semeru.js:99\n\n   97 |     async pilihJadwal() {\n   98 |         await this.page.waitForTimeout(3000);\n>  99 |         const harga_tiket =  await this.jadwal_card.first().locator('p.harga').innerText();\n      |                                                                                ^\n  100 |         const jadwal_button = await this.jadwal_card.first().locator('button:has-text(\"Pilih\")');\n  101 |         await jadwal_button.click();\n  102 |         return harga_tiket\n    at Semeru.pilihJadwal (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/semeru.js:99:80)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:38:29"
-      }
+      "startTime": "2026-10-01T11:10:27.617Z",
+      "bookingCode": "BSMR261001USYA",
+      "error": null
     },
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
