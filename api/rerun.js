@@ -9,12 +9,27 @@ export default async function handler(req, res) {
     const {
       testFile,
       keyword,
+      keywords,
       executionDate,
     } = req.body;
 
-    if (!testFile || !keyword || !executionDate) {
+    // Re-run satu test  -> keyword
+    // Re-run banyak test -> keywords[]
+
+    let grepKeyword = keyword;
+
+    if (Array.isArray(keywords) && keywords.length > 0) {
+      // Escape karakter regex agar title test dianggap sebagai teks biasa
+      const escapedKeywords = keywords.map((item) =>
+        item.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+      );
+
+      grepKeyword = escapedKeywords.join('|');
+    }
+
+    if (!testFile || !grepKeyword || !executionDate) {
       return res.status(400).json({
-        message: 'testFile, keyword, dan executionDate wajib diisi.',
+        message: 'testFile, keyword/keywords, dan executionDate wajib diisi.',
       });
     }
 
@@ -32,7 +47,7 @@ export default async function handler(req, res) {
           ref: 'master',
           inputs: {
             test_file: testFile,
-            keyword,
+            keyword: grepKeyword,
             rerun: 'true',
             execution_date: executionDate,
           },
@@ -53,7 +68,10 @@ export default async function handler(req, res) {
 
     return res.status(200).json({
       success: true,
-      message: 'Rerun berhasil dikirim ke GitHub Actions.',
+      message:
+        keywords?.length > 1
+          ? `Rerun ${keywords.length} test berhasil dikirim ke GitHub Actions.`
+          : 'Rerun berhasil dikirim ke GitHub Actions.',
     });
 
   } catch (error) {
