@@ -4,8 +4,8 @@
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/36951147348/artifacts/11205758110",
   "summary": {
     "total": 79,
-    "passed": 65,
-    "failed": 11,
+    "passed": 66,
+    "failed": 10,
     "flaky": 3,
     "skipped": 0,
     "duration": 2952286,
@@ -15,9 +15,9 @@
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 27672,
+      "duration": 27969,
       "browser": "chromium",
-      "startTime": "2026-10-02T01:40:37.943Z",
+      "startTime": "2026-10-02T02:45:32.578Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -27,9 +27,9 @@
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90746,
+      "duration": 90715,
       "browser": "chromium",
-      "startTime": "2026-10-02T01:42:40.094Z",
+      "startTime": "2026-10-02T02:47:35.223Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -39,9 +39,9 @@
     {
       "title": "@cgtrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90739,
+      "duration": 90755,
       "browser": "chromium",
-      "startTime": "2026-10-02T01:45:44.665Z",
+      "startTime": "2026-10-02T02:50:39.815Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -51,9 +51,9 @@
     {
       "title": "@jackal - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 31188,
+      "duration": 31295,
       "browser": "chromium",
-      "startTime": "2026-10-02T01:53:12.790Z",
+      "startTime": "2026-10-02T02:52:43.767Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -63,9 +63,9 @@
     {
       "title": "@jackal - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 48655,
+      "duration": 46378,
       "browser": "chromium",
-      "startTime": "2026-10-02T01:54:42.418Z",
+      "startTime": "2026-10-02T02:54:16.042Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -75,9 +75,9 @@
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93019,
+      "duration": 93699,
       "browser": "chromium",
-      "startTime": "2026-10-02T02:02:14.247Z",
+      "startTime": "2026-10-02T02:56:40.069Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -87,9 +87,9 @@
     {
       "title": "@kupuayu - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 10998,
+      "duration": 12542,
       "browser": "chromium",
-      "startTime": "2026-10-02T02:07:48.641Z",
+      "startTime": "2026-10-02T02:58:27.927Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: locator.click: Error: strict mode violation: locator('p:has-text(\"Tujuan\")') resolved to 2 elements:",
@@ -99,9 +99,9 @@
     {
       "title": "@kupuayu - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 12088,
+      "duration": 13001,
       "browser": "chromium",
-      "startTime": "2026-10-02T02:08:13.178Z",
+      "startTime": "2026-10-02T02:58:54.945Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: locator.click: Error: strict mode violation: locator('p:has-text(\"Tujuan\")') resolved to 2 elements:",
@@ -111,9 +111,9 @@
     {
       "title": "@royalkencana - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93297,
+      "duration": 93356,
       "browser": "chromium",
-      "startTime": "2026-10-02T02:19:24.723Z",
+      "startTime": "2026-10-02T03:00:44.097Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -123,9 +123,9 @@
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 37146,
+      "duration": 35849,
       "browser": "chromium",
-      "startTime": "2026-10-02T02:28:17.045Z",
+      "startTime": "2026-10-02T03:02:56.358Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -134,15 +134,12 @@
     },
     {
       "title": "@yantigroup - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 18465,
+      "status": "passed",
+      "duration": 40850,
       "browser": "chromium",
-      "startTime": "2026-10-02T02:33:30.336Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://www.yantigroup.com/",
-        "detail": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://www.yantigroup.com/\nCall log:\n  - navigating to \"https://www.yantigroup.com/\", waiting until \"load\"\n\n  101 |             const web = new site.locator(page);\n  102 |\n> 103 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  104 |\n  105 |             await clearBrowserState(page);\n  106 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:103:24"
-      }
+      "startTime": "2026-10-02T03:03:34.225Z",
+      "bookingCode": "BYGS261002UKSZ",
+      "error": null
     },
     {
       "title": "@baraya - Test Case 1 - One Way Trip",
