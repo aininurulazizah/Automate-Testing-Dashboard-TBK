@@ -1,16 +1,13 @@
-import {
-  Typography,
-  Grid,
-  Paper,
-  Stack,
-  Button,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-} from '@mui/material';
+import { Typography, Grid, Paper, Stack, Button, TextField } from '@mui/material';
 
+import dayjs from 'dayjs';
+import 'dayjs/locale/id';
+
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import IconifyIcon from 'components/base/IconifyIcon';
+
 import { DashboardData } from 'data/types';
 import SaleCard from './SummaryCard';
 
@@ -83,14 +80,6 @@ const Sales = ({
     return `${datePart}, ${timePart} WIB`;
   })();
 
-  const formatDate = (date: string) => {
-    return new Date(`${date}T00:00:00`).toLocaleDateString('id-ID', {
-      day: '2-digit',
-      month: 'short',
-      year: 'numeric',
-    });
-  };
-
   return (
     <Paper sx={{ pt: 2.875, pb: 4, px: 4 }}>
       <Stack
@@ -115,55 +104,50 @@ const Sales = ({
           spacing={2}
           alignItems={{ xs: 'stretch', sm: 'center' }}
         >
-          <FormControl size="small" sx={{ minWidth: 170 }}>
-            <InputLabel id="execution-date-label" sx={{ fontSize: 14 }}>
-              Execution Date
-            </InputLabel>
-
-            <Select
-              labelId="execution-date-label"
-              value={selectedDate ?? ''}
+          <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="id">
+            <DatePicker
               label="Execution Date"
-              onChange={(event) => onDateChange(event.target.value)}
-              sx={{
-                fontSize: 14,
-                color: 'neutral.darker',
-
-                '& .MuiSelect-select': {
-                  py: 1.4,
-                },
-
-                '& .MuiSelect-icon': {
-                  color: 'primary.lighter',
-                },
-
-                '& .MuiOutlinedInput-notchedOutline': {
-                  borderColor: 'grey.350',
-                },
-
-                '&:hover .MuiOutlinedInput-notchedOutline': {
-                  borderColor: 'primary.main',
-                },
-
-                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                  borderColor: 'primary.main',
-                },
+              value={selectedDate ? dayjs(selectedDate) : null}
+              onChange={(newValue) => {
+                if (newValue) {
+                  onDateChange(newValue.format('YYYY-MM-DD'));
+                }
               }}
-            >
-              {availableDates.map((date) => (
-                <MenuItem
-                  key={date}
-                  value={date}
+              inputFormat="DD MMM YYYY"
+              shouldDisableDate={(date) => {
+                return !availableDates.includes(date.format('YYYY-MM-DD'));
+              }}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  size="small"
                   sx={{
-                    fontSize: 14,
-                    color: 'primary.darker',
+                    width: 170,
+
+                    '& .MuiInputBase-input': {
+                      fontSize: 14,
+                    },
+
+                    '& .MuiInputLabel-root': {
+                      fontSize: 14,
+                    },
+
+                    '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: 'grey.350',
+                    },
+
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                      borderColor: 'primary.main',
+                    },
+
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                      borderColor: 'primary.main',
+                    },
                   }}
-                >
-                  {formatDate(date)}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
+                />
+              )}
+            />
+          </LocalizationProvider>
 
           <Button
             component="a"
