@@ -4,8 +4,8 @@
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/37258004487/artifacts/11324798556",
   "summary": {
     "total": 79,
-    "passed": 67,
-    "failed": 8,
+    "passed": 68,
+    "failed": 7,
     "flaky": 4,
     "skipped": 0,
     "duration": 3215813,
@@ -71,15 +71,12 @@
     },
     {
       "title": "@joglosemar - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 95012,
+      "status": "passed",
+      "duration": 50097,
       "browser": "chromium",
-      "startTime": "2026-10-05T03:39:52.558Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div, input#berangkat')\n\n   at ../pages/joglosemar.js:127\n\n  125 |\n  126 |     async isiKeberangkatan(value) {\n> 127 |         await this.keberangkatan_field.click();\n      |                                        ^\n  128 |         await this.page.waitForTimeout(1000);\n  129 |         await this.dropdown_keberangkatan.locator('.ss-option').filter({ hasText: `${value}`})\n  130 |           .or(this.dropdown_keberangkatan.locator('span').filter({ hasText: `${value}`}))\n    at Joglosemar.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/joglosemar.js:127:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:111:23"
-      }
+      "startTime": "2026-10-05T07:38:03.447Z",
+      "bookingCode": "BJGS261005DX3G",
+      "error": null
     },
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
