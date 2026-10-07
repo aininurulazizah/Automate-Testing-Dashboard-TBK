@@ -28,6 +28,7 @@ interface DetailProps {
 const Detail = ({ item, executionDate }: DetailProps) => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const [rerunning, setRerunning] = useState(false);
 
   const { id, name, testTitle, priority, detail } = item;
 
@@ -69,6 +70,19 @@ const Detail = ({ item, executionDate }: DetailProps) => {
     }
 
     try {
+      // Ambil generatedAt execution saat ini
+      const currentResponse = await fetch(`/executions/${executionDate}.json?t=${Date.now()}`, {
+        cache: 'no-store',
+      });
+
+      if (!currentResponse.ok) {
+        throw new Error('Gagal mengambil data execution saat ini.');
+      }
+
+      const currentData = await currentResponse.json();
+      const currentGeneratedAt = currentData.generatedAt;
+
+      // Trigger GitHub Actions
       const response = await fetch('/api/rerun', {
         method: 'POST',
         headers: {
@@ -81,17 +95,57 @@ const Detail = ({ item, executionDate }: DetailProps) => {
         }),
       });
 
-      const data = await response.json();
+      const responseText = await response.text();
 
-      console.log('Rerun response:', data);
+      let result: {
+        message?: string;
+        error?: string;
+      } = {};
+
+      if (responseText) {
+        try {
+          result = JSON.parse(responseText);
+        } catch {
+          // Response bukan JSON, abaikan
+        }
+      }
 
       if (!response.ok) {
-        throw new Error(data.message || data.error || 'Gagal re-run');
+        throw new Error(result.message || result.error || responseText || 'Gagal re-run');
       }
 
       alert('Re-run berhasil');
+
+      // Trigger berhasil → ubah tombol menjadi Re-running...
+      setRerunning(true);
+
+      // Polling setiap 5 detik
+      const interval = setInterval(async () => {
+        try {
+          const latestResponse = await fetch(`/executions/${executionDate}.json?t=${Date.now()}`, {
+            cache: 'no-store',
+          });
+
+          if (!latestResponse.ok) {
+            return;
+          }
+
+          const latestData = await latestResponse.json();
+
+          // Execution baru sudah masuk
+          if (latestData.generatedAt !== currentGeneratedAt) {
+            clearInterval(interval);
+
+            window.location.reload();
+          }
+        } catch (error) {
+          console.error('Polling execution error:', error);
+        }
+      }, 5000);
     } catch (error) {
       console.error('Rerun error:', error);
+
+      setRerunning(false);
 
       alert(error instanceof Error ? error.message : 'Gagal re-run');
     }
@@ -142,6 +196,7 @@ const Detail = ({ item, executionDate }: DetailProps) => {
               size="small"
               startIcon={<ReplayIcon />}
               onClick={handleRerun}
+              disabled={rerunning}
               sx={{
                 borderRadius: 5,
                 textTransform: 'none',
@@ -152,7 +207,7 @@ const Detail = ({ item, executionDate }: DetailProps) => {
                 },
               }}
             >
-              Re-run
+              {rerunning ? 'Re-running...' : 'Re-run'}
             </Button>
           )}
         </TableCell>
