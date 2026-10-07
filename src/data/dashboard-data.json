@@ -1,6 +1,6 @@
 {
   "startedAt": "2026-10-07T07:17:30.193Z",
-  "generatedAt": "2026-10-07T08:38:34.235Z",
+  "generatedAt": "2026-10-07T09:05:59.186Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/37586349268/artifacts/11469409526",
   "summary": {
     "total": 79,
@@ -15,21 +15,21 @@
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 106925,
+      "duration": 31184,
       "browser": "chromium",
-      "startTime": "2026-10-07T08:36:45.118Z",
+      "startTime": "2026-10-07T08:51:22.881Z",
       "bookingCode": null,
       "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.btmshuttle.id/\", waiting until \"load\"\n\n  190 |             const web = new site.locator(page);\n  191 |\n> 192 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  193 |\n  194 |             await clearBrowserState(page);\n  195 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:192:24"
+        "summary": "Error: expect(received).toBe(expected) // Object.is equality",
+        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 288500\nReceived: 0\n\n   at ../pages/btm.js:306\n\n  304 |\n  305 |                 const actual_total_tiket_payment_1 = this.normalizeRupiah(await this.total_bayar_label_general.innerText());\n> 306 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  307 |\n  308 |                 if (await this.total_bayar_label_payment.count() > 0) {\n  309 |                     const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.total_bayar_label_payment.innerText());\n    at Btm.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:306:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:243:36"
       }
     },
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90632,
+      "duration": 90819,
       "browser": "chromium",
-      "startTime": "2026-10-07T07:30:24.446Z",
+      "startTime": "2026-10-07T08:53:28.865Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -39,9 +39,9 @@
     {
       "title": "@cgtrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90630,
+      "duration": 90790,
       "browser": "chromium",
-      "startTime": "2026-10-07T07:33:28.252Z",
+      "startTime": "2026-10-07T08:56:33.808Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -51,9 +51,9 @@
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 92598,
+      "duration": 93683,
       "browser": "chromium",
-      "startTime": "2026-10-07T07:48:39.432Z",
+      "startTime": "2026-10-07T08:59:41.464Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -63,9 +63,9 @@
     {
       "title": "@royalkencana - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 92718,
+      "duration": 93577,
       "browser": "chromium",
-      "startTime": "2026-10-07T08:04:59.676Z",
+      "startTime": "2026-10-07T09:02:51.482Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -75,9 +75,9 @@
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 42723,
+      "duration": 43064,
       "browser": "chromium",
-      "startTime": "2026-10-07T08:15:50.898Z",
+      "startTime": "2026-10-07T09:05:12.079Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
