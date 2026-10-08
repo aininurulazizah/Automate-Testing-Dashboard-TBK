@@ -66,40 +66,37 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
       alert('Tanggal execution tidak ditemukan.');
       return;
     }
-  
+
     const failedTests = data.details
       .filter((item) => item.status === 'failed')
       .map((item) => item.title);
-  
+
     if (failedTests.length === 0) {
       alert('Tidak ada test case yang failed.');
       return;
     }
-  
+
     const confirmed = window.confirm(
       `Akan re-run ${failedTests.length} test case yang failed. Lanjutkan?`,
     );
-  
+
     if (!confirmed) {
       return;
     }
-  
+
     try {
       // Ambil generatedAt execution saat ini
-      const currentResponse = await fetch(
-        `/executions/${executionDate}.json?t=${Date.now()}`,
-        {
-          cache: 'no-store',
-        },
-      );
-  
+      const currentResponse = await fetch(`/executions/${executionDate}.json?t=${Date.now()}`, {
+        cache: 'no-store',
+      });
+
       if (!currentResponse.ok) {
         throw new Error('Gagal mengambil data execution saat ini.');
       }
-  
+
       const currentData = await currentResponse.json();
       const currentGeneratedAt = currentData.generatedAt;
-  
+
       // Trigger GitHub Actions
       const response = await fetch('/api/rerun', {
         method: 'POST',
@@ -112,14 +109,14 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
           executionDate,
         }),
       });
-  
+
       const responseText = await response.text();
-  
+
       let result: {
         message?: string;
         error?: string;
       } = {};
-  
+
       if (responseText) {
         try {
           result = JSON.parse(responseText);
@@ -127,30 +124,29 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
           // Response bukan JSON, abaikan
         }
       }
-  
+
       if (!response.ok) {
-        throw new Error(result.message || result.error || responseText || 'Gagal re-run semua failed test');
+        throw new Error(
+          result.message || result.error || responseText || 'Gagal re-run semua failed test',
+        );
       }
-  
+
       // Trigger berhasil → ubah tombol menjadi Re-running...
       setRerunningAll(true);
-  
+
       // Polling setiap 5 detik
       const interval = setInterval(async () => {
         try {
-          const latestResponse = await fetch(
-            `/executions/${executionDate}.json?t=${Date.now()}`,
-            {
-              cache: 'no-store',
-            },
-          );
-  
+          const latestResponse = await fetch(`/executions/${executionDate}.json?t=${Date.now()}`, {
+            cache: 'no-store',
+          });
+
           if (!latestResponse.ok) {
             return;
           }
-  
+
           const latestData = await latestResponse.json();
-  
+
           // Execution baru sudah masuk
           if (latestData.generatedAt !== currentGeneratedAt) {
             clearInterval(interval);
@@ -163,7 +159,7 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
     } catch (error) {
       console.error('Rerun all failed error:', error);
       setRerunningAll(false);
-  
+
       alert(error instanceof Error ? error.message : 'Gagal re-run semua failed test');
     }
   };
@@ -187,7 +183,7 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
           variant="outlined"
           size="small"
           onClick={handleRerunAllFailed}
-          disabled={ rerunningAll || !data.details.some((item) => item.status === 'failed') }
+          disabled={rerunningAll || !data.details.some((item) => item.status === 'failed')}
           sx={{
             borderRadius: 5,
             textTransform: 'none',
