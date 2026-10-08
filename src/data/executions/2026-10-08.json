@@ -1,6 +1,6 @@
 {
   "startedAt": "2026-10-07T23:31:12.970Z",
-  "generatedAt": "2026-10-08T06:44:11.828Z",
+  "generatedAt": "2026-10-08T06:47:02.880Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/37702678669/artifacts/11520941334",
   "summary": {
     "total": 79,
@@ -15,9 +15,9 @@
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 30325,
+      "duration": 38706,
       "browser": "chromium",
-      "startTime": "2026-10-08T06:27:07.420Z",
+      "startTime": "2026-10-08T06:46:20.741Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
