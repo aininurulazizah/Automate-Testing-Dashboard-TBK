@@ -27,6 +27,7 @@ interface DetailsProps {
 const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rerunningAll, setRerunningAll] = useState(false);
 
   const details: DetailItem[] = data.details.map((item, index) => ({
     id: index + 1,
@@ -65,25 +66,41 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
       alert('Tanggal execution tidak ditemukan.');
       return;
     }
-
+  
     const failedTests = data.details
       .filter((item) => item.status === 'failed')
       .map((item) => item.title);
-
+  
     if (failedTests.length === 0) {
       alert('Tidak ada test case yang failed.');
       return;
     }
-
+  
     const confirmed = window.confirm(
       `Akan re-run ${failedTests.length} test case yang failed. Lanjutkan?`,
     );
-
+  
     if (!confirmed) {
       return;
     }
-
+  
     try {
+      // Ambil generatedAt execution saat ini
+      const currentResponse = await fetch(
+        `/executions/${executionDate}.json?t=${Date.now()}`,
+        {
+          cache: 'no-store',
+        },
+      );
+  
+      if (!currentResponse.ok) {
+        throw new Error('Gagal mengambil data execution saat ini.');
+      }
+  
+      const currentData = await currentResponse.json();
+      const currentGeneratedAt = currentData.generatedAt;
+  
+      // Trigger GitHub Actions
       const response = await fetch('/api/rerun', {
         method: 'POST',
         headers: {
@@ -95,19 +112,58 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
           executionDate,
         }),
       });
-
-      const result = await response.json();
-
-      console.log('Rerun all failed response:', result);
-
-      if (!response.ok) {
-        throw new Error(result.message || result.error || 'Gagal re-run semua failed test');
+  
+      const responseText = await response.text();
+  
+      let result: {
+        message?: string;
+        error?: string;
+      } = {};
+  
+      if (responseText) {
+        try {
+          result = JSON.parse(responseText);
+        } catch {
+          // Response bukan JSON, abaikan
+        }
       }
-
-      alert(`${failedTests.length} failed test berhasil dikirim ke GitHub Actions.`);
+  
+      if (!response.ok) {
+        throw new Error(result.message || result.error || responseText || 'Gagal re-run semua failed test');
+      }
+  
+      // Trigger berhasil → ubah tombol menjadi Re-running...
+      setRerunningAll(true);
+  
+      // Polling setiap 5 detik
+      const interval = setInterval(async () => {
+        try {
+          const latestResponse = await fetch(
+            `/executions/${executionDate}.json?t=${Date.now()}`,
+            {
+              cache: 'no-store',
+            },
+          );
+  
+          if (!latestResponse.ok) {
+            return;
+          }
+  
+          const latestData = await latestResponse.json();
+  
+          // Execution baru sudah masuk
+          if (latestData.generatedAt !== currentGeneratedAt) {
+            clearInterval(interval);
+            window.location.reload();
+          }
+        } catch (error) {
+          console.error('Polling execution error:', error);
+        }
+      }, 5000);
     } catch (error) {
       console.error('Rerun all failed error:', error);
-
+      setRerunningAll(false);
+  
       alert(error instanceof Error ? error.message : 'Gagal re-run semua failed test');
     }
   };
@@ -131,7 +187,7 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
           variant="outlined"
           size="small"
           onClick={handleRerunAllFailed}
-          disabled={!data.details.some((item) => item.status === 'failed')}
+          disabled={ rerunningAll || !data.details.some((item) => item.status === 'failed') }
           sx={{
             borderRadius: 5,
             textTransform: 'none',
@@ -142,7 +198,7 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
           }}
           startIcon={<RestartAltIcon />}
         >
-          Re-run All Failed Tests
+          {rerunningAll ? 'Re-running...' : 'Re-run All Failed Tests'}
         </Button>
       </Box>
 
