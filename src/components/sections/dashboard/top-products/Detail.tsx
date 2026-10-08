@@ -23,9 +23,10 @@ import { DetailItem } from 'data/types';
 interface DetailProps {
   item: DetailItem;
   executionDate?: string;
+  rerunningAll?: boolean;
 }
 
-const Detail = ({ item, executionDate }: DetailProps) => {
+const Detail = ({ item, executionDate, rerunningAll }: DetailProps) => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [rerunning, setRerunning] = useState(false);
@@ -196,7 +197,7 @@ const Detail = ({ item, executionDate }: DetailProps) => {
               size="small"
               startIcon={<ReplayIcon />}
               onClick={handleRerun}
-              disabled={rerunning}
+              disabled={rerunning || rerunningAll}
               sx={{
                 borderRadius: 5,
                 textTransform: 'none',
@@ -207,7 +208,7 @@ const Detail = ({ item, executionDate }: DetailProps) => {
                 },
               }}
             >
-              {rerunning ? 'Re-running...' : 'Re-run'}
+              {rerunning || rerunningAll ? 'Re-running...' : 'Re-run'}
             </Button>
           )}
         </TableCell>

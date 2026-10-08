@@ -213,7 +213,7 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
             {filteredDetails
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((item) => (
-                <Detail key={item.id} item={item} executionDate={executionDate} />
+                <Detail key={item.id} item={item} executionDate={executionDate} rerunningAll={rerunningAll} />
               ))}
           </TableBody>
         </Table>
