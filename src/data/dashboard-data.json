@@ -1,6 +1,6 @@
 {
   "startedAt": "2026-10-07T23:31:12.970Z",
-  "generatedAt": "2026-10-08T03:30:21.918Z",
+  "generatedAt": "2026-10-08T03:51:11.320Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/37702678669/artifacts/11520941334",
   "summary": {
     "total": 79,
@@ -15,9 +15,9 @@
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 33532,
+      "duration": 32122,
       "browser": "chromium",
-      "startTime": "2026-10-07T23:41:29.336Z",
+      "startTime": "2026-10-08T03:33:51.110Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -27,9 +27,9 @@
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90810,
+      "duration": 90572,
       "browser": "chromium",
-      "startTime": "2026-10-07T23:43:37.821Z",
+      "startTime": "2026-10-08T03:35:56.907Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -39,9 +39,9 @@
     {
       "title": "@cgtrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90809,
+      "duration": 90617,
       "browser": "chromium",
-      "startTime": "2026-10-07T23:46:42.823Z",
+      "startTime": "2026-10-08T03:39:00.623Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -51,9 +51,9 @@
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93458,
+      "duration": 92638,
       "browser": "chromium",
-      "startTime": "2026-10-07T23:59:45.005Z",
+      "startTime": "2026-10-08T03:42:06.354Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -63,21 +63,21 @@
     {
       "title": "@riyan - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93699,
+      "duration": 92825,
       "browser": "chromium",
-      "startTime": "2026-10-08T00:15:04.558Z",
+      "startTime": "2026-10-08T03:45:14.059Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users').nth(1).locator('li').first().locator('p:has-text(\"Rp\")').first()\n\n   at ../pages/riyan.js:172\n\n  170 |\n  171 |         const first_jadwal = await this.jadwal_plg_card.first();\n> 172 |         const harga_tiket = await first_jadwal.locator('p:has-text(\"Rp\")').first().innerText();\n      |                                                                                    ^\n  173 |         await first_jadwal.locator('button:has-text(\"Pilih\")').first().click();\n  174 |         return harga_tiket;\n  175 |     }\n    at Riyan.pilihJadwalPulang (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/riyan.js:172:84)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:130:37"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users li').first().locator('div.harga > p').first()\n\n   at ../pages/riyan.js:163\n\n  161 |\n  162 |         const first_jadwal = await this.jadwal_card.first();\n> 163 |         const harga_tiket = await first_jadwal.locator('div.harga > p').first().innerText();\n      |                                                                                 ^\n  164 |         await first_jadwal.locator('button:has-text(\"Pilih\")').first().click();\n  165 |         return harga_tiket;\n  166 |     }\n    at Riyan.pilihJadwal (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/riyan.js:163:81)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:128:33"
       }
     },
     {
       "title": "@royalkencana - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93211,
+      "duration": 92692,
       "browser": "chromium",
-      "startTime": "2026-10-08T00:18:41.979Z",
+      "startTime": "2026-10-08T03:48:21.544Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -87,9 +87,9 @@
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 36662,
+      "duration": 35343,
       "browser": "chromium",
-      "startTime": "2026-10-08T03:29:42.347Z",
+      "startTime": "2026-10-08T03:50:33.467Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
