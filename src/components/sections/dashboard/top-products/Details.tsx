@@ -194,7 +194,7 @@ const DetailsItem = ({ data, selectedStatus, executionDate }: DetailsProps) => {
           }}
           startIcon={<RestartAltIcon />}
         >
-          {rerunningAll ? 'Re-running...' : 'Re-run All Failed Tests'}
+          {rerunningAll ? 'Re-running All Failed Test...' : 'Re-run All Failed Tests'}
         </Button>
       </Box>
 
