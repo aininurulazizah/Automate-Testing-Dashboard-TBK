@@ -1,6 +1,6 @@
 {
   "startedAt": "2026-10-13T01:11:04.200Z",
-  "generatedAt": "2026-10-13T04:39:16.693Z",
+  "generatedAt": "2026-10-13T04:44:06.462Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38330853620/artifacts/11784453187",
   "summary": {
     "total": 79,
@@ -90,9 +90,9 @@
     {
       "title": "@pelitamas - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 94241,
+      "duration": 94210,
       "browser": "chromium",
-      "startTime": "2026-10-13T04:29:47.041Z",
+      "startTime": "2026-10-13T04:42:28.722Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
