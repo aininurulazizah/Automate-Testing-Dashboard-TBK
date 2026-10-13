@@ -1,12 +1,12 @@
 {
   "startedAt": "2026-10-11T22:44:45.802Z",
-  "generatedAt": "2026-10-12T00:04:21.479Z",
+  "generatedAt": "2026-10-13T03:50:21.667Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38181599351/artifacts/11720285674",
   "summary": {
     "total": 79,
     "passed": 65,
-    "failed": 14,
-    "flaky": 0,
+    "failed": 13,
+    "flaky": 1,
     "skipped": 0,
     "duration": 3518673,
     "durationFormatted": "00:58:38"
@@ -14,15 +14,12 @@
   "details": [
     {
       "title": "@ats - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 91930,
+      "status": "flaky",
+      "duration": 15123,
       "browser": "chromium",
-      "startTime": "2026-10-11T22:50:13.324Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal ~ div.form-pp')\n\n   at ../pages/ats.js:118\n\n  116 |\n  117 |     async isiKeberangkatan(value) {\n> 118 |         await this.keberangkatan_field.click();\n      |                                        ^\n  119 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n  120 |     }\n  121 |\n    at Ats.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ats.js:118:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:25:19"
-      }
+      "startTime": "2026-10-13T03:50:02.782Z",
+      "bookingCode": "BATS2610130634",
+      "error": null
     },
     {
       "title": "@ats - Test Case 2 - Round Trip",
