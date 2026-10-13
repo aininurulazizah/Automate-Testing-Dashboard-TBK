@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-13T01:11:04.200Z",
-  "generatedAt": "2026-10-13T02:22:21.128Z",
+  "generatedAt": "2026-10-13T04:24:18.796Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38330853620/artifacts/11784453187",
   "summary": {
     "total": 79,
-    "passed": 66,
-    "failed": 10,
+    "passed": 68,
+    "failed": 8,
     "flaky": 3,
     "skipped": 0,
     "duration": 3157508,
@@ -15,9 +15,9 @@
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 29821,
+      "duration": 31094,
       "browser": "chromium",
-      "startTime": "2026-10-13T01:23:56.732Z",
+      "startTime": "2026-10-13T04:02:12.840Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -27,9 +27,9 @@
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90589,
+      "duration": 90464,
       "browser": "chromium",
-      "startTime": "2026-10-13T01:26:00.316Z",
+      "startTime": "2026-10-13T04:04:16.935Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -39,9 +39,9 @@
     {
       "title": "@cgtrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90587,
+      "duration": 90496,
       "browser": "chromium",
-      "startTime": "2026-10-13T01:29:04.104Z",
+      "startTime": "2026-10-13T04:07:19.919Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -51,9 +51,9 @@
     {
       "title": "@ctu - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 91221,
+      "duration": 90920,
       "browser": "chromium",
-      "startTime": "2026-10-13T01:32:08.976Z",
+      "startTime": "2026-10-13T04:10:23.685Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -62,34 +62,28 @@
     },
     {
       "title": "@joglosemar - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 39130,
+      "status": "passed",
+      "duration": 47551,
       "browser": "chromium",
-      "startTime": "2026-10-13T01:42:19.765Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Error: expect(received).toBe(expected) // Object.is equality",
-        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 105000\nReceived: 108500\n\n   at ../pages/joglosemar.js:359\n\n  357 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n  358 |\n> 359 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  360 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  361 |\n  362 |                 return expected_total_tiket;\n    at Joglosemar.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/joglosemar.js:359:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:64:32"
-      }
+      "startTime": "2026-10-13T04:11:55.937Z",
+      "bookingCode": "BJGS261013ULMY",
+      "error": null
     },
     {
       "title": "@joglosemar - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 52149,
+      "status": "passed",
+      "duration": 55175,
       "browser": "chromium",
-      "startTime": "2026-10-13T01:43:57.946Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Error: expect(received).toBe(expected) // Object.is equality",
-        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 200000\nReceived: 207000\n\n   at ../pages/joglosemar.js:359\n\n  357 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n  358 |\n> 359 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  360 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  361 |\n  362 |                 return expected_total_tiket;\n    at Joglosemar.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/joglosemar.js:359:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:150:36"
-      }
+      "startTime": "2026-10-13T04:12:45.443Z",
+      "bookingCode": "BJGS261013C7DA",
+      "error": null
     },
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 92727,
+      "duration": 92068,
       "browser": "chromium",
-      "startTime": "2026-10-13T01:48:12.232Z",
+      "startTime": "2026-10-13T04:15:15.486Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -99,33 +93,33 @@
     {
       "title": "@pelitamas - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 91568,
+      "duration": 92352,
       "browser": "chromium",
-      "startTime": "2026-10-13T01:59:26.059Z",
+      "startTime": "2026-10-13T04:18:21.673Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/pelitamas.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Pelitamas.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/pelitamas.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:25:19"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button.doc__btn--confirm')\n\n   at ../pages/pelitamas.js:345\n\n  343 |     async konfirmasiPembayaran() {\n  344 |         await this.konfirmasi_pembayaran_btn.click();\n> 345 |         await this.konfirmasi_pembayaran_btn_modal.click();\n      |                                                    ^\n  346 |     }\n  347 |\n  348 |     async cekBookedPageVersion() {\n    at Pelitamas.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/pelitamas.js:345:52)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:68:9"
       }
     },
     {
       "title": "@pelitamas - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 91691,
+      "duration": 92253,
       "browser": "chromium",
-      "startTime": "2026-10-13T02:02:33.414Z",
+      "startTime": "2026-10-13T04:21:28.817Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/pelitamas.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Pelitamas.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/pelitamas.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:111:23"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button.doc__btn--confirm')\n\n   at ../pages/pelitamas.js:345\n\n  343 |     async konfirmasiPembayaran() {\n  344 |         await this.konfirmasi_pembayaran_btn.click();\n> 345 |         await this.konfirmasi_pembayaran_btn_modal.click();\n      |                                                    ^\n  346 |     }\n  347 |\n  348 |     async cekBookedPageVersion() {\n    at Pelitamas.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/pelitamas.js:345:52)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:154:13"
       }
     },
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 37145,
+      "duration": 35781,
       "browser": "chromium",
-      "startTime": "2026-10-13T02:16:24.135Z",
+      "startTime": "2026-10-13T04:23:40.223Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
