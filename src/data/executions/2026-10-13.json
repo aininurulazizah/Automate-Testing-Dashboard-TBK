@@ -1,6 +1,6 @@
 {
   "startedAt": "2026-10-13T01:11:04.200Z",
-  "generatedAt": "2026-10-13T04:44:06.462Z",
+  "generatedAt": "2026-10-13T04:48:45.414Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38330853620/artifacts/11784453187",
   "summary": {
     "total": 79,
@@ -90,13 +90,13 @@
     {
       "title": "@pelitamas - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 94210,
+      "duration": 92835,
       "browser": "chromium",
-      "startTime": "2026-10-13T04:42:28.722Z",
+      "startTime": "2026-10-13T04:47:09.470Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button.doc__btn--confirm')\n\n   at ../pages/pelitamas.js:345\n\n  343 |     async konfirmasiPembayaran() {\n  344 |         await this.konfirmasi_pembayaran_btn.click();\n> 345 |         await this.konfirmasi_pembayaran_btn_modal.click();\n      |                                                    ^\n  346 |     }\n  347 |\n  348 |     async cekBookedPageVersion() {\n    at Pelitamas.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/pelitamas.js:345:52)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:68:9"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button:has-text(\"Pembayaran\")')\n\n   at ../pages/pelitamas.js:331\n\n  329 |\n  330 |     async klikBayar() {\n> 331 |         await this.pembayaran_btn.click();\n      |                                   ^\n  332 |     }\n  333 |\n  334 |     async pilihMetodePembayaran(metode_bayar, platform_bayar){\n    at Pelitamas.klikBayar (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/pelitamas.js:331:35)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:60:19"
       }
     },
     {
