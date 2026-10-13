@@ -1,12 +1,12 @@
 {
   "startedAt": "2026-10-11T22:44:45.802Z",
-  "generatedAt": "2026-10-13T03:52:21.520Z",
+  "generatedAt": "2026-10-13T03:56:32.394Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38181599351/artifacts/11720285674",
   "summary": {
     "total": 79,
     "passed": 66,
-    "failed": 12,
-    "flaky": 1,
+    "failed": 11,
+    "flaky": 2,
     "skipped": 0,
     "duration": 3518673,
     "durationFormatted": "00:58:38"
@@ -68,15 +68,12 @@
     },
     {
       "title": "@ctu - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 94071,
+      "status": "flaky",
+      "duration": 17557,
       "browser": "chromium",
-      "startTime": "2026-10-11T23:09:03.633Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/ctu.js:109\n\n  107 |\n  108 |     async isiKeberangkatan(value) {\n> 109 |         await this.keberangkatan_field.click();\n      |                                        ^\n  110 |         await this.dropdown_keberangkatan.locator(`div:text-is(\"${value}\")`).click();\n  111 |     }\n  112 |\n    at Ctu.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ctu.js:109:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:25:19"
-      }
+      "startTime": "2026-10-13T03:56:11.605Z",
+      "bookingCode": "BCTU261013DLN5",
+      "error": null
     },
     {
       "title": "@ctu - Test Case 2 - Round Trip",
