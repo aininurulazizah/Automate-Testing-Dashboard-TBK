@@ -1,6 +1,6 @@
 {
   "startedAt": "2026-10-13T23:13:55.691Z",
-  "generatedAt": "2026-10-14T02:25:08.304Z",
+  "generatedAt": "2026-10-14T02:40:04.244Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38482879053/artifacts/11860968166",
   "summary": {
     "total": 79,
@@ -63,9 +63,9 @@
     {
       "title": "@ctu - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90956,
+      "duration": 90934,
       "browser": "chromium",
-      "startTime": "2026-10-14T02:23:33.791Z",
+      "startTime": "2026-10-14T02:38:30.380Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
