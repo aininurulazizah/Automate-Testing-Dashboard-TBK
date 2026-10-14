@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-13T23:13:55.691Z",
-  "generatedAt": "2026-10-14T02:40:04.244Z",
+  "generatedAt": "2026-10-14T04:09:24.853Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38482879053/artifacts/11860968166",
   "summary": {
     "total": 79,
-    "passed": 68,
-    "failed": 8,
+    "passed": 69,
+    "failed": 7,
     "flaky": 3,
     "skipped": 0,
     "duration": 2946908,
@@ -14,15 +14,12 @@
   "details": [
     {
       "title": "@btm - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 22541,
+      "status": "passed",
+      "duration": 28410,
       "browser": "chromium",
-      "startTime": "2026-10-14T01:59:16.328Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Error: expect(received).toBeGreaterThanOrEqual(expected)",
-        "detail": "Error: expect(received).toBeGreaterThanOrEqual(expected)\n\nExpected: >= 155000\nReceived:    0\n\n   at ../pages/btm.js:229\n\n  227 |                 }\n  228 |\n> 229 |                 expect(harga_kursi).toBeGreaterThanOrEqual(harga_min);\n      |                                     ^\n  230 |                 expect(harga_kursi).toBeLessThanOrEqual(harga_max);\n  231 |             }\n  232 |\n    at Btm.validasiHargaTiketKursi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:229:37)\n    at Btm.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:270:25)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-14T04:08:51.196Z",
+      "bookingCode": "BBTM26101407R4",
+      "error": null
     },
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
