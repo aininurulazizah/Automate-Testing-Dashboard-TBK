@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-13T23:13:55.691Z",
-  "generatedAt": "2026-10-14T04:09:24.853Z",
+  "generatedAt": "2026-10-14T04:12:41.435Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38482879053/artifacts/11860968166",
   "summary": {
     "total": 79,
-    "passed": 69,
-    "failed": 7,
+    "passed": 70,
+    "failed": 6,
     "flaky": 3,
     "skipped": 0,
     "duration": 2946908,
@@ -59,15 +59,12 @@
     },
     {
       "title": "@ctu - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 90934,
+      "status": "passed",
+      "duration": 21004,
       "browser": "chromium",
-      "startTime": "2026-10-14T02:38:30.380Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button:has-text(\"Pembayaran\")')\n\n   at ../pages/ctu.js:330\n\n  328 |\n  329 |     async klikBayar() {\n> 330 |         await this.pembayaran_btn.click();\n      |                                   ^\n  331 |     }\n  332 |\n  333 |     async pilihMetodePembayaran(metode_bayar, platform_bayar){\n    at Ctu.klikBayar (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ctu.js:330:35)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:60:19"
-      }
+      "startTime": "2026-10-14T04:12:17.654Z",
+      "bookingCode": "BCTU261014JMG5",
+      "error": null
     },
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
