@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-14T22:08:48.109Z",
-  "generatedAt": "2026-10-15T01:59:51.799Z",
+  "generatedAt": "2026-10-15T02:59:00.988Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38645490385/artifacts/11935585532",
   "summary": {
     "total": 79,
-    "passed": 71,
-    "failed": 8,
+    "passed": 72,
+    "failed": 7,
     "flaky": 0,
     "skipped": 0,
     "duration": 2963628,
@@ -62,15 +62,12 @@
     },
     {
       "title": "@pelitamas - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 92972,
+      "status": "passed",
+      "duration": 23805,
       "browser": "chromium",
-      "startTime": "2026-10-15T01:58:16.380Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button.doc__btn--confirm')\n\n   at ../pages/pelitamas.js:348\n\n  346 |     async konfirmasiPembayaran() {\n  347 |         await this.konfirmasi_pembayaran_btn.click();\n> 348 |         await this.konfirmasi_pembayaran_btn_modal.click();\n      |                                                    ^\n  349 |     }\n  350 |\n  351 |     async cekBookedPageVersion() {\n    at Pelitamas.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/pelitamas.js:348:52)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:154:13"
-      }
+      "startTime": "2026-10-15T02:58:33.220Z",
+      "bookingCode": "BPLS261015PWAB",
+      "error": null
     },
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
