@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-14T22:08:48.109Z",
-  "generatedAt": "2026-10-15T02:59:00.988Z",
+  "generatedAt": "2026-10-15T03:09:54.559Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/38645490385/artifacts/11935585532",
   "summary": {
     "total": 79,
-    "passed": 72,
-    "failed": 7,
+    "passed": 73,
+    "failed": 6,
     "flaky": 0,
     "skipped": 0,
     "duration": 2963628,
@@ -83,15 +83,12 @@
     },
     {
       "title": "@wbtrans - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 705,
+      "status": "passed",
+      "duration": 40125,
       "browser": "chromium",
-      "startTime": "2026-10-14T23:03:30.124Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://www.wbtrans.id/",
-        "detail": "Error: page.goto: net::ERR_CONNECTION_REFUSED at https://www.wbtrans.id/\nCall log:\n  - navigating to \"https://www.wbtrans.id/\", waiting until \"load\"\n\n  15 |         const web = new site.locator(page);\n  16 |\n> 17 |         await page.goto(site.urls[ENV]);\n     |                    ^\n  18 |\n  19 |         await clearBrowserState(page);\n  20 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:17:20"
-      }
+      "startTime": "2026-10-15T03:09:09.697Z",
+      "bookingCode": "BWBS261015UFTH",
+      "error": null
     },
     {
       "title": "@wbtrans - Test Case 2 - Round Trip",
