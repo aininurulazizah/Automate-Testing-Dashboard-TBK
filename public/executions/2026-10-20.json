@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-19T22:50:56.614Z",
-  "generatedAt": "2026-10-20T03:01:01.511Z",
+  "generatedAt": "2026-10-20T03:27:59.429Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/39337699807/artifacts/12230818520",
   "summary": {
     "total": 79,
-    "passed": 69,
-    "failed": 9,
+    "passed": 72,
+    "failed": 6,
     "flaky": 1,
     "skipped": 0,
     "duration": 3392929,
@@ -23,22 +23,19 @@
     },
     {
       "title": "@ats - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 92211,
+      "status": "passed",
+      "duration": 21671,
       "browser": "chromium",
-      "startTime": "2026-10-20T02:26:07.505Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button.doc__btn--confirm')\n\n   at ../pages/ats.js:349\n\n  347 |     async konfirmasiPembayaran() {\n  348 |         await this.konfirmasi_pembayaran_btn.click();\n> 349 |         await this.konfirmasi_pembayaran_btn_modal.click();\n      |                                                    ^\n  350 |     }\n  351 |\n  352 |     async cekBookedPageVersion() {\n    at Ats.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ats.js:349:52)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:154:13"
-      }
+      "startTime": "2026-10-20T03:12:01.892Z",
+      "bookingCode": "BATS261020OVQY",
+      "error": null
     },
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 31156,
+      "duration": 30747,
       "browser": "chromium",
-      "startTime": "2026-10-20T01:53:09.301Z",
+      "startTime": "2026-10-20T03:12:56.957Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -48,9 +45,9 @@
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90546,
+      "duration": 90528,
       "browser": "chromium",
-      "startTime": "2026-10-20T01:55:13.401Z",
+      "startTime": "2026-10-20T03:15:01.017Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -60,9 +57,9 @@
     {
       "title": "@cgtrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90538,
+      "duration": 90537,
       "browser": "chromium",
-      "startTime": "2026-10-20T01:58:16.578Z",
+      "startTime": "2026-10-20T03:18:04.334Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -71,27 +68,21 @@
     },
     {
       "title": "@ctu - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 91341,
+      "status": "passed",
+      "duration": 22039,
       "browser": "chromium",
-      "startTime": "2026-10-20T02:01:21.343Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button.doc__btn--confirm')\n\n   at ../pages/ctu.js:347\n\n  345 |     async konfirmasiPembayaran() {\n  346 |         await this.konfirmasi_pembayaran_btn.click()\n> 347 |         await this.konfirmasi_pembayaran_btn_modal.click();\n      |                                                    ^\n  348 |     }\n  349 |\n  350 |     async cekBookedPageVersion() {\n    at Ctu.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ctu.js:347:52)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:68:9"
-      }
+      "startTime": "2026-10-20T03:19:36.071Z",
+      "bookingCode": "BCTU26102067DE",
+      "error": null
     },
     {
       "title": "@ctu - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 91487,
+      "status": "passed",
+      "duration": 28762,
       "browser": "chromium",
-      "startTime": "2026-10-20T02:04:27.833Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button.doc__btn--confirm')\n\n   at ../pages/ctu.js:347\n\n  345 |     async konfirmasiPembayaran() {\n  346 |         await this.konfirmasi_pembayaran_btn.click()\n> 347 |         await this.konfirmasi_pembayaran_btn_modal.click();\n      |                                                    ^\n  348 |     }\n  349 |\n  350 |     async cekBookedPageVersion() {\n    at Ctu.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ctu.js:347:52)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:154:13"
-      }
+      "startTime": "2026-10-20T03:19:58.786Z",
+      "bookingCode": "BCTU261020J2S4",
+      "error": null
     },
     {
       "title": "@daytrans - Test Case 1 - One Way Trip",
@@ -114,9 +105,9 @@
     {
       "title": "@krakaline - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 92317,
+      "duration": 92530,
       "browser": "chromium",
-      "startTime": "2026-10-20T02:11:42.405Z",
+      "startTime": "2026-10-20T03:22:02.152Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -126,9 +117,9 @@
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 92187,
+      "duration": 92742,
       "browser": "chromium",
-      "startTime": "2026-10-20T02:14:48.803Z",
+      "startTime": "2026-10-20T03:25:09.349Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -147,9 +138,9 @@
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 38677,
+      "duration": 36632,
       "browser": "chromium",
-      "startTime": "2026-10-20T02:20:03.854Z",
+      "startTime": "2026-10-20T03:27:19.812Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
