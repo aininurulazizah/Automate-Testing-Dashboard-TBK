@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-19T22:50:56.614Z",
-  "generatedAt": "2026-10-20T02:27:42.444Z",
+  "generatedAt": "2026-10-20T02:30:08.622Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/39337699807/artifacts/12230818520",
   "summary": {
     "total": 79,
-    "passed": 67,
-    "failed": 11,
+    "passed": 68,
+    "failed": 10,
     "flaky": 1,
     "skipped": 0,
     "duration": 3392929,
@@ -95,15 +95,12 @@
     },
     {
       "title": "@daytrans - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 92382,
+      "status": "passed",
+      "duration": 41167,
       "browser": "chromium",
-      "startTime": "2026-10-20T02:07:35.196Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('#confirmSubmit')\n    - locator resolved to <button type=\"button\" id=\"confirmSubmit\" data-dismiss=\"modal\" class=\"btn bg-red text-white\">Lanjutkan</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    142 × waiting for element to be visible, enabled and stable\n        - element is not visible\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/daytrans.js:197\n\n  195 |     async cariKursi() {\n  196 |         await this.carikursi_btn.click();\n> 197 |         await this.carikursi_confirm_btn.click();\n      |                                          ^\n  198 |     }\n  199 |\n  200 |     async pilihKursi(jml_penumpang) { // n = 0 (tidak ada perpindahan armada)\n    at Daytrans.cariKursi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/daytrans.js:197:42)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:48:13"
-      }
+      "startTime": "2026-10-20T02:29:21.512Z",
+      "bookingCode": "BDTR261020V9FA",
+      "error": null
     },
     {
       "title": "@daytrans - Test Case 3 - Connecting Reservation",
