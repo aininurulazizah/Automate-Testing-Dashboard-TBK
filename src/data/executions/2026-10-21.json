@@ -1,12 +1,12 @@
 {
   "startedAt": "2026-10-21T01:57:10.951Z",
-  "generatedAt": "2026-10-21T05:01:10.236Z",
+  "generatedAt": "2026-10-21T09:26:57.588Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/39530039498/artifacts/12322616051",
   "summary": {
     "total": 79,
-    "passed": 24,
-    "failed": 54,
-    "flaky": 1,
+    "passed": 63,
+    "failed": 13,
+    "flaky": 3,
     "skipped": 0,
     "duration": 5841813,
     "durationFormatted": "01:37:21"
@@ -14,82 +14,64 @@
   "details": [
     {
       "title": "@adibuzz - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93743,
+      "status": "passed",
+      "duration": 28553,
       "browser": "chromium",
-      "startTime": "2026-10-21T01:57:10.951Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/adibuzz.js:278\n\n  276 |                 }\n  277 |\n> 278 |                 const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                               ^\n  279 |                 expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  280 |\n  281 |                 const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Adibuzz.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/adibuzz.js:278:143)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T08:26:46.103Z",
+      "bookingCode": "BADI261021URMB",
+      "error": null
     },
     {
       "title": "@adibuzz - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93846,
+      "status": "passed",
+      "duration": 38783,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:00:22.659Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/adibuzz.js:278\n\n  276 |                 }\n  277 |\n> 278 |                 const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                               ^\n  279 |                 expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  280 |\n  281 |                 const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Adibuzz.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/adibuzz.js:278:143)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T08:27:15.616Z",
+      "bookingCode": "BADI26102117X4",
+      "error": null
     },
     {
       "title": "@ans - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 94032,
+      "status": "passed",
+      "duration": 28075,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:03:35.078Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/ans.js:279\n\n  277 |\n  278 |                 // } else {\n> 279 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  280 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  281 |\n  282 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Ans.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ans.js:279:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T08:27:55.231Z",
+      "bookingCode": "BANS261021UPR9",
+      "error": null
     },
     {
       "title": "@ans - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93758,
+      "status": "passed",
+      "duration": 36446,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:06:48.345Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/ans.js:279\n\n  277 |\n  278 |                 // } else {\n> 279 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  280 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  281 |\n  282 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Ans.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ans.js:279:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T08:28:24.493Z",
+      "bookingCode": "BANS261021P2GN",
+      "error": null
     },
     {
       "title": "@banyumili - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93924,
+      "status": "passed",
+      "duration": 30355,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:13:36.539Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/banyumili.js:294\n\n  292 |\n  293 |                 // } else {\n> 294 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  295 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  296 |\n  297 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Banyumili.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/banyumili.js:294:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T08:29:02.367Z",
+      "bookingCode": "BBYM2610211DRX",
+      "error": null
     },
     {
       "title": "@banyumili - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93739,
+      "status": "passed",
+      "duration": 37943,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:16:49.616Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/banyumili.js:294\n\n  292 |\n  293 |                 // } else {\n> 294 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  295 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  296 |\n  297 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Banyumili.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/banyumili.js:294:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T08:29:34.008Z",
+      "bookingCode": "BBYM261021V7XF",
+      "error": null
     },
     {
       "title": "@baraya - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 30048,
+      "duration": 25874,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:21:13.775Z",
+      "startTime": "2026-10-21T08:30:41.015Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: locator.click: Error: strict mode violation: locator('button[id^=\"btn-toggle-jadwal-pulang\"]') resolved to 3 elements:",
@@ -98,34 +80,28 @@
     },
     {
       "title": "@binasarana - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93751,
+      "status": "flaky",
+      "duration": 27951,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:24:40.241Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.textContent: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/binasarana.js:239\n\n  237 |                 }\n  238 |\n> 239 |                 const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').textContent());\n      |                                                                                                                                               ^\n  240 |                 expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  241 |\n  242 |                 const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').textContent());\n    at Binasarana.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/binasarana.js:239:143)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T08:31:42.508Z",
+      "bookingCode": "BBSS261021ERMT",
+      "error": null
     },
     {
       "title": "@btm - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93955,
+      "status": "passed",
+      "duration": 30237,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:27:51.989Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/btm.js:268\n\n  266 |                     }\n  267 |\n> 268 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.total_bayar_seat_page_1.innerText());\n      |                                                                                                               ^\n  269 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.total_bayar_label_general.innerText());\n  270 |\n  271 |                     const diskon = await this.page.locator('span#display_diskon').count > 0\n    at Btm.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:268:111)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T08:32:11.331Z",
+      "bookingCode": "BBTM261021UQ8X",
+      "error": null
     },
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 32765,
+      "duration": 29841,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:30:02.040Z",
+      "startTime": "2026-10-21T08:33:12.723Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -135,9 +111,9 @@
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90805,
+      "duration": 90539,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:32:09.652Z",
+      "startTime": "2026-10-21T08:35:15.617Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -147,9 +123,9 @@
     {
       "title": "@cgtrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90831,
+      "duration": 90515,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:35:14.654Z",
+      "startTime": "2026-10-21T08:38:18.984Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -159,9 +135,9 @@
     {
       "title": "@daytrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 94907,
+      "duration": 93064,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:39:12.733Z",
+      "startTime": "2026-10-21T08:41:24.589Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -171,9 +147,9 @@
     {
       "title": "@daytrans - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 94899,
+      "duration": 93039,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:42:25.194Z",
+      "startTime": "2026-10-21T08:44:32.568Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -182,82 +158,64 @@
     },
     {
       "title": "@gracias - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93705,
+      "status": "passed",
+      "duration": 28172,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:45:37.532Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/gracias.js:281\n\n  279 |\n  280 |                 // } else {\n> 281 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  282 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  283 |\n  284 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Gracias.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/gracias.js:281:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T08:46:06.615Z",
+      "bookingCode": "BGRS261021CP3N",
+      "error": null
     },
     {
       "title": "@gracias - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93780,
+      "status": "passed",
+      "duration": 37688,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:48:49.549Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/gracias.js:281\n\n  279 |\n  280 |                 // } else {\n> 281 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  282 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  283 |\n  284 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Gracias.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/gracias.js:281:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T08:46:35.666Z",
+      "bookingCode": "BGRS2610210V23",
+      "error": null
     },
     {
       "title": "@harumbsi - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 94015,
+      "status": "passed",
+      "duration": 26656,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:52:01.291Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/harumbsi.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Harumbsi.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/harumbsi.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T08:47:14.551Z",
+      "bookingCode": "BBSI261021UVXM",
+      "error": null
     },
     {
       "title": "@harumbsi - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93507,
+      "status": "passed",
+      "duration": 34076,
       "browser": "chromium",
-      "startTime": "2026-10-21T02:55:12.769Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/harumbsi.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Harumbsi.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/harumbsi.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T08:47:41.871Z",
+      "bookingCode": "BBSI2610216JXF",
+      "error": null
     },
     {
       "title": "@joglosemar - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 95909,
+      "status": "passed",
+      "duration": 46405,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:00:23.521Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: Test timeout of 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.joglosemarbus.com/\", waiting until \"load\"\n\n  15 |         const web = new site.locator(page);\n  16 |\n> 17 |         await page.goto(site.urls[ENV]);\n     |                    ^\n  18 |\n  19 |         await clearBrowserState(page);\n  20 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:17:20"
-      }
+      "startTime": "2026-10-21T08:48:16.772Z",
+      "bookingCode": "BJGS261021OKM5",
+      "error": null
     },
     {
       "title": "@joglosemar - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 96025,
+      "status": "passed",
+      "duration": 50904,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:03:38.539Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.reload: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - waiting for navigation until \"domcontentloaded\"\n\n   at ../utils/helper.js:37\n\n  35 |     });\n  36 |\n> 37 |     await page.reload({ waitUntil: 'domcontentloaded' });\n     |                ^\n  38 | }\n    at clearBrowserState (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/utils/helper.js:37:16)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:105:13"
-      }
+      "startTime": "2026-10-21T08:49:05.395Z",
+      "bookingCode": "BJGS261021WEXM",
+      "error": null
     },
     {
       "title": "@krakaline - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 93944,
+      "duration": 92501,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:08:15.080Z",
+      "startTime": "2026-10-21T08:51:32.105Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -267,9 +225,9 @@
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93658,
+      "duration": 92501,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:11:25.489Z",
+      "startTime": "2026-10-21T08:54:39.024Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -278,58 +236,46 @@
     },
     {
       "title": "@kupuayu - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93680,
+      "status": "passed",
+      "duration": 38868,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:17:00.921Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/kupuayu.js:292\n\n  290 |\n  291 |                 // } else {\n> 292 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  293 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  294 |\n  295 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Kupuayu.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/kupuayu.js:292:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T08:56:12.521Z",
+      "bookingCode": "BKKA2610210F5H",
+      "error": null
     },
     {
       "title": "@kupuayu - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93322,
+      "status": "passed",
+      "duration": 56763,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:20:12.142Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/kupuayu.js:292\n\n  290 |\n  291 |                 // } else {\n> 292 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  293 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  294 |\n  295 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Kupuayu.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/kupuayu.js:292:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T08:56:52.265Z",
+      "bookingCode": "BKKA261021ELFB",
+      "error": null
     },
     {
       "title": "@minanga - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93856,
+      "status": "passed",
+      "duration": 26372,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:23:23.597Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/minanga.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Minanga.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/minanga.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T08:57:50.250Z",
+      "bookingCode": "BMNA261021CL9N",
+      "error": null
     },
     {
       "title": "@minanga - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93592,
+      "status": "passed",
+      "duration": 36338,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:26:35.343Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/minanga.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Minanga.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/minanga.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T08:58:17.427Z",
+      "bookingCode": "BMNA261021K8S5",
+      "error": null
     },
     {
       "title": "@mstrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 94484,
+      "duration": 92712,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:30:08.737Z",
+      "startTime": "2026-10-21T09:00:28.611Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -339,9 +285,9 @@
     {
       "title": "@mstrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 94656,
+      "duration": 92701,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:33:20.244Z",
+      "startTime": "2026-10-21T09:03:35.879Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -350,34 +296,28 @@
     },
     {
       "title": "@namaste - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 94074,
+      "status": "passed",
+      "duration": 29209,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:36:31.929Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/namaste.js:307\n\n  305 |\n  306 |                 // } else {\n> 307 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  308 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  309 |\n  310 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Namaste.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/namaste.js:307:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:05:09.491Z",
+      "bookingCode": "BNMS2610210Q2T",
+      "error": null
     },
     {
       "title": "@namaste - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93889,
+      "status": "passed",
+      "duration": 39315,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:39:44.093Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/namaste.js:307\n\n  305 |\n  306 |                 // } else {\n> 307 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  308 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  309 |\n  310 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Namaste.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/namaste.js:307:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:05:39.541Z",
+      "bookingCode": "BNMS261021OKBH",
+      "error": null
     },
     {
       "title": "@putraremaja - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 91184,
+      "duration": 90799,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:43:39.177Z",
+      "startTime": "2026-10-21T09:07:52.317Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -387,9 +327,9 @@
     {
       "title": "@putraremaja - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 91209,
+      "duration": 90756,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:46:45.692Z",
+      "startTime": "2026-10-21T09:10:56.609Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -398,267 +338,204 @@
     },
     {
       "title": "@riyan - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93722,
+      "status": "passed",
+      "duration": 25584,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:51:06.282Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/riyan.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Riyan.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/riyan.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:12:28.707Z",
+      "bookingCode": "BRYN261021J8SH",
+      "error": null
     },
     {
       "title": "@riyan - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93990,
+      "status": "passed",
+      "duration": 32324,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:54:17.648Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/riyan.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Riyan.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/riyan.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:12:55.046Z",
+      "bookingCode": "BRYN261021DQ2G",
+      "error": null
     },
     {
       "title": "@royalkencana - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93993,
+      "status": "passed",
+      "duration": 26286,
       "browser": "chromium",
-      "startTime": "2026-10-21T03:57:29.331Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/royalkencana.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Royalkencana.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/royalkencana.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:13:28.179Z",
+      "bookingCode": "BRYK261021CVRZ",
+      "error": null
     },
     {
       "title": "@royalkencana - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93705,
+      "status": "passed",
+      "duration": 36646,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:00:40.519Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/royalkencana.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Royalkencana.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/royalkencana.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:13:55.161Z",
+      "bookingCode": "BRYK2610217WLN",
+      "error": null
     },
     {
       "title": "@sadya - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93676,
+      "status": "passed",
+      "duration": 28135,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:04:16.137Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.textContent: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/sadya.js:293\n\n  291 |\n  292 |                 // } else {\n> 293 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').textContent());\n      |                                                                                                                                                   ^\n  294 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  295 |\n  296 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').textContent());\n    at Sadya.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/sadya.js:293:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:14:32.567Z",
+      "bookingCode": "BSDY2610218EXN",
+      "error": null
     },
     {
       "title": "@sadya - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93833,
+      "status": "passed",
+      "duration": 38621,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:07:27.999Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.textContent: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/sadya.js:293\n\n  291 |\n  292 |                 // } else {\n> 293 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').textContent());\n      |                                                                                                                                                   ^\n  294 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  295 |\n  296 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').textContent());\n    at Sadya.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/sadya.js:293:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:15:01.602Z",
+      "bookingCode": "BSDY261021079H",
+      "error": null
     },
     {
       "title": "@sariharum - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93811,
+      "status": "passed",
+      "duration": 24347,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:10:39.504Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/sariharum.js:291\n\n  289 |\n  290 |                 // } else {\n> 291 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  292 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  293 |\n  294 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Sariharum.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/sariharum.js:291:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:15:41.404Z",
+      "bookingCode": "BSRH2610217KA5",
+      "error": null
     },
     {
       "title": "@sariharum - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93658,
+      "status": "passed",
+      "duration": 36130,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:13:50.321Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/sariharum.js:291\n\n  289 |\n  290 |                 // } else {\n> 291 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  292 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  293 |\n  294 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Sariharum.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/sariharum.js:291:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:16:06.402Z",
+      "bookingCode": "BSRH26102168ET",
+      "error": null
     },
     {
       "title": "@sunjaya - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 94247,
+      "status": "passed",
+      "duration": 29756,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:17:54.319Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/sunjaya.js:299\n\n  297 |\n  298 |                 // } else {\n> 299 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah1(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                    ^\n  300 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  301 |\n  302 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah1(await this.page.locator('span#hargatot').innerText());\n    at Sunjaya.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/sunjaya.js:299:148)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:16:43.447Z",
+      "bookingCode": "BSNA26102128RF",
+      "error": null
     },
     {
       "title": "@sunjaya - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 94449,
+      "status": "passed",
+      "duration": 38705,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:21:10.417Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/sunjaya.js:299\n\n  297 |\n  298 |                 // } else {\n> 299 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah1(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                    ^\n  300 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  301 |\n  302 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah1(await this.page.locator('span#hargatot').innerText());\n    at Sunjaya.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/sunjaya.js:299:148)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:17:15.267Z",
+      "bookingCode": "BSNA261021JV3B",
+      "error": null
     },
     {
       "title": "@transkita - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93513,
+      "status": "passed",
+      "duration": 25545,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:24:24.343Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/transkita.js:287\n\n  285 |\n  286 |                 // } else {\n> 287 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  288 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  289 |\n  290 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Transkita.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/transkita.js:287:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:17:56.175Z",
+      "bookingCode": "BTKT261021V8XF",
+      "error": null
     },
     {
       "title": "@transkita - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 92917,
+      "status": "passed",
+      "duration": 34640,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:27:35.026Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/transkita.js:287\n\n  285 |\n  286 |                 // } else {\n> 287 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  288 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  289 |\n  290 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Transkita.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/transkita.js:287:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:18:22.547Z",
+      "bookingCode": "BTKT261021IKFG",
+      "error": null
     },
     {
       "title": "@trikusuma - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93424,
+      "status": "flaky",
+      "duration": 31441,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:30:45.437Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/trikusuma.js:321\n\n  319 |\n  320 |                 // } else {\n> 321 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  322 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  323 |\n  324 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Trikusuma.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/trikusuma.js:321:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:20:31.406Z",
+      "bookingCode": "BTKS261021OMSA",
+      "error": null
     },
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93551,
+      "duration": 34866,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:33:56.002Z",
+      "startTime": "2026-10-21T09:21:38.063Z",
       "bookingCode": null,
       "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/trikusuma.js:321\n\n  319 |\n  320 |                 // } else {\n> 321 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  322 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  323 |\n  324 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Trikusuma.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/trikusuma.js:321:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
+        "summary": "Error: expect(received).toBe(expected) // Object.is equality",
+        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 370000\nReceived: 320000\n\n   at ../pages/trikusuma.js:340\n\n  338 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n  339 |\n> 340 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  341 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  342 |\n  343 |                 return expected_total_tiket;\n    at Trikusuma.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/trikusuma.js:340:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:150:36"
       }
     },
     {
       "title": "@wbtrans - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93646,
+      "status": "passed",
+      "duration": 30535,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:37:06.666Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/wbtrans.js:290\n\n  288 |\n  289 |                 // } else {\n> 290 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  291 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  292 |\n  293 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Wbtrans.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/wbtrans.js:290:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:22:14.351Z",
+      "bookingCode": "BWBS2610210FAN",
+      "error": null
     },
     {
       "title": "@wbtrans - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93522,
+      "status": "passed",
+      "duration": 41852,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:40:17.551Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/wbtrans.js:290\n\n  288 |\n  289 |                 // } else {\n> 290 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  291 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  292 |\n  293 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Wbtrans.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/wbtrans.js:290:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:22:45.572Z",
+      "bookingCode": "BWBS261021VDQE",
+      "error": null
     },
     {
       "title": "@wisatakomodo - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93646,
+      "status": "passed",
+      "duration": 26049,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:43:28.870Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/wisatakomodo.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Wisatakomodo.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/wisatakomodo.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:23:28.287Z",
+      "bookingCode": "BWKM2610210Q3F",
+      "error": null
     },
     {
       "title": "@wisatakomodo - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93873,
+      "status": "passed",
+      "duration": 32775,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:46:40.137Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/wisatakomodo.js:288\n\n  286 |\n  287 |                 // } else {\n> 288 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  289 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  290 |\n  291 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Wisatakomodo.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/wisatakomodo.js:288:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:23:55.132Z",
+      "bookingCode": "BWKM2610210C9Z",
+      "error": null
     },
     {
       "title": "@yantigroup - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93740,
+      "status": "passed",
+      "duration": 28648,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:49:52.250Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/yantigroup.js:302\n\n  300 |\n  301 |                 // } else {\n> 302 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  303 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  304 |\n  305 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Yantigroup.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/yantigroup.js:302:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:24:28.866Z",
+      "bookingCode": "BYGS261021U2MG",
+      "error": null
     },
     {
       "title": "@yantigroup - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 93728,
+      "status": "passed",
+      "duration": 36815,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:53:03.984Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/yantigroup.js:302\n\n  300 |\n  301 |                 // } else {\n> 302 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  303 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  304 |\n  305 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Yantigroup.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/yantigroup.js:302:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:141:36"
-      }
+      "startTime": "2026-10-21T09:24:58.532Z",
+      "bookingCode": "BYGS261021P7LS",
+      "error": null
     },
     {
       "title": "@ztrans - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93816,
+      "status": "passed",
+      "duration": 33210,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:56:17.901Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('.display-price-seat-selected:not(#hargatot)')\n\n   at ../pages/ztrans.js:299\n\n  297 |\n  298 |                 // } else {\n> 299 |                     const actual_total_tiket_seat_1 = this.normalizeRupiah(await this.page.locator('.display-price-seat-selected:not(#hargatot)').innerText());\n      |                                                                                                                                                   ^\n  300 |                     expect(actual_total_tiket_seat_1).toBe(expected_total_tiket);\n  301 |\n  302 |                     const actual_total_tiket_seat_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n    at Ztrans.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ztrans.js:299:147)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:50:36"
-      }
+      "startTime": "2026-10-21T09:25:36.578Z",
+      "bookingCode": "BSBT261021UCQE",
+      "error": null
     },
     {
       "title": "@ztrans - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 96236,
+      "status": "passed",
+      "duration": 42402,
       "browser": "chromium",
-      "startTime": "2026-10-21T04:59:32.436Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: Test timeout of 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.ztrans.id/\", waiting until \"load\"\n\n  101 |             const web = new site.locator(page);\n  102 |\n> 103 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  104 |\n  105 |             await clearBrowserState(page);\n  106 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:103:24"
-      }
+      "startTime": "2026-10-21T09:26:11.130Z",
+      "bookingCode": "BSBT261021UD29",
+      "error": null
     },
     {
       "title": "@baraya - Test Case 1 - One Way Trip",
