@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-21T22:13:09.382Z",
-  "generatedAt": "2026-10-22T03:04:37.814Z",
+  "generatedAt": "2026-10-22T03:15:15.785Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/39684786032/artifacts/12390313715",
   "summary": {
     "total": 79,
-    "passed": 62,
-    "failed": 16,
+    "passed": 63,
+    "failed": 15,
     "flaky": 1,
     "skipped": 0,
     "duration": 3593471,
@@ -95,15 +95,12 @@
     },
     {
       "title": "@joglosemar - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 95758,
+      "status": "passed",
+      "duration": 58966,
       "browser": "chromium",
-      "startTime": "2026-10-21T22:51:34.074Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: Test timeout of 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.joglosemarbus.com/\", waiting until \"load\"\n\n  101 |             const web = new site.locator(page);\n  102 |\n> 103 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  104 |\n  105 |             await clearBrowserState(page);\n  106 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:103:24"
-      }
+      "startTime": "2026-10-22T03:14:10.877Z",
+      "bookingCode": "BJGS261022PQ95",
+      "error": null
     },
     {
       "title": "@krakaline - Test Case 1 - One Way Trip",
