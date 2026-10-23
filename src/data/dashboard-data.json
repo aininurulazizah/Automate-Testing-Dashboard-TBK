@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-21T22:13:09.382Z",
-  "generatedAt": "2026-10-23T10:54:20.453Z",
+  "generatedAt": "2026-10-23T11:07:20.447Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/39684786032/artifacts/12390313715",
   "summary": {
     "total": 79,
-    "passed": 64,
-    "failed": 14,
+    "passed": 65,
+    "failed": 13,
     "flaky": 1,
     "skipped": 0,
     "duration": 3593471,
@@ -197,15 +197,12 @@
     },
     {
       "title": "@ztrans - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 96723,
+      "status": "passed",
+      "duration": 56816,
       "browser": "chromium",
-      "startTime": "2026-10-21T23:40:42.685Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#dropdown-outlet').locator('span:text-is(\"Tamansari\")')\n\n   at ../pages/ztrans.js:129\n\n  127 |     async isiKeberangkatan(value) {\n  128 |         await this.keberangkatan_field.click();\n> 129 |         await this.dropdown_keberangkatan.locator(`span:text-is(\"${value}\")`).click();\n      |                                                                               ^\n  130 |     }\n  131 |\n  132 |     async isiTujuan(value) {\n    at Ztrans.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ztrans.js:129:79)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:111:13"
-      }
+      "startTime": "2026-10-23T11:06:17.933Z",
+      "bookingCode": "BSBT261023WLSH",
+      "error": null
     },
     {
       "title": "@ats - Test Case 2 - Round Trip",
