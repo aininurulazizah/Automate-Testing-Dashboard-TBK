@@ -1,6 +1,6 @@
 {
   "startedAt": "2026-10-21T22:13:09.382Z",
-  "generatedAt": "2026-10-23T11:07:20.447Z",
+  "generatedAt": "2026-10-23T11:08:03.800Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/39684786032/artifacts/12390313715",
   "summary": {
     "total": 79,
@@ -177,9 +177,9 @@
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 34812,
+      "duration": 35292,
       "browser": "chromium",
-      "startTime": "2026-10-21T23:31:43.578Z",
+      "startTime": "2026-10-23T11:07:24.586Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
