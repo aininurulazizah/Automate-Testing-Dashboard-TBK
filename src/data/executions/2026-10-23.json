@@ -1,6 +1,6 @@
 {
   "startedAt": "2026-10-22T22:13:23.738Z",
-  "generatedAt": "2026-10-23T06:23:29.096Z",
+  "generatedAt": "2026-10-23T06:31:37.599Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/39863248830/artifacts/12467149372",
   "summary": {
     "total": 79,
@@ -186,9 +186,9 @@
     {
       "title": "@ztrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 95533,
+      "duration": 95962,
       "browser": "chromium",
-      "startTime": "2026-10-22T23:41:37.928Z",
+      "startTime": "2026-10-23T06:29:58.031Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
