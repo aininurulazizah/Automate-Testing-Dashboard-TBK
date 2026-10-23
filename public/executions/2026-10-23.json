@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-22T22:13:23.738Z",
-  "generatedAt": "2026-10-22T23:46:29.089Z",
+  "generatedAt": "2026-10-23T02:08:40.441Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/39863248830/artifacts/12467149372",
   "summary": {
     "total": 79,
-    "passed": 60,
-    "failed": 17,
+    "passed": 61,
+    "failed": 16,
     "flaky": 2,
     "skipped": 0,
     "duration": 3805138,
@@ -170,15 +170,12 @@
     },
     {
       "title": "@semeru - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 92657,
+      "status": "passed",
+      "duration": 24388,
       "browser": "chromium",
-      "startTime": "2026-10-22T23:27:59.967Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div.seat-blank').first()\n\n   at ../pages/semeru.js:124\n\n  122 |\n  123 |         for(let i = 0; i < jml_penumpang; i++) {\n> 124 |             await this.kursi_tersedia.nth(i).click();\n      |                                              ^\n  125 |         }\n  126 |     }\n  127 |\n    at Semeru.pilihKursi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/semeru.js:124:46)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:49:13"
-      }
+      "startTime": "2026-10-23T02:08:11.864Z",
+      "bookingCode": "BSMR261023UYN5",
+      "error": null
     },
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
