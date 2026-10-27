@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-26T23:04:39.537Z",
-  "generatedAt": "2026-10-27T00:35:33.240Z",
+  "generatedAt": "2026-10-27T02:56:05.485Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/40417122605/artifacts/12700287365",
   "summary": {
     "total": 79,
-    "passed": 60,
-    "failed": 17,
+    "passed": 61,
+    "failed": 16,
     "flaky": 2,
     "skipped": 0,
     "duration": 3702962,
@@ -15,33 +15,33 @@
     {
       "title": "@ats - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 93887,
+      "duration": 97350,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:10:11.150Z",
+      "startTime": "2026-10-27T02:04:41.962Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button#v-0-1-0-origin')\n    - locator resolved to <button type=\"button\" data-v-efd22e05=\"\" id=\"v-0-1-0-origin\" class=\"nyos__trigger\" aria-expanded=\"false\" aria-haspopup=\"listbox\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    167 × waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/ats.js:133\n\n  131 |\n  132 |     async isiKeberangkatan(value) {\n> 133 |         await this.keberangkatan_field.click();\n      |                                        ^\n  134 |         await this.dropdown_keberangkatan.locator(`span.nyos__option-text > strong:text-is(\"${value}\")`).click();\n  135 |     }\n  136 |\n    at Ats.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ats.js:133:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:25:19"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button#v-0-1-0-origin')\n    - locator resolved to <button type=\"button\" data-v-efd22e05=\"\" id=\"v-0-1-0-origin\" class=\"nyos__trigger\" aria-expanded=\"false\" aria-haspopup=\"listbox\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    172 × waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/ats.js:133\n\n  131 |\n  132 |     async isiKeberangkatan(value) {\n> 133 |         await this.keberangkatan_field.click();\n      |                                        ^\n  134 |         await this.dropdown_keberangkatan.locator(`span.nyos__option-text > strong:text-is(\"${value}\")`).click();\n  135 |     }\n  136 |\n    at Ats.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ats.js:133:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:25:19"
       }
     },
     {
       "title": "@ats - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 96106,
+      "duration": 97303,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:13:28.642Z",
+      "startTime": "2026-10-27T02:08:10.479Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button#v-0-1-0-origin')\n    - locator resolved to <button type=\"button\" data-v-efd22e05=\"\" id=\"v-0-1-0-origin\" class=\"nyos__trigger\" aria-expanded=\"false\" aria-haspopup=\"listbox\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    172 × waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/ats.js:133\n\n  131 |\n  132 |     async isiKeberangkatan(value) {\n> 133 |         await this.keberangkatan_field.click();\n      |                                        ^\n  134 |         await this.dropdown_keberangkatan.locator(`span.nyos__option-text > strong:text-is(\"${value}\")`).click();\n  135 |     }\n  136 |\n    at Ats.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ats.js:133:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:111:23"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button#v-0-1-0-origin')\n    - locator resolved to <button type=\"button\" data-v-efd22e05=\"\" id=\"v-0-1-0-origin\" class=\"nyos__trigger\" aria-expanded=\"false\" aria-haspopup=\"listbox\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    173 × waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/ats.js:133\n\n  131 |\n  132 |     async isiKeberangkatan(value) {\n> 133 |         await this.keberangkatan_field.click();\n      |                                        ^\n  134 |         await this.dropdown_keberangkatan.locator(`span.nyos__option-text > strong:text-is(\"${value}\")`).click();\n  135 |     }\n  136 |\n    at Ats.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ats.js:133:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:111:23"
       }
     },
     {
       "title": "@baraya - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 93038,
+      "duration": 94652,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:18:53.008Z",
+      "startTime": "2026-10-27T02:11:33.066Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -51,45 +51,45 @@
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 32498,
+      "duration": 107105,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:24:45.007Z",
+      "startTime": "2026-10-27T02:14:59.811Z",
       "bookingCode": null,
       "error": {
-        "summary": "Error: expect(received).toBe(expected) // Object.is equality",
-        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 288500\nReceived: 0\n\n   at ../pages/btm.js:289\n\n  287 |\n  288 |                 const actual_total_tiket_payment_1 = this.normalizeRupiah(await this.total_bayar_label_general.innerText());\n> 289 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  290 |\n  291 |                 if (await this.total_bayar_label_payment.count() > 0) {\n  292 |                     const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.total_bayar_label_payment.innerText());\n    at Btm.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:289:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:243:36"
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.btmshuttle.id/\", waiting until \"load\"\n\n  190 |             const web = new site.locator(page);\n  191 |\n> 192 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  193 |\n  194 |             await clearBrowserState(page);\n  195 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:192:24"
       }
     },
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90483,
+      "duration": 107193,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:26:50.171Z",
+      "startTime": "2026-10-27T02:18:35.675Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div').locator('div.ss-list').locator('div.ss-option:text-is(\"CILACAP\")')\n\n   at ../pages/cgtrans.js:122\n\n  120 |     async isiKeberangkatan(value) {\n  121 |         await this.keberangkatan_field.click();\n> 122 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n      |                                                                                        ^\n  123 |     }\n  124 |\n  125 |     async isiTujuan(value) {\n    at Cgtrans.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/cgtrans.js:122:88)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:25:9"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.cgtrans.co.id/\", waiting until \"load\"\n\n  15 |         const web = new site.locator(page);\n  16 |\n> 17 |         await page.goto(site.urls[ENV]);\n     |                    ^\n  18 |\n  19 |         await clearBrowserState(page);\n  20 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:17:20"
       }
     },
     {
       "title": "@cgtrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90457,
+      "duration": 107182,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:29:53.113Z",
+      "startTime": "2026-10-27T02:22:11.587Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div').locator('div.ss-list').locator('div.ss-option:text-is(\"CILACAP\")')\n\n   at ../pages/cgtrans.js:122\n\n  120 |     async isiKeberangkatan(value) {\n  121 |         await this.keberangkatan_field.click();\n> 122 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n      |                                                                                        ^\n  123 |     }\n  124 |\n  125 |     async isiTujuan(value) {\n    at Cgtrans.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/cgtrans.js:122:88)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:111:13"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.cgtrans.co.id/\", waiting until \"load\"\n\n  101 |             const web = new site.locator(page);\n  102 |\n> 103 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  104 |\n  105 |             await clearBrowserState(page);\n  106 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:103:24"
       }
     },
     {
       "title": "@daytrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 92698,
+      "duration": 95153,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:33:46.052Z",
+      "startTime": "2026-10-27T02:25:35.863Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -99,9 +99,9 @@
     {
       "title": "@daytrans - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 92666,
+      "duration": 95020,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:36:53.195Z",
+      "startTime": "2026-10-27T02:28:48.247Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -111,33 +111,33 @@
     {
       "title": "@krakaline - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 91839,
+      "duration": 108126,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:47:05.389Z",
+      "startTime": "2026-10-27T02:32:13.279Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users li').first().locator('div.harga > p').first()\n\n   at ../pages/krakaline.js:163\n\n  161 |\n  162 |         const first_jadwal = await this.jadwal_card.first();\n> 163 |         const harga_tiket = await first_jadwal.locator('div.harga > p').first().innerText();\n      |                                                                                 ^\n  164 |         await first_jadwal.locator('button:has-text(\"Pilih\")').first().click();\n  165 |         return harga_tiket;\n  166 |     }\n    at Krakaline.pilihJadwal (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/krakaline.js:163:81)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:38:29"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.krakaline.com/\", waiting until \"load\"\n\n  15 |         const web = new site.locator(page);\n  16 |\n> 17 |         await page.goto(site.urls[ENV]);\n     |                    ^\n  18 |\n  19 |         await clearBrowserState(page);\n  20 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:17:20"
       }
     },
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 92099,
+      "duration": 107745,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:50:11.097Z",
+      "startTime": "2026-10-27T02:35:51.399Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div#users li').first().locator('div.harga > p').first()\n\n   at ../pages/krakaline.js:163\n\n  161 |\n  162 |         const first_jadwal = await this.jadwal_card.first();\n> 163 |         const harga_tiket = await first_jadwal.locator('div.harga > p').first().innerText();\n      |                                                                                 ^\n  164 |         await first_jadwal.locator('button:has-text(\"Pilih\")').first().click();\n  165 |         return harga_tiket;\n  166 |     }\n    at Krakaline.pilihJadwal (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/krakaline.js:163:81)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:128:33"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.krakaline.com/\", waiting until \"load\"\n\n  101 |             const web = new site.locator(page);\n  102 |\n> 103 |             await page.goto(site.urls[ENV]);\n      |                        ^\n  104 |\n  105 |             await clearBrowserState(page);\n  106 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:103:24"
       }
     },
     {
       "title": "@mstrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 92214,
+      "duration": 94666,
       "browser": "chromium",
-      "startTime": "2026-10-26T23:59:10.803Z",
+      "startTime": "2026-10-27T02:39:15.943Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -147,9 +147,9 @@
     {
       "title": "@mstrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 92257,
+      "duration": 94657,
       "browser": "chromium",
-      "startTime": "2026-10-27T00:02:17.009Z",
+      "startTime": "2026-10-27T02:42:27.989Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -159,9 +159,9 @@
     {
       "title": "@putraremaja - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 90678,
+      "duration": 91177,
       "browser": "chromium",
-      "startTime": "2026-10-27T00:07:26.988Z",
+      "startTime": "2026-10-27T02:45:37.090Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -171,9 +171,9 @@
     {
       "title": "@putraremaja - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90666,
+      "duration": 91223,
       "browser": "chromium",
-      "startTime": "2026-10-27T00:10:30.701Z",
+      "startTime": "2026-10-27T02:48:43.697Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -183,33 +183,30 @@
     {
       "title": "@semeru - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 92003,
+      "duration": 107402,
       "browser": "chromium",
-      "startTime": "2026-10-27T00:21:58.298Z",
+      "startTime": "2026-10-27T02:52:05.369Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div.seat-blank').first()\n\n   at ../pages/semeru.js:124\n\n  122 |\n  123 |         for(let i = 0; i < jml_penumpang; i++) {\n> 124 |             await this.kursi_tersedia.nth(i).click();\n      |                                              ^\n  125 |         }\n  126 |     }\n  127 |\n    at Semeru.pilihKursi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/semeru.js:124:46)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:49:13"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.semerutrans.com/\", waiting until \"load\"\n\n  15 |         const web = new site.locator(page);\n  16 |\n> 17 |         await page.goto(site.urls[ENV]);\n     |                    ^\n  18 |\n  19 |         await clearBrowserState(page);\n  20 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:17:20"
       }
     },
     {
       "title": "@trikusuma - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 90830,
+      "status": "passed",
+      "duration": 36737,
       "browser": "chromium",
-      "startTime": "2026-10-27T00:27:24.069Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('#area_antar + div')\n    - locator resolved to <div class=\"ss-55375 ss-main form-control\">…</div>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-id=\"1230564\" class=\"ss-option ss-disabled\">BANJARSARI/GEWOK ( Purwokerto )  - Rp.20.000 </div> from <div class=\"form-group col-lg-6 pb-2 c-jemput\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-id=\"1230564\" class=\"ss-option ss-disabled\">BANJARSARI/GEWOK ( Purwokerto )  - Rp.20.000 </div> from <div class=\"form-group col-lg-6 pb-2 c-jemput\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    36 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-id=\"1230564\" class=\"ss-option ss-disabled\">BANJARSARI/GEWOK ( Purwokerto )  - Rp.20.000 </div> from <div class=\"form-group col-lg-6 pb-2 c-jemput\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n       - waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-id=\"1230564\" class=\"ss-option ss-disabled\">BANJARSARI/GEWOK ( Purwokerto )  - Rp.20.000 </div> from <div class=\"form-group col-lg-6 pb-2 c-jemput\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n       - waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div class=\"ss-option\" data-id=\"66921175\">Hanya Antar</div> from <div class=\"form-group col-lg-12 pb-2\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n       - waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-id=\"1230564\" class=\"ss-option ss-disabled\">BANJARSARI/GEWOK ( Purwokerto )  - Rp.20.000 </div> from <div class=\"form-group col-lg-6 pb-2 c-jemput\">…</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - <div data-id=\"1230564\" class=\"ss-option ss-disabled\">BANJARSARI/GEWOK ( Purwokerto )  - Rp.20.000 </div> from <div class=\"form-group col-lg-6 pb-2 c-jemput\">…</div> subtree intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n\n   at ../pages/trikusuma.js:208\n\n  206 |         if (pemesan.JenisAntarJemput === \"Jemput - Antar\" || pemesan.JenisAntarJemput === \"Hanya Antar\") {\n  207 |             await this.alamat_antar_pemesan.fill(pemesan.AlamatAntar);\n> 208 |             await this.area_antar_pemesan.click();\n      |                                           ^\n  209 |\n  210 |             const area_antar = this.area_antar_pemesan.locator('div.ss-option').nth(3);\n  211 |             await area_antar.click();\n    at Trikusuma.isiDataPenumpang (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/trikusuma.js:208:43)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:47:13"
-      }
+      "startTime": "2026-10-27T02:53:53.692Z",
+      "bookingCode": "BTKS261027WSAZ",
+      "error": null
     },
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 36094,
+      "duration": 44768,
       "browser": "chromium",
-      "startTime": "2026-10-27T00:29:33.357Z",
+      "startTime": "2026-10-27T02:55:17.297Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
