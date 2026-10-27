@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-26T23:04:39.537Z",
-  "generatedAt": "2026-10-27T06:42:19.382Z",
+  "generatedAt": "2026-10-27T06:45:23.596Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/40417122605/artifacts/12700287365",
   "summary": {
     "total": 79,
-    "passed": 62,
-    "failed": 15,
+    "passed": 63,
+    "failed": 14,
     "flaky": 2,
     "skipped": 0,
     "duration": 3702962,
@@ -179,15 +179,12 @@
     },
     {
       "title": "@semeru - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 107402,
+      "status": "passed",
+      "duration": 25334,
       "browser": "chromium",
-      "startTime": "2026-10-27T02:52:05.369Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n  - navigating to \"https://www.semerutrans.com/\", waiting until \"load\"\n\n  15 |         const web = new site.locator(page);\n  16 |\n> 17 |         await page.goto(site.urls[ENV]);\n     |                    ^\n  18 |\n  19 |         await clearBrowserState(page);\n  20 |\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:17:20"
-      }
+      "startTime": "2026-10-27T06:44:51.620Z",
+      "bookingCode": "BSMR261027UEFT",
+      "error": null
     },
     {
       "title": "@trikusuma - Test Case 1 - One Way Trip",
