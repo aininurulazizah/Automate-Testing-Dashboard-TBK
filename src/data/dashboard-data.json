@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-26T23:04:39.537Z",
-  "generatedAt": "2026-10-27T06:45:23.596Z",
+  "generatedAt": "2026-10-27T08:53:43.602Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/40417122605/artifacts/12700287365",
   "summary": {
     "total": 79,
-    "passed": 63,
-    "failed": 14,
+    "passed": 64,
+    "failed": 13,
     "flaky": 2,
     "skipped": 0,
     "duration": 3702962,
@@ -14,15 +14,12 @@
   "details": [
     {
       "title": "@ats - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 97350,
+      "status": "passed",
+      "duration": 19685,
       "browser": "chromium",
-      "startTime": "2026-10-27T02:04:41.962Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button#v-0-1-0-origin')\n    - locator resolved to <button type=\"button\" data-v-efd22e05=\"\" id=\"v-0-1-0-origin\" class=\"nyos__trigger\" aria-expanded=\"false\" aria-haspopup=\"listbox\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    172 × waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div aria-hidden=\"true\" data-v-a2d84ee5=\"\" class=\"dpopup__backdrop\" data-wl-field=\"backdropOpacity\"></div> from <div data-v-a2d84ee5=\"\" class=\"dpopup-root\" data-wl-section-type=\"Popup\" data-wl-section-theme=\"default\">…</div> subtree intercepts pointer events\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/ats.js:133\n\n  131 |\n  132 |     async isiKeberangkatan(value) {\n> 133 |         await this.keberangkatan_field.click();\n      |                                        ^\n  134 |         await this.dropdown_keberangkatan.locator(`span.nyos__option-text > strong:text-is(\"${value}\")`).click();\n  135 |     }\n  136 |\n    at Ats.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ats.js:133:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:25:19"
-      }
+      "startTime": "2026-10-27T08:53:20.137Z",
+      "bookingCode": "BATS2610276WLS",
+      "error": null
     },
     {
       "title": "@ats - Test Case 2 - Round Trip",
