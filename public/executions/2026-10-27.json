@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-26T23:04:39.537Z",
-  "generatedAt": "2026-10-27T02:56:05.485Z",
+  "generatedAt": "2026-10-27T06:42:19.382Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/40417122605/artifacts/12700287365",
   "summary": {
     "total": 79,
-    "passed": 61,
-    "failed": 16,
+    "passed": 62,
+    "failed": 15,
     "flaky": 2,
     "skipped": 0,
     "duration": 3702962,
@@ -38,15 +38,12 @@
     },
     {
       "title": "@baraya - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 94652,
+      "status": "passed",
+      "duration": 42774,
       "browser": "chromium",
-      "startTime": "2026-10-27T02:11:33.066Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: expect(locator).not.toHaveClass(expected) failed\n\nLocator: locator('div#modal-load')\nExpected pattern: not /show/\nError: element(s) not found\n\nCall log:\n  - Expect \"not toHaveClass\" with timeout 120000ms\n  - waiting for locator('div#modal-load')\n\n   at ../pages/baraya.js:105\n\n  103 |             await expect(loader).toHaveClass(new RegExp(loader_class), {timeout: 120000});\n  104 |         } else {\n> 105 |             await expect(loader).not.toHaveClass(new RegExp(loader_class), {timeout: 120000});\n      |                                      ^\n  106 |         }\n  107 |     }\n  108 |\n    at Baraya.waitForLoader (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/baraya.js:105:38)\n    at Baraya.isiDataPenumpang (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/baraya.js:209:9)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:136:13"
-      }
+      "startTime": "2026-10-27T06:41:30.760Z",
+      "bookingCode": "BBRT261027KLFZ",
+      "error": null
     },
     {
       "title": "@btm - Test Case 3 - Connecting Reservation",
