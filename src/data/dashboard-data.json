@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-26T23:04:39.537Z",
-  "generatedAt": "2026-10-27T09:43:04.815Z",
+  "generatedAt": "2026-10-27T09:45:26.951Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/40417122605/artifacts/12700287365",
   "summary": {
     "total": 79,
-    "passed": 66,
-    "failed": 11,
+    "passed": 67,
+    "failed": 10,
     "flaky": 2,
     "skipped": 0,
     "duration": 3702962,
@@ -158,15 +158,12 @@
     },
     {
       "title": "@putraremaja - Test Case 2 - Round Trip",
-      "status": "failed",
-      "duration": 91223,
+      "status": "passed",
+      "duration": 49855,
       "browser": "chromium",
-      "startTime": "2026-10-27T02:48:43.697Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('p:text-is(\"Asal\") + div div#dropdown-outlet').locator('span:text-is(\"Agen pr hotel candra kirana jogja\")')\n\n   at ../pages/putraremaja.js:121\n\n  119 |     async isiKeberangkatan(value) {\n  120 |         await this.keberangkatan_field.click();\n> 121 |         await this.dropdown_keberangkatan.locator(`span:text-is(\"${value}\")`).click();\n      |                                                                               ^\n  122 |     }\n  123 |\n  124 |     async isiTujuan(value) {\n    at Putraremaja.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/putraremaja.js:121:79)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:111:13"
-      }
+      "startTime": "2026-10-27T09:44:34.041Z",
+      "bookingCode": "BPTR2610278MN5",
+      "error": null
     },
     {
       "title": "@semeru - Test Case 1 - One Way Trip",
