@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-27T22:54:26.187Z",
-  "generatedAt": "2026-10-28T02:21:02.152Z",
+  "generatedAt": "2026-10-28T07:44:58.654Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/40598223768/artifacts/12780519664",
   "summary": {
     "total": 79,
-    "passed": 68,
-    "failed": 10,
+    "passed": 69,
+    "failed": 9,
     "flaky": 1,
     "skipped": 0,
     "duration": 3154626,
@@ -50,15 +50,12 @@
     },
     {
       "title": "@daytrans - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 92898,
+      "status": "passed",
+      "duration": 38022,
       "browser": "chromium",
-      "startTime": "2026-10-27T23:12:49.640Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('input[data-testid=\"terms-consent-agree\"]')\n    - locator resolved to <input disabled id=\"_r_3q_\" type=\"checkbox\" data-testid=\"terms-consent-agree\" class=\"mt-0.5 size-4 shrink-0 rounded text-primary focus:ring-primary disabled:cursor-not-allowed border-[#d1d5db]\"/>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n      - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is not stable\n  144 × retrying click action\n        - waiting 500ms\n        - waiting for element to be visible, enabled and stable\n        - element is not enabled\n  - retrying click action\n    - waiting 500ms\n\n   at ../pages/daytrans.js:348\n\n  346 |     async konfirmasiPembayaran() {\n  347 |         await this.konfirmasi_pembayaran_btn.click();\n> 348 |         await this.check_ketentuan_btn.click();\n      |                                        ^\n  349 |         await this.konfirmasi_pembayaran_btn_modal.click();\n  350 |     }\n  351 |\n    at Daytrans.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/daytrans.js:348:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:80:9"
-      }
+      "startTime": "2026-10-28T07:44:15.845Z",
+      "bookingCode": "Sabtu, 28 November 2026 04:30",
+      "error": null
     },
     {
       "title": "@daytrans - Test Case 3 - Connecting Reservation",
