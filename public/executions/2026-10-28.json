@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-27T22:54:26.187Z",
-  "generatedAt": "2026-10-28T07:44:58.654Z",
+  "generatedAt": "2026-10-28T07:48:40.580Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/40598223768/artifacts/12780519664",
   "summary": {
     "total": 79,
-    "passed": 69,
-    "failed": 9,
+    "passed": 70,
+    "failed": 8,
     "flaky": 1,
     "skipped": 0,
     "duration": 3154626,
@@ -59,15 +59,12 @@
     },
     {
       "title": "@daytrans - Test Case 3 - Connecting Reservation",
-      "status": "failed",
-      "duration": 93056,
+      "status": "passed",
+      "duration": 36245,
       "browser": "chromium",
-      "startTime": "2026-10-27T23:15:58.908Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.innerText: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('aside + div > div > div').first().locator('span:has-text(\"Rp\")').nth(1)\n\n   at ../pages/daytrans.js:174\n\n  172 |     async pilihJadwal(){\n  173 |         const jadwal_card = await this.jadwal_cards.first();\n> 174 |         const harga_tiket = await jadwal_card.locator('span:has-text(\"Rp\")').nth(1).innerText();\n      |                                                                                     ^\n  175 |         const pilih_btn = await jadwal_card.locator('button:has-text(\"Pilih Jadwal\")');\n  176 |\n  177 |         await pilih_btn.click();\n    at Daytrans.pilihJadwal (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/daytrans.js:174:85)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:225:33"
-      }
+      "startTime": "2026-10-28T07:47:59.385Z",
+      "bookingCode": "Sabtu, 28 November 2026 06:15",
+      "error": null
     },
     {
       "title": "@krakaline - Test Case 1 - One Way Trip",
