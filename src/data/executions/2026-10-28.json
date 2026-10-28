@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-27T22:54:26.187Z",
-  "generatedAt": "2026-10-28T07:48:40.580Z",
+  "generatedAt": "2026-10-28T07:53:00.488Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/40598223768/artifacts/12780519664",
   "summary": {
     "total": 79,
-    "passed": 70,
-    "failed": 8,
+    "passed": 71,
+    "failed": 7,
     "flaky": 1,
     "skipped": 0,
     "duration": 3154626,
@@ -92,15 +92,12 @@
     },
     {
       "title": "@mstrans - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93075,
+      "status": "passed",
+      "duration": 25089,
       "browser": "chromium",
-      "startTime": "2026-10-27T23:36:48.846Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/mstrans.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Mstrans.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/mstrans.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:34:19"
-      }
+      "startTime": "2026-10-28T07:52:31.108Z",
+      "bookingCode": "BMST261028UYTH",
+      "error": null
     },
     {
       "title": "@mstrans - Test Case 2 - Round Trip",
