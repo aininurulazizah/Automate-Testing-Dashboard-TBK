@@ -1,11 +1,11 @@
 {
   "startedAt": "2026-10-29T23:09:40.064Z",
-  "generatedAt": "2026-10-30T00:18:07.063Z",
+  "generatedAt": "2026-10-30T03:09:40.341Z",
   "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/40971115951/artifacts/12943109612",
   "summary": {
     "total": 79,
-    "passed": 70,
-    "failed": 8,
+    "passed": 71,
+    "failed": 7,
     "flaky": 1,
     "skipped": 0,
     "duration": 3228249,
@@ -86,15 +86,12 @@
     },
     {
       "title": "@ztrans - Test Case 1 - One Way Trip",
-      "status": "failed",
-      "duration": 93106,
+      "status": "passed",
+      "duration": 40862,
       "browser": "chromium",
-      "startTime": "2026-10-30T00:13:17.955Z",
-      "bookingCode": null,
-      "error": {
-        "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#jmlpenumpang + div')\n\n   at ../pages/ztrans.js:161\n\n  159 |\n  160 |     async isiJumlahPenumpang(value) {\n> 161 |         await this.jumlah_penumpang.click();\n      |                                     ^\n  162 |         await this.dropdown_jml_penumpang.locator(`div:text-is(\"${value} Orang\")`).click();\n  163 |         await this.keberangkatan_field.click(); // Untuk menghilangkan dropdown\n  164 |     }\n    at Ztrans.isiJumlahPenumpang (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ztrans.js:161:37)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:42:23"
-      }
+      "startTime": "2026-10-30T03:08:55.384Z",
+      "bookingCode": "BSBT261030O6FG",
+      "error": null
     },
     {
       "title": "@ztrans - Test Case 2 - Round Trip",
