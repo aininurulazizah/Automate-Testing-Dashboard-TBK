@@ -1,23 +1,35 @@
 {
-  "startedAt": "2026-11-10T23:57:18.022Z",
-  "generatedAt": "2026-11-11T01:14:00.967Z",
-  "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/42927435797/artifacts/13819750563",
+  "startedAt": "2026-11-12T01:24:19.458Z",
+  "generatedAt": "2026-11-12T02:57:24.572Z",
+  "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/43134211091/artifacts/13910558865",
   "summary": {
     "total": 79,
-    "passed": 61,
-    "failed": 16,
-    "flaky": 2,
+    "passed": 54,
+    "failed": 20,
+    "flaky": 5,
     "skipped": 0,
-    "duration": 3216301,
-    "durationFormatted": "00:53:36"
+    "duration": 3516591,
+    "durationFormatted": "00:58:36"
   },
   "details": [
     {
+      "title": "@banyumili - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 93547,
+      "browser": "chromium",
+      "startTime": "2026-11-12T01:31:24.846Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: expect(locator).not.toHaveClass(expected) failed\n\nLocator: locator('div#modal-load')\nExpected pattern: not /show/\nError: element(s) not found\n\nCall log:\n  - Expect \"not toHaveClass\" with timeout 120000ms\n  - waiting for locator('div#modal-load')\n\n   at ../pages/banyumili.js:98\n\n   96 |             await expect(loader).toHaveClass(new RegExp(loader_class), {timeout: 120000});\n   97 |         } else {\n>  98 |             await expect(loader).not.toHaveClass(new RegExp(loader_class), {timeout: 120000});\n      |                                      ^\n   99 |         }\n  100 |     }\n  101 |\n    at Banyumili.waitForLoader (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/banyumili.js:98:38)\n    at Banyumili.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/banyumili.js:340:9)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:166:13"
+      }
+    },
+    {
       "title": "@btm - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 30824,
+      "duration": 31277,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:07:28.733Z",
+      "startTime": "2026-11-12T01:37:26.954Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -27,9 +39,9 @@
     {
       "title": "@cgtrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 686,
+      "duration": 723,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:08:03.500Z",
+      "startTime": "2026-11-12T01:38:02.296Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.cgtrans.co.id/",
@@ -39,9 +51,9 @@
     {
       "title": "@cgtrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 684,
+      "duration": 753,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:08:06.600Z",
+      "startTime": "2026-11-12T01:38:05.594Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.cgtrans.co.id/",
@@ -51,81 +63,81 @@
     {
       "title": "@ctu - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 94152,
+      "duration": 90758,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:09:40.473Z",
+      "startTime": "2026-11-12T01:39:42.908Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-d4361339=\"\" class=\"osfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    158 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n\n   at ../pages/ctu.js:184\n\n  182 |\n  183 |     async cariTiket() {\n> 184 |         await this.cari_btn.click();\n      |                             ^\n  185 |     }\n  186 |\n  187 |     async pilihJadwal() {\n    at Ctu.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ctu.js:184:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:45:19"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-d4361339=\"\" class=\"osfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    158 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/ctu.js:184\n\n  182 |\n  183 |     async cariTiket() {\n> 184 |         await this.cari_btn.click();\n      |                             ^\n  185 |     }\n  186 |\n  187 |     async pilihJadwal() {\n    at Ctu.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ctu.js:184:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:45:19"
       }
     },
     {
       "title": "@ctu - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 90889,
+      "duration": 90964,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:12:48.544Z",
+      "startTime": "2026-11-12T01:42:48.008Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-d4361339=\"\" class=\"osfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    155 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n\n   at ../pages/ctu.js:184\n\n  182 |\n  183 |     async cariTiket() {\n> 184 |         await this.cari_btn.click();\n      |                             ^\n  185 |     }\n  186 |\n  187 |     async pilihJadwal() {\n    at Ctu.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ctu.js:184:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:138:23"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-d4361339=\"\" class=\"osfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    155 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/ctu.js:184\n\n  182 |\n  183 |     async cariTiket() {\n> 184 |         await this.cari_btn.click();\n      |                             ^\n  185 |     }\n  186 |\n  187 |     async pilihJadwal() {\n    at Ctu.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/ctu.js:184:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:138:23"
       }
     },
     {
       "title": "@daytrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 94341,
+      "duration": 93170,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:15:57.560Z",
+      "startTime": "2026-11-12T01:45:57.408Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('[aria-label*=\"11 December 2026\"]')\n\n   at ../pages/daytrans.js:152\n\n  150 |\n  151 |         await this.tanggal_pergi.click();\n> 152 |         await tanggal_target.click();\n      |                              ^\n  153 |         await this.save_date_btn.click();\n  154 |     }\n  155 |\n    at Daytrans.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/daytrans.js:152:30)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:38:9"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('[aria-label*=\"12 December 2026\"]')\n\n   at ../pages/daytrans.js:152\n\n  150 |\n  151 |         await this.tanggal_pergi.click();\n> 152 |         await tanggal_target.click();\n      |                              ^\n  153 |         await this.save_date_btn.click();\n  154 |     }\n  155 |\n    at Daytrans.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/daytrans.js:152:30)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:38:9"
       }
     },
     {
       "title": "@daytrans - Test Case 3 - Connecting Reservation",
       "status": "failed",
-      "duration": 93426,
+      "duration": 93173,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:19:11.513Z",
+      "startTime": "2026-11-12T01:49:10.848Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('[aria-label*=\"11 December 2026\"]')\n\n   at ../pages/daytrans.js:152\n\n  150 |\n  151 |         await this.tanggal_pergi.click();\n> 152 |         await tanggal_target.click();\n      |                              ^\n  153 |         await this.save_date_btn.click();\n  154 |     }\n  155 |\n    at Daytrans.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/daytrans.js:152:30)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:224:13"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('[aria-label*=\"12 December 2026\"]')\n\n   at ../pages/daytrans.js:152\n\n  150 |\n  151 |         await this.tanggal_pergi.click();\n> 152 |         await tanggal_target.click();\n      |                              ^\n  153 |         await this.save_date_btn.click();\n  154 |     }\n  155 |\n    at Daytrans.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/daytrans.js:152:30)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:224:13"
       }
     },
     {
       "title": "@jackal - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 98446,
+      "duration": 97658,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:24:58.943Z",
+      "startTime": "2026-11-12T01:54:58.389Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('input[type=\"text\"][readonly]')\n    - locator resolved to <input required=\"\" type=\"text\" tabindex=\"0\" readonly=\"readonly\" placeholder=\"Departure Date\" class=\"flex-grow bg-transparent outline-none form-control input\"/>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"popInfo\" tabindex=\"-1\" aria-modal=\"true\" aria-labelledby=\"popInfoLabel\" class=\"modal modal-pop-info fade show\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n      - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is not stable\n  169 × retrying click action\n        - waiting 500ms\n        - waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div id=\"popInfo\" tabindex=\"-1\" aria-modal=\"true\" aria-labelledby=\"popInfoLabel\" class=\"modal modal-pop-info fade show\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n\n   at ../pages/jackal.js:116\n\n  114 |     async isiTanggalPergi(value) {\n  115 |         const tanggal_target = this.page.locator(`[aria-label=\"${value}\"]`).first();\n> 116 |         await this.tanggal_pergi.click();\n      |                                  ^\n  117 |         while(!(await tanggal_target.isVisible())){\n  118 |             await this.next_month_btn.click();\n  119 |         }\n    at Jackal.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/jackal.js:116:34)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:38:19"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('input[type=\"text\"][readonly]')\n    - locator resolved to <input required=\"\" type=\"text\" tabindex=\"0\" readonly=\"readonly\" placeholder=\"Departure Date\" class=\"flex-grow bg-transparent outline-none form-control input\"/>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"popInfo\" tabindex=\"-1\" aria-modal=\"true\" aria-labelledby=\"popInfoLabel\" class=\"modal modal-pop-info fade show\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n      - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is not stable\n  168 × retrying click action\n        - waiting 500ms\n        - waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div id=\"popInfo\" tabindex=\"-1\" aria-modal=\"true\" aria-labelledby=\"popInfoLabel\" class=\"modal modal-pop-info fade show\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n\n   at ../pages/jackal.js:116\n\n  114 |     async isiTanggalPergi(value) {\n  115 |         const tanggal_target = this.page.locator(`[aria-label=\"${value}\"]`).first();\n> 116 |         await this.tanggal_pergi.click();\n      |                                  ^\n  117 |         while(!(await tanggal_target.isVisible())){\n  118 |             await this.next_month_btn.click();\n  119 |         }\n    at Jackal.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/jackal.js:116:34)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:38:19"
       }
     },
     {
       "title": "@jackal - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 97489,
+      "duration": 97804,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:28:35.266Z",
+      "startTime": "2026-11-12T01:58:30.999Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('input[type=\"text\"][readonly]')\n    - locator resolved to <input required=\"\" type=\"text\" tabindex=\"0\" readonly=\"readonly\" placeholder=\"Departure Date\" class=\"flex-grow bg-transparent outline-none form-control input\"/>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"popInfo\" tabindex=\"-1\" aria-modal=\"true\" aria-labelledby=\"popInfoLabel\" class=\"modal modal-pop-info fade show\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n      - waiting 100ms\n    171 × waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div id=\"popInfo\" tabindex=\"-1\" aria-modal=\"true\" aria-labelledby=\"popInfoLabel\" class=\"modal modal-pop-info fade show\">…</div> intercepts pointer events\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/jackal.js:116\n\n  114 |     async isiTanggalPergi(value) {\n  115 |         const tanggal_target = this.page.locator(`[aria-label=\"${value}\"]`).first();\n> 116 |         await this.tanggal_pergi.click();\n      |                                  ^\n  117 |         while(!(await tanggal_target.isVisible())){\n  118 |             await this.next_month_btn.click();\n  119 |         }\n    at Jackal.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/jackal.js:116:34)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:127:23"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('input[type=\"text\"][readonly]')\n    - locator resolved to <input required=\"\" type=\"text\" tabindex=\"0\" readonly=\"readonly\" placeholder=\"Departure Date\" class=\"flex-grow bg-transparent outline-none form-control input\"/>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"popInfo\" tabindex=\"-1\" aria-modal=\"true\" aria-labelledby=\"popInfoLabel\" class=\"modal modal-pop-info fade show\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n      - waiting 100ms\n    - waiting for element to be visible, enabled and stable\n    - element is not stable\n  170 × retrying click action\n        - waiting 500ms\n        - waiting for element to be visible, enabled and stable\n        - element is visible, enabled and stable\n        - scrolling into view if needed\n        - done scrolling\n        - <div id=\"popInfo\" tabindex=\"-1\" aria-modal=\"true\" aria-labelledby=\"popInfoLabel\" class=\"modal modal-pop-info fade show\">…</div> intercepts pointer events\n  - retrying click action\n    - waiting 500ms\n\n   at ../pages/jackal.js:116\n\n  114 |     async isiTanggalPergi(value) {\n  115 |         const tanggal_target = this.page.locator(`[aria-label=\"${value}\"]`).first();\n> 116 |         await this.tanggal_pergi.click();\n      |                                  ^\n  117 |         while(!(await tanggal_target.isVisible())){\n  118 |             await this.next_month_btn.click();\n  119 |         }\n    at Jackal.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/jackal.js:116:34)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:127:23"
       }
     },
     {
       "title": "@krakaline - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 686,
+      "duration": 736,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:32:50.904Z",
+      "startTime": "2026-11-12T02:02:58.478Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.krakaline.com/",
@@ -135,9 +147,9 @@
     {
       "title": "@krakaline - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 696,
+      "duration": 752,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:32:54.012Z",
+      "startTime": "2026-11-12T02:03:01.805Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.krakaline.com/",
@@ -147,33 +159,33 @@
     {
       "title": "@mstrans - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 94001,
+      "duration": 94262,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:42:04.011Z",
+      "startTime": "2026-11-12T02:13:32.850Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-d4361339=\"\" class=\"osfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    151 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/mstrans.js:183\n\n  181 |\n  182 |     async cariTiket() {\n> 183 |         await this.cari_btn.click();\n      |                             ^\n  184 |     }\n  185 |\n  186 |     async pilihJadwal() {\n    at Mstrans.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/mstrans.js:183:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:45:19"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-d4361339=\"\" class=\"osfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    158 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/mstrans.js:183\n\n  181 |\n  182 |     async cariTiket() {\n> 183 |         await this.cari_btn.click();\n      |                             ^\n  184 |     }\n  185 |\n  186 |     async pilihJadwal() {\n    at Mstrans.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/mstrans.js:183:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:45:19"
       }
     },
     {
       "title": "@mstrans - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 94083,
+      "duration": 94317,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:45:15.560Z",
+      "startTime": "2026-11-12T02:16:44.599Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-d4361339=\"\" class=\"osfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    150 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/mstrans.js:183\n\n  181 |\n  182 |     async cariTiket() {\n> 183 |         await this.cari_btn.click();\n      |                             ^\n  184 |     }\n  185 |\n  186 |     async pilihJadwal() {\n    at Mstrans.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/mstrans.js:183:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:138:23"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-d4361339=\"\" class=\"osfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    156 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/mstrans.js:183\n\n  181 |\n  182 |     async cariTiket() {\n> 183 |         await this.cari_btn.click();\n      |                             ^\n  184 |     }\n  185 |\n  186 |     async pilihJadwal() {\n    at Mstrans.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/mstrans.js:183:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:138:23"
       }
     },
     {
       "title": "@pelitamas - Test Case 1 - One Way Trip",
       "status": "failed",
-      "duration": 92273,
+      "duration": 92378,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:49:42.067Z",
+      "startTime": "2026-11-12T02:21:09.961Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
@@ -183,21 +195,45 @@
     {
       "title": "@pelitamas - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 92258,
+      "duration": 92287,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:52:51.547Z",
+      "startTime": "2026-11-12T02:24:20.631Z",
       "bookingCode": null,
       "error": {
         "summary": "Test timeout of 90000ms exceeded.",
-        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-2dd75e29=\"\" class=\"nyfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    160 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/pelitamas.js:183\n\n  181 |\n  182 |     async cariTiket() {\n> 183 |         await this.cari_btn.click();\n      |                             ^\n  184 |     }\n  185 |\n  186 |     async pilihJadwal() {\n    at Pelitamas.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/pelitamas.js:183:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:138:23"
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('button[data-wl-field=\"searchPath\"]')\n    - locator resolved to <button disabled type=\"submit\" data-v-2dd75e29=\"\" class=\"nyfr__submit\" data-wl-field=\"searchPath\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    159 × waiting for element to be visible, enabled and stable\n        - element is not enabled\n      - retrying click action\n        - waiting 500ms\n\n   at ../pages/pelitamas.js:183\n\n  181 |\n  182 |     async cariTiket() {\n> 183 |         await this.cari_btn.click();\n      |                             ^\n  184 |     }\n  185 |\n  186 |     async pilihJadwal() {\n    at Pelitamas.cariTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/pelitamas.js:183:29)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:138:23"
+      }
+    },
+    {
+      "title": "@raputri - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 94670,
+      "browser": "chromium",
+      "startTime": "2026-11-12T02:30:16.695Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/raputri.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Raputri.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/raputri.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:34:19"
+      }
+    },
+    {
+      "title": "@raputri - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 94312,
+      "browser": "chromium",
+      "startTime": "2026-11-12T02:33:28.412Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/raputri.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Raputri.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/raputri.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:123:23"
       }
     },
     {
       "title": "@trikusuma - Test Case 2 - Round Trip",
       "status": "failed",
-      "duration": 34349,
+      "duration": 35303,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:08:23.816Z",
+      "startTime": "2026-11-12T02:47:06.471Z",
       "bookingCode": null,
       "error": {
         "summary": "Error: expect(received).toBe(expected) // Object.is equality",
@@ -205,570 +241,546 @@
       }
     },
     {
-      "title": "@kruzz - Test Case 2 - Round Trip",
-      "status": "flaky",
-      "duration": 47001,
+      "title": "@yantigroup - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 93702,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:35:05.402Z",
-      "bookingCode": "BKRZ261111C7X4",
+      "startTime": "2026-11-12T02:53:31.207Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: expect(locator).not.toHaveClass(expected) failed\n\nLocator: locator('div#modal-load')\nExpected pattern: not /show/\nError: element(s) not found\n\nCall log:\n  - Expect \"not toHaveClass\" with timeout 120000ms\n  - waiting for locator('div#modal-load')\n\n   at ../pages/yantigroup.js:106\n\n  104 |             await expect(loader).toHaveClass(new RegExp(loader_class), {timeout: 120000});\n  105 |         } else {\n> 106 |             await expect(loader).not.toHaveClass(new RegExp(loader_class), {timeout: 120000});\n      |                                      ^\n  107 |         }\n  108 |     }\n  109 |\n    at Yantigroup.waitForLoader (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/yantigroup.js:106:38)\n    at Yantigroup.konfirmasiPembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/yantigroup.js:362:9)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:80:9"
+      }
+    },
+    {
+      "title": "@kruzz - Test Case 1 - One Way Trip",
+      "status": "flaky",
+      "duration": 36246,
+      "browser": "chromium",
+      "startTime": "2026-11-12T02:04:39.897Z",
+      "bookingCode": "BKRZ261112QWET",
       "error": null
     },
     {
-      "title": "@sadya - Test Case 1 - One Way Trip",
+      "title": "@kruzz - Test Case 2 - Round Trip",
       "status": "flaky",
-      "duration": 33946,
+      "duration": 48591,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:01:19.290Z",
-      "bookingCode": "BSDY2611116WXA",
+      "startTime": "2026-11-12T02:06:52.624Z",
+      "bookingCode": "BKRZ261112U0DM",
+      "error": null
+    },
+    {
+      "title": "@putraremaja - Test Case 1 - One Way Trip",
+      "status": "flaky",
+      "duration": 28816,
+      "browser": "chromium",
+      "startTime": "2026-11-12T02:27:29.137Z",
+      "bookingCode": "BPTR261112ELXF",
+      "error": null
+    },
+    {
+      "title": "@sunjaya - Test Case 1 - One Way Trip",
+      "status": "flaky",
+      "duration": 32573,
+      "browser": "chromium",
+      "startTime": "2026-11-12T02:43:17.317Z",
+      "bookingCode": "BSNA261112689Z",
+      "error": null
+    },
+    {
+      "title": "@wbtrans - Test Case 1 - One Way Trip",
+      "status": "flaky",
+      "duration": 30948,
+      "browser": "chromium",
+      "startTime": "2026-11-12T02:49:19.189Z",
+      "bookingCode": "BWBS261112P14N",
       "error": null
     },
     {
       "title": "@adibuzz - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 32477,
+      "duration": 34512,
       "browser": "chromium",
-      "startTime": "2026-11-10T23:57:18.022Z",
-      "bookingCode": "BADI261111P9Y5",
+      "startTime": "2026-11-12T01:24:19.458Z",
+      "bookingCode": "BADI261112PD2M",
       "error": null
     },
     {
       "title": "@adibuzz - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 40793,
+      "duration": 43724,
       "browser": "chromium",
-      "startTime": "2026-11-10T23:57:51.710Z",
-      "bookingCode": "BADI261111IUDN",
+      "startTime": "2026-11-12T01:24:56.212Z",
+      "bookingCode": "BADI261112PELZ",
       "error": null
     },
     {
       "title": "@ans - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 35522,
+      "duration": 34016,
       "browser": "chromium",
-      "startTime": "2026-11-10T23:58:33.835Z",
-      "bookingCode": "BANS261111PX9F",
+      "startTime": "2026-11-12T01:25:41.407Z",
+      "bookingCode": "BANS2611126VQR",
       "error": null
     },
     {
       "title": "@ans - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 43275,
+      "duration": 48874,
       "browser": "chromium",
-      "startTime": "2026-11-10T23:59:11.359Z",
-      "bookingCode": "BANS261111J4AB",
+      "startTime": "2026-11-12T01:26:17.428Z",
+      "bookingCode": "BANS2611120W2A",
       "error": null
     },
     {
       "title": "@aoshuttle - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 23495,
+      "duration": 21157,
       "browser": "chromium",
-      "startTime": "2026-11-10T23:59:57.018Z",
-      "bookingCode": "BAOS261111W8AT",
+      "startTime": "2026-11-12T01:27:08.674Z",
+      "bookingCode": "BAOS261112KW2Y",
       "error": null
     },
     {
       "title": "@aoshuttle - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 26071,
+      "duration": 25451,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:00:21.603Z",
-      "bookingCode": "BAOS261111DE9Y",
+      "startTime": "2026-11-12T01:27:30.957Z",
+      "bookingCode": "BAOS2611121W4N",
       "error": null
     },
     {
       "title": "@aragon - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 24569,
+      "duration": 28166,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:00:48.986Z",
-      "bookingCode": "BARG261111CSAG",
+      "startTime": "2026-11-12T01:27:57.764Z",
+      "bookingCode": "BARG261112DK8F",
       "error": null
     },
     {
       "title": "@ats - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 22104,
+      "duration": 21746,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:01:14.788Z",
-      "bookingCode": "BATS261111CJ3Y",
+      "startTime": "2026-11-12T01:28:27.372Z",
+      "bookingCode": "BATS261112O7SH",
       "error": null
     },
     {
       "title": "@ats - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 23366,
+      "duration": 23355,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:01:37.792Z",
-      "bookingCode": "BATS261111DKQF",
+      "startTime": "2026-11-12T01:28:50.128Z",
+      "bookingCode": "BATS261112IJPB",
       "error": null
     },
     {
       "title": "@banyumili - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 31785,
+      "duration": 31569,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:02:02.226Z",
-      "bookingCode": "BBYM261111IPE3",
-      "error": null
-    },
-    {
-      "title": "@banyumili - Test Case 2 - Round Trip",
-      "status": "passed",
-      "duration": 37858,
-      "browser": "chromium",
-      "startTime": "2026-11-11T00:02:35.840Z",
-      "bookingCode": "BBYM261111C3SA",
+      "startTime": "2026-11-12T01:29:14.642Z",
+      "bookingCode": "BBYM261112IPK5",
       "error": null
     },
     {
       "title": "@baraya - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 31537,
+      "duration": 32906,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:03:15.851Z",
-      "bookingCode": "BBRT261111MNTH",
+      "startTime": "2026-11-12T01:33:01.392Z",
+      "bookingCode": "BBRT261112P7LA",
       "error": null
     },
     {
       "title": "@baraya - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 41729,
+      "duration": 42588,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:03:49.331Z",
-      "bookingCode": "BBRT2611111KFS",
+      "startTime": "2026-11-12T01:33:36.054Z",
+      "bookingCode": "BBRT2611120LNB",
       "error": null
     },
     {
       "title": "@besttrans - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 34495,
+      "duration": 33485,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:04:33.486Z",
-      "bookingCode": "BBST261111XYG5",
+      "startTime": "2026-11-12T01:34:21.179Z",
+      "bookingCode": "BBST261112VKQM",
       "error": null
     },
     {
       "title": "@besttrans - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 41834,
+      "duration": 48483,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:05:09.771Z",
-      "bookingCode": "BBST261111IOP8",
+      "startTime": "2026-11-12T01:34:56.281Z",
+      "bookingCode": "BBST261112UJEG",
       "error": null
     },
     {
       "title": "@binasarana - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 29090,
+      "duration": 30528,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:05:53.826Z",
-      "bookingCode": "BBSS261111PXN5",
+      "startTime": "2026-11-12T01:35:47.328Z",
+      "bookingCode": "BBSS261112IJY4",
       "error": null
     },
     {
       "title": "@btm - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 29693,
+      "duration": 31490,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:06:24.077Z",
-      "bookingCode": "BBTM2611117WR5",
+      "startTime": "2026-11-12T01:36:19.066Z",
+      "bookingCode": "BBTM261112OUXH",
       "error": null
     },
     {
       "title": "@gracias - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 33780,
+      "duration": 33932,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:20:48.726Z",
-      "bookingCode": "BGRS261111V7W4",
+      "startTime": "2026-11-12T01:50:47.556Z",
+      "bookingCode": "BGRS261112O19M",
       "error": null
     },
     {
       "title": "@gracias - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 41166,
+      "duration": 40616,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:21:24.186Z",
-      "bookingCode": "BGRS261111PD2Y",
+      "startTime": "2026-11-12T01:51:22.961Z",
+      "bookingCode": "BGRS261112DK28",
       "error": null
     },
     {
       "title": "@harumbsi - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 26232,
+      "duration": 27018,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:22:07.767Z",
-      "bookingCode": "BBSI261111CJER",
+      "startTime": "2026-11-12T01:52:05.659Z",
+      "bookingCode": "BBSI261112QYNB",
       "error": null
     },
     {
       "title": "@harumbsi - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 34112,
+      "duration": 38314,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:22:35.248Z",
-      "bookingCode": "BBSI2611110VT5",
+      "startTime": "2026-11-12T01:52:33.710Z",
+      "bookingCode": "BBSI261112C83G",
       "error": null
     },
     {
       "title": "@joglosemar - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 34127,
+      "duration": 34929,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:30:21.173Z",
-      "bookingCode": "BJGS2611110XAZ",
+      "startTime": "2026-11-12T02:00:17.541Z",
+      "bookingCode": "BJGS261112JZBH",
       "error": null
     },
     {
       "title": "@joglosemar - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 44208,
+      "duration": 45423,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:30:56.927Z",
-      "bookingCode": "BJGS2611110294",
+      "startTime": "2026-11-12T02:00:54.120Z",
+      "bookingCode": "BJGS2611128XM4",
       "error": null
     },
     {
       "title": "@kpm - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 28505,
+      "duration": 32603,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:31:43.373Z",
-      "bookingCode": "BKPM261111619Z",
+      "startTime": "2026-11-12T02:01:42.020Z",
+      "bookingCode": "BKPM261112P9FZ",
       "error": null
     },
     {
       "title": "@kpm - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 35619,
+      "duration": 39246,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:32:12.661Z",
-      "bookingCode": "BKPM261111CXSZ",
-      "error": null
-    },
-    {
-      "title": "@kruzz - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 33676,
-      "browser": "chromium",
-      "startTime": "2026-11-11T00:32:55.578Z",
-      "bookingCode": "BKRZ261111O0E4",
+      "startTime": "2026-11-12T02:02:15.961Z",
+      "bookingCode": "BKPM261112P84G",
       "error": null
     },
     {
       "title": "@kruzz - Test Case 3 - Connecting Reservation",
       "status": "passed",
-      "duration": 39019,
+      "duration": 41051,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:35:53.833Z",
-      "bookingCode": "BKRZ261111EN5B",
+      "startTime": "2026-11-12T02:07:42.757Z",
+      "bookingCode": "BKRZ2611120CR4",
       "error": null
     },
     {
       "title": "@kupuayu - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 52694,
+      "duration": 40133,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:36:34.117Z",
-      "bookingCode": "BKKA261111OJ85",
+      "startTime": "2026-11-12T02:08:24.888Z",
+      "bookingCode": "BKKA261112WMZH",
       "error": null
     },
     {
       "title": "@kupuayu - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 73633,
+      "duration": 63098,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:37:29.101Z",
-      "bookingCode": "BKKA2611117KF4",
+      "startTime": "2026-11-12T02:09:06.859Z",
+      "bookingCode": "BKKA261112RX9Z",
       "error": null
     },
     {
       "title": "@minanga - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 32056,
+      "duration": 31616,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:38:45.791Z",
-      "bookingCode": "BMNA2611113MY4",
+      "startTime": "2026-11-12T02:10:12.499Z",
+      "bookingCode": "BMNA261112KEFT",
       "error": null
     },
     {
       "title": "@minanga - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 43155,
+      "duration": 41594,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:39:19.290Z",
-      "bookingCode": "BMNA261111JT5H",
+      "startTime": "2026-11-12T02:10:45.576Z",
+      "bookingCode": "BMNA261112UGZB",
       "error": null
     },
     {
       "title": "@mrtrans - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 22174,
+      "duration": 26978,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:40:04.661Z",
-      "bookingCode": "BMRT261111IWRG",
+      "startTime": "2026-11-12T02:11:28.616Z",
+      "bookingCode": "BMRT261112AGNT",
       "error": null
     },
     {
       "title": "@namaste - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 30271,
+      "duration": 31950,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:46:51.403Z",
-      "bookingCode": "BNMS261111JP24",
+      "startTime": "2026-11-12T02:18:20.570Z",
+      "bookingCode": "BNMS261112UESZ",
       "error": null
     },
     {
       "title": "@namaste - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 41407,
+      "duration": 39026,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:47:23.201Z",
-      "bookingCode": "BNMS261111I1E3",
-      "error": null
-    },
-    {
-      "title": "@putraremaja - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 27630,
-      "browser": "chromium",
-      "startTime": "2026-11-11T00:54:26.402Z",
-      "bookingCode": "BPTR261111UCZB",
+      "startTime": "2026-11-12T02:18:53.871Z",
+      "bookingCode": "BNMS261112W9GB",
       "error": null
     },
     {
       "title": "@putraremaja - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 39258,
+      "duration": 40352,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:54:55.104Z",
-      "bookingCode": "BPTR26111108RZ",
-      "error": null
-    },
-    {
-      "title": "@raputri - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 30143,
-      "browser": "chromium",
-      "startTime": "2026-11-11T00:55:35.862Z",
-      "bookingCode": "BRPT261111Q34T",
-      "error": null
-    },
-    {
-      "title": "@raputri - Test Case 2 - Round Trip",
-      "status": "passed",
-      "duration": 38701,
-      "browser": "chromium",
-      "startTime": "2026-11-11T00:56:07.686Z",
-      "bookingCode": "BRPT261111CQ8G",
+      "startTime": "2026-11-12T02:27:59.113Z",
+      "bookingCode": "BPTR261112IJRX",
       "error": null
     },
     {
       "title": "@riyan - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 31088,
+      "duration": 31305,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:56:48.446Z",
-      "bookingCode": "BRYN261111CKEG",
+      "startTime": "2026-11-12T02:35:04.034Z",
+      "bookingCode": "BRYN261112L3TH",
       "error": null
     },
     {
       "title": "@riyan - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 40070,
+      "duration": 41239,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:57:20.937Z",
-      "bookingCode": "BRYN261111KLFH",
+      "startTime": "2026-11-12T02:35:36.552Z",
+      "bookingCode": "BRYN26111234A5",
       "error": null
     },
     {
       "title": "@royalkencana - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 31823,
+      "duration": 32129,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:58:02.635Z",
-      "bookingCode": "BRYK261111U6PD",
+      "startTime": "2026-11-12T02:36:19.512Z",
+      "bookingCode": "BRYK26111267Q4",
       "error": null
     },
     {
       "title": "@royalkencana - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 42882,
+      "duration": 42232,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:58:35.529Z",
-      "bookingCode": "BRYK261111EL3M",
+      "startTime": "2026-11-12T02:36:53.038Z",
+      "bookingCode": "BRYK261112OJK2",
       "error": null
     },
     {
       "title": "@sabila - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 22940,
+      "duration": 23016,
       "browser": "chromium",
-      "startTime": "2026-11-11T00:59:19.792Z",
-      "bookingCode": "BSBL2611117XFS",
+      "startTime": "2026-11-12T02:37:36.931Z",
+      "bookingCode": "BSBL261112UQL9",
+      "error": null
+    },
+    {
+      "title": "@sadya - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 34940,
+      "browser": "chromium",
+      "startTime": "2026-11-12T02:38:01.054Z",
+      "bookingCode": "BSDY261112IR9F",
       "error": null
     },
     {
       "title": "@sadya - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 37595,
+      "duration": 44974,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:01:54.438Z",
-      "bookingCode": "BSDY261111OA5H",
+      "startTime": "2026-11-12T02:38:37.564Z",
+      "bookingCode": "BSDY261112JNTB",
       "error": null
     },
     {
       "title": "@sariharum - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 33033,
+      "duration": 29875,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:02:33.648Z",
-      "bookingCode": "BSRH2611110KQY",
+      "startTime": "2026-11-12T02:39:24.516Z",
+      "bookingCode": "BSRH2611127KL3",
       "error": null
     },
     {
       "title": "@sariharum - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 38853,
+      "duration": 40659,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:03:07.940Z",
-      "bookingCode": "BSRH261111WF4N",
+      "startTime": "2026-11-12T02:39:56.006Z",
+      "bookingCode": "BSRH261112IFAT",
       "error": null
     },
     {
       "title": "@selamat - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 26916,
+      "duration": 32012,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:03:48.260Z",
-      "bookingCode": "BSLT261111C72E",
+      "startTime": "2026-11-12T02:40:38.578Z",
+      "bookingCode": "BSLT261112PFSH",
       "error": null
     },
     {
       "title": "@semeru - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 22819,
+      "duration": 25809,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:04:16.394Z",
-      "bookingCode": "BSMR261111O6CK",
-      "error": null
-    },
-    {
-      "title": "@sunjaya - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 35685,
-      "browser": "chromium",
-      "startTime": "2026-11-11T01:04:40.260Z",
-      "bookingCode": "BSNA2611112RFY",
+      "startTime": "2026-11-12T02:41:12.014Z",
+      "bookingCode": "BSMR261112KYG5",
       "error": null
     },
     {
       "title": "@sunjaya - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 43415,
+      "duration": 43493,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:05:19.048Z",
-      "bookingCode": "BSNA261111CXFT",
+      "startTime": "2026-11-12T02:43:53.044Z",
+      "bookingCode": "BSNA26111202GB",
       "error": null
     },
     {
       "title": "@transkita - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 28042,
+      "duration": 32142,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:06:05.814Z",
-      "bookingCode": "BTKT261111U01X",
+      "startTime": "2026-11-12T02:44:40.173Z",
+      "bookingCode": "BTKT261112W3GT",
       "error": null
     },
     {
       "title": "@transkita - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 37984,
+      "duration": 40549,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:06:35.074Z",
-      "bookingCode": "BTKT26111123GZ",
+      "startTime": "2026-11-12T02:45:13.762Z",
+      "bookingCode": "BTKT2611129SYB",
       "error": null
     },
     {
       "title": "@trikusuma - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 33270,
+      "duration": 32333,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:07:14.606Z",
-      "bookingCode": "BTKS261111IU3F",
-      "error": null
-    },
-    {
-      "title": "@wbtrans - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 33982,
-      "browser": "chromium",
-      "startTime": "2026-11-11T01:09:00.051Z",
-      "bookingCode": "BWBS261111P39A",
+      "startTime": "2026-11-12T02:45:56.010Z",
+      "bookingCode": "BTKS2611128EY5",
       "error": null
     },
     {
       "title": "@wbtrans - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 42502,
+      "duration": 43663,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:09:35.159Z",
-      "bookingCode": "BWBS261111IUYH",
+      "startTime": "2026-11-12T02:49:51.368Z",
+      "bookingCode": "BWBS261112E3NT",
       "error": null
     },
     {
       "title": "@wisatakomodo - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 29185,
+      "duration": 32141,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:10:19.057Z",
-      "bookingCode": "BWKM261111O7GB",
+      "startTime": "2026-11-12T02:50:36.652Z",
+      "bookingCode": "BWKM261112IOPT",
       "error": null
     },
     {
       "title": "@wisatakomodo - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 39854,
+      "duration": 43948,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:10:49.361Z",
-      "bookingCode": "BWKM261111Q8AH",
-      "error": null
-    },
-    {
-      "title": "@yantigroup - Test Case 1 - One Way Trip",
-      "status": "passed",
-      "duration": 28060,
-      "browser": "chromium",
-      "startTime": "2026-11-11T01:11:30.633Z",
-      "bookingCode": "BYGS261111KRY4",
+      "startTime": "2026-11-12T02:51:09.998Z",
+      "bookingCode": "BWKM261112U0EH",
       "error": null
     },
     {
       "title": "@yantigroup - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 38729,
+      "duration": 45615,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:11:59.931Z",
-      "bookingCode": "BYGS261111PEM4",
+      "startTime": "2026-11-12T02:55:07.289Z",
+      "bookingCode": "BYGS26111261BH",
       "error": null
     },
     {
       "title": "@ztrans - Test Case 1 - One Way Trip",
       "status": "passed",
-      "duration": 31425,
+      "duration": 37912,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:12:40.467Z",
-      "bookingCode": "BSBT261111DKWN",
+      "startTime": "2026-11-12T02:55:54.643Z",
+      "bookingCode": "BSBT261112IQZ5",
       "error": null
     },
     {
       "title": "@ztrans - Test Case 2 - Round Trip",
       "status": "passed",
-      "duration": 44660,
+      "duration": 46956,
       "browser": "chromium",
-      "startTime": "2026-11-11T01:13:13.690Z",
-      "bookingCode": "BSBT261111VSYN",
+      "startTime": "2026-11-12T02:56:34.785Z",
+      "bookingCode": "BSBT261112VWEB",
       "error": null
     }
   ]
