@@ -1,0 +1,751 @@
+{
+  "startedAt": "2026-11-24T04:21:51.516Z",
+  "generatedAt": "2026-11-24T05:57:01.970Z",
+  "githubRunUrl": "https://github.com/aininurulazizah/Automate-Testing-WL-TBK/actions/runs/45324916615/artifacts/14893844578",
+  "summary": {
+    "total": 75,
+    "passed": 50,
+    "failed": 20,
+    "flaky": 5,
+    "skipped": 0,
+    "duration": 3573191,
+    "durationFormatted": "00:59:33"
+  },
+  "details": [
+    {
+      "title": "@aragon - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 92677,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:26:50.243Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('img[alt=qrissp]')\n\n   at ../pages/aragon.js:223\n\n  221 |\n  222 |     async pilihMetodePembayaran(metode_bayar, platform_bayar){\n> 223 |         await this.getPlatformBayar(platform_bayar).click();\n      |                                                     ^\n  224 |     }\n  225 |\n  226 |     async checklistKetentuan() {\n    at Aragon.pilihMetodePembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/aragon.js:223:53)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:74:19"
+      }
+    },
+    {
+      "title": "@ats - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 24070,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:28:53.991Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: expect(locator).toBeVisible() failed",
+        "detail": "Error: expect(locator).toBeVisible() failed\n\nLocator: locator('section[data-wl-section-type=\"OrderDetail\"]').locator('h2:has-text(\"Detail Pesanan\")')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 5000ms\n  - waiting for locator('section[data-wl-section-type=\"OrderDetail\"]').locator('h2:has-text(\"Detail Pesanan\")')\n\n  88 |\n  89 |         for (const locator of Object.values(bookedPageElements)) {\n> 90 |             await expect(locator).toBeVisible();\n     |                                   ^\n  91 |         }\n  92 |\n  93 |         await web.validasiTotalHargaTiket(harga_tiket, jml_penumpang, expected_total_tiket, \"success-page\", site.data.BiayaLainnya);\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:90:35"
+      }
+    },
+    {
+      "title": "@banyumili - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 92344,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:31:51.031Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('input[onclick*=\"QRIS\"]')\n\n   at ../pages/banyumili.js:329\n\n  327 |         await this.waitForLoader('div#load-container-payment', 'd-none', true);\n  328 |\n> 329 |         await this.getPlatformBayar(platform_bayar).click({ force: true });\n      |                                                     ^\n  330 |     }\n  331 |\n  332 |     async checklistKetentuan() {\n    at Banyumili.pilihMetodePembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/banyumili.js:329:53)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:160:13"
+      }
+    },
+    {
+      "title": "@btm - Test Case 3 - Connecting Reservation",
+      "status": "failed",
+      "duration": 29483,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:40:42.048Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: expect(received).toBe(expected) // Object.is equality",
+        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 227000\nReceived: 0\n\n   at ../pages/btm.js:289\n\n  287 |\n  288 |                 const actual_total_tiket_payment_1 = this.normalizeRupiah(await this.total_bayar_label_general.innerText());\n> 289 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  290 |\n  291 |                 if (await this.total_bayar_label_payment.count() > 0) {\n  292 |                     const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.total_bayar_label_payment.innerText());\n    at Btm.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/btm.js:289:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:263:36"
+      }
+    },
+    {
+      "title": "@daytrans - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 92405,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:44:05.624Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('[aria-label*=\"24 December 2026\"]')\n\n   at ../pages/daytrans.js:152\n\n  150 |\n  151 |         await this.tanggal_pergi.click();\n> 152 |         await tanggal_target.click();\n      |                              ^\n  153 |         await this.save_date_btn.click();\n  154 |     }\n  155 |\n    at Daytrans.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/daytrans.js:152:30)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:38:9"
+      }
+    },
+    {
+      "title": "@daytrans - Test Case 3 - Connecting Reservation",
+      "status": "failed",
+      "duration": 92270,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:47:15.969Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('[aria-label*=\"24 December 2026\"]')\n\n   at ../pages/daytrans.js:152\n\n  150 |\n  151 |         await this.tanggal_pergi.click();\n> 152 |         await tanggal_target.click();\n      |                              ^\n  153 |         await this.save_date_btn.click();\n  154 |     }\n  155 |\n    at Daytrans.isiTanggalPergi (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/daytrans.js:152:30)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:224:13"
+      }
+    },
+    {
+      "title": "@harumbsi - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 93122,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:51:36.413Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/harumbsi.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Harumbsi.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/harumbsi.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:34:19"
+      }
+    },
+    {
+      "title": "@harumbsi - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 92940,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:54:43.960Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/harumbsi.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Harumbsi.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/harumbsi.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:123:23"
+      }
+    },
+    {
+      "title": "@minanga - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 90420,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:06:26.989Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/minanga.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Minanga.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/minanga.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:34:19"
+      }
+    },
+    {
+      "title": "@minanga - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 90393,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:09:29.722Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/minanga.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Minanga.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/minanga.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:123:23"
+      }
+    },
+    {
+      "title": "@mstrans - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 28615,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:12:07.634Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: expect(locator).toBeVisible() failed",
+        "detail": "Error: expect(locator).toBeVisible() failed\n\nLocator: locator('section[data-wl-section-type=\"OrderDetail\"]').locator('h2:has-text(\"Detail Pesanan\")')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 5000ms\n  - waiting for locator('section[data-wl-section-type=\"OrderDetail\"]').locator('h2:has-text(\"Detail Pesanan\")')\n\n  88 |\n  89 |         for (const locator of Object.values(bookedPageElements)) {\n> 90 |             await expect(locator).toBeVisible();\n     |                                   ^\n  91 |         }\n  92 |\n  93 |         await web.validasiTotalHargaTiket(harga_tiket, jml_penumpang, expected_total_tiket, \"success-page\", site.data.BiayaLainnya);\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:90:35"
+      }
+    },
+    {
+      "title": "@raputri - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 92882,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:18:06.632Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/raputri.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Raputri.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/raputri.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:34:19"
+      }
+    },
+    {
+      "title": "@raputri - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 92884,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:21:14.222Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/raputri.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Raputri.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/raputri.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:123:23"
+      }
+    },
+    {
+      "title": "@royalkencana - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 93298,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:25:29.199Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/royalkencana.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Royalkencana.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/royalkencana.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:34:19"
+      }
+    },
+    {
+      "title": "@royalkencana - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 93143,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:28:37.255Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('select#asal + div')\n\n   at ../pages/royalkencana.js:117\n\n  115 |\n  116 |     async isiKeberangkatan(value) {\n> 117 |         await this.keberangkatan_field.click();\n      |                                        ^\n  118 |         await this.dropdown_keberangkatan.locator(`div.ss-option:text-is(\"${value}\")`).click();\n  119 |     }\n  120 |\n    at Royalkencana.isiKeberangkatan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/royalkencana.js:117:40)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:123:23"
+      }
+    },
+    {
+      "title": "@sadya - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 92413,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:32:08.870Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('input[onclick*=\"QRIS\"]')\n\n   at ../pages/sadya.js:339\n\n  337 |         await this.waitForLoader('div#load-container-payment', 'd-none', true);\n  338 |\n> 339 |         await this.getPlatformBayar(platform_bayar).click({ force: true });\n      |                                                     ^\n  340 |     }\n  341 |\n  342 |     async checklistKetentuan() {\n    at Sadya.pilihMetodePembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/sadya.js:339:53)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:74:9"
+      }
+    },
+    {
+      "title": "@sadya - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 92262,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:35:16.653Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('input[onclick*=\"QRIS\"]')\n\n   at ../pages/sadya.js:339\n\n  337 |         await this.waitForLoader('div#load-container-payment', 'd-none', true);\n  338 |\n> 339 |         await this.getPlatformBayar(platform_bayar).click({ force: true });\n      |                                                     ^\n  340 |     }\n  341 |\n  342 |     async checklistKetentuan() {\n    at Sadya.pilihMetodePembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/sadya.js:339:53)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:160:13"
+      }
+    },
+    {
+      "title": "@semeru - Test Case 1 - One Way Trip",
+      "status": "failed",
+      "duration": 91147,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:41:45.701Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('div.ss-option:has-text(\"BEKASI\")').nth(1)\n    - locator resolved to <div class=\"ss-option\" data-id=\"29605047\">AGEN JATIWARNA, Bekasi</div>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n    - waiting 20ms\n    - waiting for element to be visible, enabled and stable\n    - element is not stable\n  2 × retrying click action\n      - waiting 100ms\n      - waiting for element to be visible, enabled and stable\n      - element is not visible\n  168 × retrying click action\n        - waiting 500ms\n        - waiting for element to be visible, enabled and stable\n        - element is not visible\n  - retrying click action\n    - waiting 500ms\n\n   at ../pages/semeru.js:72\n\n  70 |     async isiTujuan(value) {\n  71 |         await this.tujuan.click();\n> 72 |         await this.page.locator(`div.ss-option:has-text(\"${value}\")`).nth(1).click();\n     |                                                                              ^\n  73 |     }\n  74 |\n  75 |     async isiTanggalPergi(value) {\n    at Semeru.isiTujuan (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/semeru.js:72:78)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:36:9"
+      }
+    },
+    {
+      "title": "@trikusuma - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 40081,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:49:00.684Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Error: expect(received).toBe(expected) // Object.is equality",
+        "detail": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 370000\nReceived: 320000\n\n   at ../pages/trikusuma.js:340\n\n  338 |                 const actual_total_tiket_payment_2 = this.normalizeRupiah(await this.page.locator('span#hargatot').innerText());\n  339 |\n> 340 |                 expect(actual_total_tiket_payment_1).toBe(expected_total_tiket);\n      |                                                      ^\n  341 |                 expect(actual_total_tiket_payment_2).toBe(expected_total_tiket);\n  342 |\n  343 |                 return expected_total_tiket;\n    at Trikusuma.validasiTotalHargaTiket (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/trikusuma.js:340:54)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:162:36"
+      }
+    },
+    {
+      "title": "@wisatakomodo - Test Case 2 - Round Trip",
+      "status": "failed",
+      "duration": 92328,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:52:57.571Z",
+      "bookingCode": null,
+      "error": {
+        "summary": "Test timeout of 90000ms exceeded.",
+        "detail": "Test timeout of 90000ms exceeded.\n\nError: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n  - waiting for locator('input[onclick*=\"QRIS\"]')\n\n   at ../pages/wisatakomodo.js:334\n\n  332 |         await this.waitForLoader('div#load-container-payment', 'd-none', true);\n  333 |\n> 334 |         await this.getPlatformBayar(platform_bayar).click({ force: true });\n      |                                                     ^\n  335 |     }\n  336 |\n  337 |     async checklistKetentuan() {\n    at Wisatakomodo.pilihMetodePembayaran (/home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/pages/wisatakomodo.js:334:53)\n    at /home/runner/work/Automate-Testing-WL-TBK/Automate-Testing-WL-TBK/tests/reservasi_test.spec.js:160:13"
+      }
+    },
+    {
+      "title": "@baraya - Test Case 2 - Round Trip",
+      "status": "flaky",
+      "duration": 42028,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:35:29.589Z",
+      "bookingCode": "BBRT26112406JX",
+      "error": null
+    },
+    {
+      "title": "@besttrans - Test Case 1 - One Way Trip",
+      "status": "flaky",
+      "duration": 30958,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:37:47.169Z",
+      "bookingCode": "BBST2611241WRX",
+      "error": null
+    },
+    {
+      "title": "@ctu - Test Case 1 - One Way Trip",
+      "status": "flaky",
+      "duration": 24927,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:41:41.999Z",
+      "bookingCode": "BCTU261124RX9M",
+      "error": null
+    },
+    {
+      "title": "@selamat - Test Case 1 - One Way Trip",
+      "status": "flaky",
+      "duration": 26812,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:39:45.243Z",
+      "bookingCode": "BSLT261124IOWN",
+      "error": null
+    },
+    {
+      "title": "@trikusuma - Test Case 1 - One Way Trip",
+      "status": "flaky",
+      "duration": 38379,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:47:41.454Z",
+      "bookingCode": "BTKS26112474Z5",
+      "error": null
+    },
+    {
+      "title": "@adibuzz - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 35014,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:21:51.516Z",
+      "bookingCode": "BADI2611247K84",
+      "error": null
+    },
+    {
+      "title": "@adibuzz - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 42296,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:22:29.766Z",
+      "bookingCode": "BADI2611240YTB",
+      "error": null
+    },
+    {
+      "title": "@ans - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 29700,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:23:13.074Z",
+      "bookingCode": "BANS26112428FN",
+      "error": null
+    },
+    {
+      "title": "@ans - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 40178,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:23:44.078Z",
+      "bookingCode": "BANS2611241DLA",
+      "error": null
+    },
+    {
+      "title": "@aoshuttle - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 22052,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:24:25.835Z",
+      "bookingCode": "BAOS261124IPR4",
+      "error": null
+    },
+    {
+      "title": "@aoshuttle - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 26804,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:24:48.657Z",
+      "bookingCode": "BAOS261124OKXA",
+      "error": null
+    },
+    {
+      "title": "@ats - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 23569,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:29:19.173Z",
+      "bookingCode": "BATS261124P72R",
+      "error": null
+    },
+    {
+      "title": "@banyumili - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 32039,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:29:43.405Z",
+      "bookingCode": "BBYM261124OP3F",
+      "error": null
+    },
+    {
+      "title": "@baraya - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 29254,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:33:25.469Z",
+      "bookingCode": "BBRT261124PD8A",
+      "error": null
+    },
+    {
+      "title": "@besttrans - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 37870,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:38:19.107Z",
+      "bookingCode": "BBST261124EXYG",
+      "error": null
+    },
+    {
+      "title": "@binasarana - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 36278,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:38:58.124Z",
+      "bookingCode": "BBSS2611246QL3",
+      "error": null
+    },
+    {
+      "title": "@btm - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 32994,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:39:35.228Z",
+      "bookingCode": "BBTM261124P34A",
+      "error": null
+    },
+    {
+      "title": "@ctu - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 22859,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:42:07.554Z",
+      "bookingCode": "BCTU2611240X9G",
+      "error": null
+    },
+    {
+      "title": "@gracias - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 30027,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:48:50.999Z",
+      "bookingCode": "BGRS2611246294",
+      "error": null
+    },
+    {
+      "title": "@gracias - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 39510,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:49:21.998Z",
+      "bookingCode": "BGRS2611246Q2N",
+      "error": null
+    },
+    {
+      "title": "@jackal - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 32953,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:56:17.657Z",
+      "bookingCode": "BJKL261124C1WE",
+      "error": null
+    },
+    {
+      "title": "@jackal - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 40855,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:56:51.755Z",
+      "bookingCode": "BJKL26112461K2",
+      "error": null
+    },
+    {
+      "title": "@joglosemar - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 37370,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:57:34.017Z",
+      "bookingCode": "BJGS261124CD2B",
+      "error": null
+    },
+    {
+      "title": "@joglosemar - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 50007,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:58:12.672Z",
+      "bookingCode": "BJGS261124KEAH",
+      "error": null
+    },
+    {
+      "title": "@kpm - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 33560,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:59:04.352Z",
+      "bookingCode": "BKPM261124KANZ",
+      "error": null
+    },
+    {
+      "title": "@kpm - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 48088,
+      "browser": "chromium",
+      "startTime": "2026-11-24T04:59:38.868Z",
+      "bookingCode": "BKPM261124FGTH",
+      "error": null
+    },
+    {
+      "title": "@kruzz - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 41352,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:00:28.013Z",
+      "bookingCode": "BKRZ261124V2E3",
+      "error": null
+    },
+    {
+      "title": "@kruzz - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 52006,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:01:10.030Z",
+      "bookingCode": "BKRZ261124PX9M",
+      "error": null
+    },
+    {
+      "title": "@kruzz - Test Case 3 - Connecting Reservation",
+      "status": "passed",
+      "duration": 62417,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:02:03.001Z",
+      "bookingCode": "BKRZ261124J7QR",
+      "error": null
+    },
+    {
+      "title": "@kupuayu - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 41656,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:03:06.485Z",
+      "bookingCode": "BKKA261124IU0L",
+      "error": null
+    },
+    {
+      "title": "@kupuayu - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 64421,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:03:49.427Z",
+      "bookingCode": "BKKA261124PV3M",
+      "error": null
+    },
+    {
+      "title": "@mrtrans - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 22141,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:11:01.078Z",
+      "bookingCode": "BMRT26112413MG",
+      "error": null
+    },
+    {
+      "title": "@mstrans - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 30559,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:12:37.613Z",
+      "bookingCode": "BMST261124CJZH",
+      "error": null
+    },
+    {
+      "title": "@namaste - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 31840,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:13:09.111Z",
+      "bookingCode": "BNMS2611247FGZ",
+      "error": null
+    },
+    {
+      "title": "@namaste - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 44973,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:13:41.852Z",
+      "bookingCode": "BNMS26112417LG",
+      "error": null
+    },
+    {
+      "title": "@pelitamas - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 24825,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:14:28.067Z",
+      "bookingCode": "BPLS261124IUSZ",
+      "error": null
+    },
+    {
+      "title": "@pelitamas - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 23164,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:14:53.618Z",
+      "bookingCode": "BPLS261124IRFS",
+      "error": null
+    },
+    {
+      "title": "@putraremaja - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 30278,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:15:17.530Z",
+      "bookingCode": "BPTR261124KQYZ",
+      "error": null
+    },
+    {
+      "title": "@putraremaja - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 43160,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:15:48.658Z",
+      "bookingCode": "BPTR261124CRX9",
+      "error": null
+    },
+    {
+      "title": "@riyan - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 28666,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:22:48.012Z",
+      "bookingCode": "BRYN261124L3MB",
+      "error": null
+    },
+    {
+      "title": "@riyan - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 36840,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:23:17.579Z",
+      "bookingCode": "BRYN26112472FM",
+      "error": null
+    },
+    {
+      "title": "@sabila - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 23143,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:30:11.261Z",
+      "bookingCode": "BSBL261124IESZ",
+      "error": null
+    },
+    {
+      "title": "@sariharum - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 34580,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:36:50.594Z",
+      "bookingCode": "BSRH2611242SYH",
+      "error": null
+    },
+    {
+      "title": "@sariharum - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 44178,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:37:26.181Z",
+      "bookingCode": "BSRH261124IO1Y",
+      "error": null
+    },
+    {
+      "title": "@sunjaya - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 44477,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:43:18.897Z",
+      "bookingCode": "BSNA261124J13H",
+      "error": null
+    },
+    {
+      "title": "@sunjaya - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 53083,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:44:05.624Z",
+      "bookingCode": "BSNA261124U7QZ",
+      "error": null
+    },
+    {
+      "title": "@transkita - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 29120,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:45:01.274Z",
+      "bookingCode": "BTKT261124IJDK",
+      "error": null
+    },
+    {
+      "title": "@transkita - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 36560,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:45:31.262Z",
+      "bookingCode": "BTKT261124DET5",
+      "error": null
+    },
+    {
+      "title": "@wbtrans - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 31989,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:49:42.165Z",
+      "bookingCode": "BWBS261124P7EF",
+      "error": null
+    },
+    {
+      "title": "@wbtrans - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 41507,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:50:15.044Z",
+      "bookingCode": "BWBS261124LFSB",
+      "error": null
+    },
+    {
+      "title": "@wisatakomodo - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 25362,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:50:57.612Z",
+      "bookingCode": "BWKM261124OUCR",
+      "error": null
+    },
+    {
+      "title": "@yantigroup - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 28877,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:54:31.425Z",
+      "bookingCode": "BYGS261124KELA",
+      "error": null
+    },
+    {
+      "title": "@yantigroup - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 40094,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:55:01.338Z",
+      "bookingCode": "BYGS261124K35B",
+      "error": null
+    },
+    {
+      "title": "@ztrans - Test Case 1 - One Way Trip",
+      "status": "passed",
+      "duration": 31373,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:55:42.669Z",
+      "bookingCode": "BSBT261124PATZ",
+      "error": null
+    },
+    {
+      "title": "@ztrans - Test Case 2 - Round Trip",
+      "status": "passed",
+      "duration": 44992,
+      "browser": "chromium",
+      "startTime": "2026-11-24T05:56:15.263Z",
+      "bookingCode": "BSBT26112417AN",
+      "error": null
+    }
+  ]
+}
